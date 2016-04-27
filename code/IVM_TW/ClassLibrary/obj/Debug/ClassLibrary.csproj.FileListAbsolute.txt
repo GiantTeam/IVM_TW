@@ -1,0 +1,5 @@
+F:\git\IVM_TW\code\IVM_TW\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+F:\git\IVM_TW\code\IVM_TW\ClassLibrary\bin\Debug\ClassLibrary.dll
+F:\git\IVM_TW\code\IVM_TW\ClassLibrary\bin\Debug\ClassLibrary.pdb
+F:\git\IVM_TW\code\IVM_TW\ClassLibrary\obj\Debug\ClassLibrary.dll
+F:\git\IVM_TW\code\IVM_TW\ClassLibrary\obj\Debug\ClassLibrary.pdb

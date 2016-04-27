@@ -1,0 +1,13 @@
+C:\Users\campufix\Downloads\VM\VM\bin\Debug\VM.exe.config
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\VM.exe
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\VM.pdb
+C:\Users\campufix\Downloads\VM\VM\bin\Debug\VM.exe.manifest
+C:\Users\campufix\Downloads\VM\VM\bin\Debug\VM.application
+C:\Users\campufix\Downloads\VM\VM\bin\Debug\VM.exe
+C:\Users\campufix\Downloads\VM\VM\bin\Debug\VM.pdb
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\IVM_TM.csprojResolveAssemblyReference.cache
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\VM.frmMain.resources
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\VM.Properties.Resources.resources
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\IVM_TM.csproj.GenerateResource.Cache
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\VM.exe.manifest
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\VM.application

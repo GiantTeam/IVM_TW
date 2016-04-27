@@ -1,0 +1,26 @@
+d:\我的文档\documents\visual studio 2012\Projects\VM\VM\bin\Debug\VM.exe.config
+d:\我的文档\documents\visual studio 2012\Projects\VM\VM\bin\Debug\VM.exe
+d:\我的文档\documents\visual studio 2012\Projects\VM\VM\bin\Debug\VM.pdb
+d:\我的文档\documents\visual studio 2012\Projects\VM\VM\obj\Debug\VM.csprojResolveAssemblyReference.cache
+d:\我的文档\documents\visual studio 2012\Projects\VM\VM\obj\Debug\VM.Properties.Resources.resources
+d:\我的文档\documents\visual studio 2012\Projects\VM\VM\obj\Debug\VM.csproj.GenerateResource.Cache
+d:\我的文档\documents\visual studio 2012\Projects\VM\VM\obj\Debug\VM.exe
+d:\我的文档\documents\visual studio 2012\Projects\VM\VM\obj\Debug\VM.pdb
+d:\我的文档\documents\visual studio 2012\Projects\VM\VM\obj\Debug\VM.Form1.resources
+D:\我的文档\Documents\Visual Studio 2012\Projects\VM\VM\bin\Debug\VM.exe.manifest
+D:\我的文档\Documents\Visual Studio 2012\Projects\VM\VM\bin\Debug\VM.application
+D:\我的文档\Documents\Visual Studio 2012\Projects\VM\VM\obj\Debug\VM.exe.manifest
+D:\我的文档\Documents\Visual Studio 2012\Projects\VM\VM\obj\Debug\VM.application
+C:\Users\campufix\Downloads\VM\VM\bin\Debug\VM.exe.config
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\VM.exe
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\VM.pdb
+C:\Users\campufix\Downloads\VM\VM\bin\Debug\VM.exe.manifest
+C:\Users\campufix\Downloads\VM\VM\bin\Debug\VM.application
+C:\Users\campufix\Downloads\VM\VM\bin\Debug\VM.exe
+C:\Users\campufix\Downloads\VM\VM\bin\Debug\VM.pdb
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\VM.csprojResolveAssemblyReference.cache
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\VM.Form1.resources
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\VM.Properties.Resources.resources
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\VM.csproj.GenerateResource.Cache
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\VM.exe.manifest
+C:\Users\campufix\Downloads\VM\VM\obj\Debug\VM.application

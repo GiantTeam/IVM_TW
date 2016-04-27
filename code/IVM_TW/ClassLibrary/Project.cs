@@ -14,7 +14,7 @@ namespace ClassLibrary
         public double dblRate; //项目收益率
         public double dblMoney;  //项目起投金额
         public string strLink; //理财产品链接
-
+       
         public Project(int intId)
         {
             this.intId = intId;

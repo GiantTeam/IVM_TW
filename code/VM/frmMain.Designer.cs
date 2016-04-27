@@ -162,6 +162,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -196,6 +198,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button18);
+            this.tabPage1.Controls.Add(this.button17);
             this.tabPage1.Controls.Add(this.button11);
             this.tabPage1.Controls.Add(this.button10);
             this.tabPage1.Controls.Add(this.button9);
@@ -238,7 +242,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(768, 416);
+            this.button10.Location = new System.Drawing.Point(760, 423);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 32);
             this.button10.TabIndex = 23;
@@ -247,7 +251,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(768, 376);
+            this.button9.Location = new System.Drawing.Point(760, 383);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 32);
             this.button9.TabIndex = 22;
@@ -256,7 +260,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(768, 336);
+            this.button8.Location = new System.Drawing.Point(760, 343);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 32);
             this.button8.TabIndex = 21;
@@ -265,7 +269,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(768, 296);
+            this.button7.Location = new System.Drawing.Point(760, 303);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 32);
             this.button7.TabIndex = 20;
@@ -274,7 +278,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(768, 256);
+            this.button6.Location = new System.Drawing.Point(760, 263);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 32);
             this.button6.TabIndex = 19;
@@ -347,7 +351,7 @@
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(752, 264);
+            this.dataGridView1.Size = new System.Drawing.Size(744, 264);
             this.dataGridView1.TabIndex = 16;
             // 
             // 项目
@@ -380,7 +384,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(760, 136);
+            this.button3.Location = new System.Drawing.Point(760, 192);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 32);
             this.button3.TabIndex = 13;
@@ -589,7 +593,7 @@
             // 
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(760, 8);
+            this.button1.Location = new System.Drawing.Point(760, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 32);
             this.button1.TabIndex = 4;
@@ -1441,17 +1445,35 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(760, 48);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(75, 32);
+            this.button17.TabIndex = 25;
+            this.button17.Text = "确定";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(760, 138);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(75, 32);
+            this.button18.TabIndex = 26;
+            this.button18.Text = "确定";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 725);
+            this.ClientSize = new System.Drawing.Size(913, 725);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "frmMain";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.ShowIcon = false;
             this.tabControl1.ResumeLayout(false);
@@ -1608,7 +1630,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button17;
     }
 }
 

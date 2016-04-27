@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ClassLibrary
 {
     using System.Collections;
-    class ProjectList
+    public class ProjectList
     {
 
         //Use Facade Pattern

@@ -24,3 +24,16 @@ F:\git\IVM_TW\code\VM\obj\Debug\VM.Properties.Resources.resources
 F:\git\IVM_TW\code\VM\obj\Debug\IVM_TM.csproj.GenerateResource.Cache
 F:\git\IVM_TW\code\VM\obj\Debug\VM.exe.manifest
 F:\git\IVM_TW\code\VM\obj\Debug\VM.application
+E:\IVM_TW\code\VM\bin\Debug\VM.exe.config
+E:\IVM_TW\code\VM\bin\Debug\VM.exe.manifest
+E:\IVM_TW\code\VM\bin\Debug\VM.application
+E:\IVM_TW\code\VM\bin\Debug\VM.exe
+E:\IVM_TW\code\VM\bin\Debug\VM.pdb
+E:\IVM_TW\code\VM\obj\Debug\IVM_TM.csprojResolveAssemblyReference.cache
+E:\IVM_TW\code\VM\obj\Debug\VM.frmMain.resources
+E:\IVM_TW\code\VM\obj\Debug\VM.Properties.Resources.resources
+E:\IVM_TW\code\VM\obj\Debug\IVM_TM.csproj.GenerateResource.Cache
+E:\IVM_TW\code\VM\obj\Debug\VM.exe.manifest
+E:\IVM_TW\code\VM\obj\Debug\VM.application
+E:\IVM_TW\code\VM\obj\Debug\VM.exe
+E:\IVM_TW\code\VM\obj\Debug\VM.pdb

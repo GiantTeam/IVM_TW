@@ -14,3 +14,4 @@ E:\IVM_TW\code\IVM_TW\ClassLibrary\bin\Debug\normnfkc.nlp
 E:\IVM_TW\code\IVM_TW\ClassLibrary\bin\Debug\normnfkd.nlp
 E:\IVM_TW\code\IVM_TW\ClassLibrary\obj\Debug\ClassLibrary.dll
 E:\IVM_TW\code\IVM_TW\ClassLibrary\obj\Debug\ClassLibrary.pdb
+E:\IVM_TW\code\IVM_TW\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache

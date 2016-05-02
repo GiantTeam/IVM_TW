@@ -1,1 +1,2 @@
 F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.csprojResolveAssemblyReference.cache

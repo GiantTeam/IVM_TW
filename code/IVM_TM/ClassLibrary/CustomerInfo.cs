@@ -8,7 +8,7 @@ namespace EntityClass
 {
     class CustomerInfo
     {
-        private static ArrayList CustomerList= new ArrayList();//创建储存客户信息的ArrayList
+        private static ArrayList CustomerList = new ArrayList();//创建储存客户信息的ArrayList
         private String id;//表示客户ID的字段
         private String name;//表示客户姓名字段
         private String address;//表示客户地址字段
@@ -18,7 +18,7 @@ namespace EntityClass
             id = myid;
             name = myname;
             address = myaddress;
-    }
+        }
         public String ID//表示客户ID的属性
         {
             set { id = value; }
@@ -38,7 +38,7 @@ namespace EntityClass
         {
             CustomerList.Add(aCustomerInfo);//添加一个客户信息到ArrayList中
         }
-        public static void Delete (CustomerInfo oo)
+        public static void Delete(CustomerInfo oo)
         {
             int i = CustomerList.IndexOf(oo);
             if (i < 0)
@@ -46,9 +46,10 @@ namespace EntityClass
             else
                 CustomerList.RemoveAt(i);
         }
-        public static void Show ()
+        public static void Show()
         {
             foreach (CustomerInfo s in CustomerList)
-                Console.WriteLine(s.ID + ", "+s.Name +", "+s.Address);
+                Console.WriteLine(s.ID + ", " + s.Name + ", " + s.Address);
         }
+    }
 }

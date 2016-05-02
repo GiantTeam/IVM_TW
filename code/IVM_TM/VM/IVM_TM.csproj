@@ -93,6 +93,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\frmMain.datasource" />
+    <None Include="Properties\DataSources\frmMain.mData.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\VM.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\VM.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,6 +108,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="VM_TemporaryKey.pfx" />
+    <None Include="敏捷软件开发方法学生名单.xls" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -132,16 +138,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary\EntityClass.csproj">
-      <Project>{694ba161-f761-49a5-8cd5-1efaa0f90594}</Project>
-      <Name>EntityClass</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ControlClass\ControlClass.csproj">
-      <Project>{68f32bc2-11c6-4fe7-96b2-85fc239043f7}</Project>
-      <Name>ControlClass</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

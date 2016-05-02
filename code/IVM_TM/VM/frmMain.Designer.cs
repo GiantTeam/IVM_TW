@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -227,6 +227,7 @@
             this.btnRateConfirm.Name = "btnRateConfirm";
             this.btnRateConfirm.Size = new System.Drawing.Size(75, 32);
             this.btnRateConfirm.TabIndex = 26;
+            this.btnRateConfirm.Tag = "0";
             this.btnRateConfirm.Text = "确定";
             this.btnRateConfirm.UseVisualStyleBackColor = true;
             // 
@@ -236,6 +237,7 @@
             this.btnTimeConfirm.Name = "btnTimeConfirm";
             this.btnTimeConfirm.Size = new System.Drawing.Size(75, 32);
             this.btnTimeConfirm.TabIndex = 25;
+            this.btnTimeConfirm.Tag = "0";
             this.btnTimeConfirm.Text = "确定";
             this.btnTimeConfirm.UseVisualStyleBackColor = true;
             this.btnTimeConfirm.Click += new System.EventHandler(this.btnTimeConfirm_Click);
@@ -262,55 +264,64 @@
             // 
             // grvSearch
             // 
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            this.grvSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            this.grvSearch.AllowUserToAddRows = false;
+            this.grvSearch.AllowUserToDeleteRows = false;
+            this.grvSearch.AllowUserToResizeColumns = false;
+            this.grvSearch.AllowUserToResizeRows = false;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            this.grvSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle36;
             this.grvSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grvSearch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grvSearch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grvSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
             this.grvSearch.ColumnHeadersHeight = 30;
+            this.grvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.grvSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
             this.time,
             this.money,
             this.rate,
             this.inverst});
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvSearch.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvSearch.DefaultCellStyle = dataGridViewCellStyle38;
+            this.grvSearch.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.grvSearch.Location = new System.Drawing.Point(8, 232);
             this.grvSearch.Name = "grvSearch";
+            this.grvSearch.ReadOnly = true;
             this.grvSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
             this.grvSearch.RowHeadersVisible = false;
             this.grvSearch.RowHeadersWidth = 100;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grvSearch.RowsDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grvSearch.RowsDefaultCellStyle = dataGridViewCellStyle40;
             this.grvSearch.RowTemplate.Height = 23;
             this.grvSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.grvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.grvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grvSearch.Size = new System.Drawing.Size(832, 264);
             this.grvSearch.TabIndex = 16;
+            this.grvSearch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvSearch_CellClick);
+            this.grvSearch.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grvSearch_CellMouseClick);
             // 
             // name
             // 
@@ -352,6 +363,7 @@
             // 
             this.inverst.HeaderText = "投资";
             this.inverst.Name = "inverst";
+            this.inverst.ReadOnly = true;
             // 
             // btnRush
             // 
@@ -361,6 +373,7 @@
             this.btnRush.TabIndex = 13;
             this.btnRush.Text = "抢购";
             this.btnRush.UseVisualStyleBackColor = true;
+            this.btnRush.Click += new System.EventHandler(this.btnRush_Click);
             // 
             // btnMoneyConfirm
             // 
@@ -368,6 +381,7 @@
             this.btnMoneyConfirm.Name = "btnMoneyConfirm";
             this.btnMoneyConfirm.Size = new System.Drawing.Size(75, 32);
             this.btnMoneyConfirm.TabIndex = 12;
+            this.btnMoneyConfirm.Tag = "0";
             this.btnMoneyConfirm.Text = "确定";
             this.btnMoneyConfirm.UseVisualStyleBackColor = true;
             // 
@@ -440,8 +454,10 @@
             this.rdoSRate4.Name = "rdoSRate4";
             this.rdoSRate4.Size = new System.Drawing.Size(60, 25);
             this.rdoSRate4.TabIndex = 3;
+            this.rdoSRate4.Tag = "1";
             this.rdoSRate4.Text = "其它";
             this.rdoSRate4.UseVisualStyleBackColor = true;
+            this.rdoSRate4.CheckedChanged += new System.EventHandler(this.rdoSRate4_CheckedChanged);
             // 
             // rdoSRate3
             // 
@@ -450,8 +466,10 @@
             this.rdoSRate3.Name = "rdoSRate3";
             this.rdoSRate3.Size = new System.Drawing.Size(92, 25);
             this.rdoSRate3.TabIndex = 2;
+            this.rdoSRate3.Tag = "0";
             this.rdoSRate3.Text = "10%以上";
             this.rdoSRate3.UseVisualStyleBackColor = true;
+            this.rdoSRate3.CheckedChanged += new System.EventHandler(this.rdoSRate3_CheckedChanged);
             // 
             // rdoSRate2
             // 
@@ -460,8 +478,10 @@
             this.rdoSRate2.Name = "rdoSRate2";
             this.rdoSRate2.Size = new System.Drawing.Size(90, 25);
             this.rdoSRate2.TabIndex = 1;
+            this.rdoSRate2.Tag = "0";
             this.rdoSRate2.Text = "5%-10%";
             this.rdoSRate2.UseVisualStyleBackColor = true;
+            this.rdoSRate2.CheckedChanged += new System.EventHandler(this.rdoSRate2_CheckedChanged);
             // 
             // rdoSRate1
             // 
@@ -470,8 +490,10 @@
             this.rdoSRate1.Name = "rdoSRate1";
             this.rdoSRate1.Size = new System.Drawing.Size(83, 25);
             this.rdoSRate1.TabIndex = 0;
+            this.rdoSRate1.Tag = "0";
             this.rdoSRate1.Text = "5%以下";
             this.rdoSRate1.UseVisualStyleBackColor = true;
+            this.rdoSRate1.CheckedChanged += new System.EventHandler(this.rdoSRate1_CheckedChanged);
             // 
             // grpSMoney
             // 
@@ -532,8 +554,10 @@
             this.rdoSMoney4.Name = "rdoSMoney4";
             this.rdoSMoney4.Size = new System.Drawing.Size(60, 25);
             this.rdoSMoney4.TabIndex = 3;
+            this.rdoSMoney4.Tag = "1";
             this.rdoSMoney4.Text = "其它";
             this.rdoSMoney4.UseVisualStyleBackColor = true;
+            this.rdoSMoney4.CheckedChanged += new System.EventHandler(this.rdoSMoney4_CheckedChanged);
             // 
             // rdoSMoney3
             // 
@@ -542,8 +566,10 @@
             this.rdoSMoney3.Name = "rdoSMoney3";
             this.rdoSMoney3.Size = new System.Drawing.Size(78, 25);
             this.rdoSMoney3.TabIndex = 2;
+            this.rdoSMoney3.Tag = "0";
             this.rdoSMoney3.Text = "5-10万";
             this.rdoSMoney3.UseVisualStyleBackColor = true;
+            this.rdoSMoney3.CheckedChanged += new System.EventHandler(this.rdoSMoney3_CheckedChanged);
             // 
             // rdoSMoney2
             // 
@@ -552,8 +578,10 @@
             this.rdoSMoney2.Name = "rdoSMoney2";
             this.rdoSMoney2.Size = new System.Drawing.Size(69, 25);
             this.rdoSMoney2.TabIndex = 1;
+            this.rdoSMoney2.Tag = "0";
             this.rdoSMoney2.Text = "1-5万";
             this.rdoSMoney2.UseVisualStyleBackColor = true;
+            this.rdoSMoney2.CheckedChanged += new System.EventHandler(this.rdoSMoney2_CheckedChanged);
             // 
             // rdoSMoney1
             // 
@@ -562,8 +590,10 @@
             this.rdoSMoney1.Name = "rdoSMoney1";
             this.rdoSMoney1.Size = new System.Drawing.Size(85, 25);
             this.rdoSMoney1.TabIndex = 0;
+            this.rdoSMoney1.Tag = "0";
             this.rdoSMoney1.Text = "1万以下";
             this.rdoSMoney1.UseVisualStyleBackColor = true;
+            this.rdoSMoney1.CheckedChanged += new System.EventHandler(this.rdoSMoney1_CheckedChanged);
             // 
             // btnSearch
             // 
@@ -673,6 +703,7 @@
             this.rdoSTime4.Name = "rdoSTime4";
             this.rdoSTime4.Size = new System.Drawing.Size(60, 25);
             this.rdoSTime4.TabIndex = 3;
+            this.rdoSTime4.Tag = "1";
             this.rdoSTime4.Text = "其它";
             this.rdoSTime4.UseVisualStyleBackColor = true;
             this.rdoSTime4.CheckedChanged += new System.EventHandler(this.rdoSTime4_CheckedChanged);
@@ -684,6 +715,7 @@
             this.rdoSTime3.Name = "rdoSTime3";
             this.rdoSTime3.Size = new System.Drawing.Size(110, 25);
             this.rdoSTime3.TabIndex = 2;
+            this.rdoSTime3.Tag = "0";
             this.rdoSTime3.Text = "12个月以上";
             this.rdoSTime3.UseVisualStyleBackColor = true;
             this.rdoSTime3.CheckedChanged += new System.EventHandler(this.rdoSTime3_CheckedChanged);
@@ -695,8 +727,10 @@
             this.rdoSTime2.Name = "rdoSTime2";
             this.rdoSTime2.Size = new System.Drawing.Size(94, 25);
             this.rdoSTime2.TabIndex = 1;
+            this.rdoSTime2.Tag = "0";
             this.rdoSTime2.Text = "6-12个月";
             this.rdoSTime2.UseVisualStyleBackColor = true;
+            this.rdoSTime2.CheckedChanged += new System.EventHandler(this.rdoSTime2_CheckedChanged);
             // 
             // rdoSTime1
             // 
@@ -705,8 +739,10 @@
             this.rdoSTime1.Name = "rdoSTime1";
             this.rdoSTime1.Size = new System.Drawing.Size(101, 25);
             this.rdoSTime1.TabIndex = 0;
+            this.rdoSTime1.Tag = "0";
             this.rdoSTime1.Text = "6个月以下";
             this.rdoSTime1.UseVisualStyleBackColor = true;
+            this.rdoSTime1.CheckedChanged += new System.EventHandler(this.rdoSTime1_CheckedChanged);
             // 
             // grpSort
             // 
@@ -729,6 +765,7 @@
             this.rdoSortRate.TabIndex = 3;
             this.rdoSortRate.Text = "收益率";
             this.rdoSortRate.UseVisualStyleBackColor = true;
+            this.rdoSortRate.CheckedChanged += new System.EventHandler(this.rdoSortRate_CheckedChanged);
             // 
             // rdoSortMoney
             // 
@@ -739,6 +776,7 @@
             this.rdoSortMoney.TabIndex = 2;
             this.rdoSortMoney.Text = "起投金额";
             this.rdoSortMoney.UseVisualStyleBackColor = true;
+            this.rdoSortMoney.CheckedChanged += new System.EventHandler(this.rdoSortMoney_CheckedChanged);
             // 
             // rdoSortTime
             // 
@@ -749,6 +787,7 @@
             this.rdoSortTime.TabIndex = 1;
             this.rdoSortTime.Text = "投资期限";
             this.rdoSortTime.UseVisualStyleBackColor = true;
+            this.rdoSortTime.CheckedChanged += new System.EventHandler(this.rdoSortTime_CheckedChanged);
             // 
             // rdoSortDefault
             // 
@@ -781,8 +820,10 @@
             this.rdoSortDown.Name = "rdoSortDown";
             this.rdoSortDown.Size = new System.Drawing.Size(53, 23);
             this.rdoSortDown.TabIndex = 1;
+            this.rdoSortDown.Tag = "1";
             this.rdoSortDown.Text = "降序";
             this.rdoSortDown.UseVisualStyleBackColor = true;
+            this.rdoSortDown.CheckedChanged += new System.EventHandler(this.rdoSortDown_CheckedChanged);
             // 
             // rdoSortUp
             // 
@@ -793,8 +834,10 @@
             this.rdoSortUp.Size = new System.Drawing.Size(53, 23);
             this.rdoSortUp.TabIndex = 0;
             this.rdoSortUp.TabStop = true;
+            this.rdoSortUp.Tag = "0";
             this.rdoSortUp.Text = "升序";
             this.rdoSortUp.UseVisualStyleBackColor = true;
+            this.rdoSortUp.CheckedChanged += new System.EventHandler(this.rdoSortUp_CheckedChanged);
             // 
             // tapAnalyse
             // 
@@ -820,6 +863,7 @@
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "删除";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -831,23 +875,24 @@
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "增加";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // grvAnalyse
             // 
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            this.grvAnalyse.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            this.grvAnalyse.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
             this.grvAnalyse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grvAnalyse.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grvAnalyse.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grvAnalyse.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvAnalyse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvAnalyse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
             this.grvAnalyse.ColumnHeadersHeight = 30;
             this.grvAnalyse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -857,29 +902,30 @@
             this.Column4,
             this.Column5,
             this.dataGridViewTextBoxColumn6});
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvAnalyse.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvAnalyse.DefaultCellStyle = dataGridViewCellStyle33;
+            this.grvAnalyse.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.grvAnalyse.Location = new System.Drawing.Point(0, 40);
             this.grvAnalyse.Name = "grvAnalyse";
             this.grvAnalyse.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvAnalyse.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvAnalyse.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.grvAnalyse.RowHeadersVisible = false;
             this.grvAnalyse.RowHeadersWidth = 100;
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grvAnalyse.RowsDefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grvAnalyse.RowsDefaultCellStyle = dataGridViewCellStyle35;
             this.grvAnalyse.RowTemplate.Height = 23;
             this.grvAnalyse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.grvAnalyse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -946,18 +992,21 @@
             this.mmuNew.Name = "mmuNew";
             this.mmuNew.Size = new System.Drawing.Size(54, 25);
             this.mmuNew.Text = "新建";
+            this.mmuNew.Click += new System.EventHandler(this.mmuNew_Click);
             // 
             // mmuSave
             // 
             this.mmuSave.Name = "mmuSave";
             this.mmuSave.Size = new System.Drawing.Size(54, 25);
             this.mmuSave.Text = "保存";
+            this.mmuSave.Click += new System.EventHandler(this.mmuSave_Click);
             // 
             // mmuEmpty
             // 
             this.mmuEmpty.Name = "mmuEmpty";
             this.mmuEmpty.Size = new System.Drawing.Size(54, 25);
             this.mmuEmpty.Text = "清空";
+            this.mmuEmpty.Click += new System.EventHandler(this.mmuEmpty_Click);
             // 
             // mmuImport
             // 
@@ -971,12 +1020,14 @@
             this.mmuExport.Name = "mmuExport";
             this.mmuExport.Size = new System.Drawing.Size(54, 25);
             this.mmuExport.Text = "导出";
+            this.mmuExport.Click += new System.EventHandler(this.mmuExport_Click);
             // 
             // mmuDiagram
             // 
             this.mmuDiagram.Name = "mmuDiagram";
             this.mmuDiagram.Size = new System.Drawing.Size(86, 25);
             this.mmuDiagram.Text = "统计分析";
+            this.mmuDiagram.Click += new System.EventHandler(this.mmuDiagram_Click);
             // 
             // tapRush
             // 
@@ -1110,7 +1161,6 @@
             this.btnActionRush.TabIndex = 18;
             this.btnActionRush.Text = "开始抢购";
             this.btnActionRush.UseVisualStyleBackColor = true;
-            this.btnActionRush.Click += new System.EventHandler(this.btnActionRush_Click);
             // 
             // groupBox6
             // 

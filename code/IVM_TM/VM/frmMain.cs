@@ -67,18 +67,25 @@ namespace VM
         }
 
 
-//**************************************Search界面处理***********************************************
+        //**************************************Search界面处理***********************************************
         //加载框架
+
+        private int addgrvRow(DataGridView grv)
+        {
+            DataGridViewRow Row = new DataGridViewRow();
+            grv.RowHeadersWidth = 45;
+            int index = grv.Rows.Add(Row);
+            return index;
+        }
+
         private void frmMain_Load(object sender, EventArgs e)
         {
             mData record = new mData();
             record.setData();
+
             for (int i = 0; i < 8; i++)
             {
-                DataGridViewRow Row = new DataGridViewRow();
-                grvSearch.RowHeadersWidth = 45;
-
-                int index = grvSearch.Rows.Add(Row);
+                int index = addgrvRow(grvSearch);
                 grvSearch.Rows[index].Cells[0].Value = record.name;
                 grvSearch.Rows[index].Cells[1].Value = record.date;
                 grvSearch.Rows[index].Cells[2].Value = record.money;
@@ -87,6 +94,7 @@ namespace VM
             }
             this.grvSearch.AutoGenerateColumns = false;
         }
+
 
         //页面上部：搜索功能
         //点击搜索按钮
@@ -187,7 +195,7 @@ namespace VM
         //重构排序方式：参数：选中的单选按钮
         private void rdoSort_checkedChange(RadioButton rdo)
         {
-           Int32 tIndex= Convert.ToInt32(rdo.Tag);
+            Int32 tIndex = Convert.ToInt32(rdo.Tag);
             grvSearch.Sort(grvSearch.Columns[tIndex], s_lsdSUpDown);
         }
         //重构排序方式：参数：按钮所在的组合框，找到选中的按钮，再调用rdoSort_checkedChange
@@ -254,11 +262,11 @@ namespace VM
         {
             //LinkGet();
             //  System.Diagnostics.Process.Start("http://baidu.com");
-         }
+        }
 
         private void grvSearch_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           // System.Diagnostics.Process.Start("http://baidu.com");
+            // System.Diagnostics.Process.Start("http://baidu.com");
         }
 
         //翻页设置：上一页
@@ -274,23 +282,10 @@ namespace VM
         }
 
 
-//******************************************Analyse界面**********************************************
-        private void mmuNew_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mmuSave_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mmuEmpty_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mmuImport_Click(object sender, EventArgs e)
+        //******************************************Analyse界面**********************************************
+        //页面上部，菜单栏：
+        //重构函数：选择文件夹
+        private void selectFile()
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.Multiselect = true;
@@ -303,23 +298,118 @@ namespace VM
             }
         }
 
-        private void mmuExport_Click(object sender, EventArgs e)
+        //重构函数：选择路径
+        private void selectPath()
         {
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.Description = "请选择文件路径";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string foldPath = dialog.SelectedPath;
+                MessageBox.Show("已选择文件夹:" + foldPath, "选择文件夹提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        //重构函数：清空表格内容
+        private void deleteAll()
+        {
+            int index;
+            for (index = 0; index < grvAnalyse.Rows.Count; )
+            {
+                grvAnalyse.Rows.Remove(grvAnalyse.Rows[index]);
+            }
+        }
+
+        //创建新的文件
+        private void mmuNew_Click(object sender, EventArgs e)
+        {
+            deleteAll();
+        }
+
+        //清空文件内容
+        private void mmuEmpty_Click(object sender, EventArgs e)
+        {
+            deleteAll();
+        }
+
+        //保存
+        private void mmuSave_Click(object sender, EventArgs e)
+        {
+            selectPath();
 
         }
 
+        //导入
+        private void mmuImport_Click(object sender, EventArgs e)
+        {
+            selectFile();
+        }
+
+        //导出
+        private void mmuExport_Click(object sender, EventArgs e)
+        {
+            selectPath();
+        }
+
+        //页面中部：表格处理
         private void mmuDiagram_Click(object sender, EventArgs e)
         {
 
         }
 
+        //页面下部
+        //增加按钮
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            int index;
+            for (index = 0; index < grvAnalyse.Rows.Count; index++)
+            {
+                grvAnalyse.Rows[index].Selected = false;
+            }
+            index=addgrvRow(grvAnalyse);
+            grvAnalyse.Rows[index].Selected = true;
+            grvAnalyse.Rows[index].Cells[0].Value= index;
+        }
+
+        //删除按钮
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            for (int i = this.grvAnalyse.SelectedRows.Count; i > 0; i--)
+            {
+                int ID = Convert.ToInt32(grvAnalyse.SelectedRows[i - 1].Cells[0].Value);
+                grvAnalyse.Rows.RemoveAt(grvAnalyse.SelectedRows[i - 1].Index);
+                /* 使用获得的ID删除数据库的数据
+                 string SQL = "delete  from UserInfo where UserId='"+ID.ToString()+"'";
+                 int s =Convert.ToInt32(cl.Execute(SQL));  //cl是操作类的一个对像，Execute()是类中的一个方法
+                 if (s!=0)
+                 {
+                     MessageBox.Show("成功删除选中行数据！");
+                 }
+                 */
+            }
+        }
+
+
+//******************************************Rush界面**************************************
+
+        private void btnActionRush_Click(object sender, EventArgs e)
+        {
+            if (btnActionRush.Text.Equals("开始抢购"))
+            {
+                tmrRushReflash.Enabled = true;
+                btnActionRush.Text = "停止抢购";
+            }
+            else
+            {
+                btnActionRush.Enabled = false;
+                btnActionRush.Text = "开始抢购";       
+            }
 
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void tmrRushReflash_Tick(object sender, EventArgs e)
         {
+            //tmrRushReflash();
 
         }
 

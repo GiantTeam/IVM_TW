@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="79360">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="81408">
       <assemblyIdentity name="VM" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qF/Pt3bkLD0QJKgnbwM+3QI/yW6laypKB5SDuaPVL9A=</dsig:DigestValue>
+        <dsig:DigestValue>vMl+jU7hgH9s2ZMPVBF8YJDSiqZbjbhI3gdH3wz9GCY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

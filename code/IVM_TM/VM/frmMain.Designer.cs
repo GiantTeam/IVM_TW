@@ -29,95 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.tabSelectModule = new System.Windows.Forms.TabControl();
-            this.tapSearch = new System.Windows.Forms.TabPage();
-            this.btnRateConfirm = new System.Windows.Forms.Button();
-            this.btnTimeConfirm = new System.Windows.Forms.Button();
-            this.btnPageDown = new System.Windows.Forms.Button();
-            this.btnPageUp = new System.Windows.Forms.Button();
-            this.grvSearch = new System.Windows.Forms.DataGridView();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.money = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inverst = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnRush = new System.Windows.Forms.Button();
-            this.btnMoneyConfirm = new System.Windows.Forms.Button();
-            this.lblSplit = new System.Windows.Forms.Label();
-            this.grpSRate = new System.Windows.Forms.GroupBox();
-            this.lblSRateHigh = new System.Windows.Forms.Label();
-            this.txtSRateHigh = new System.Windows.Forms.TextBox();
-            this.lblSRateLow = new System.Windows.Forms.Label();
-            this.txtSRateLow = new System.Windows.Forms.TextBox();
-            this.rdoSRate4 = new System.Windows.Forms.RadioButton();
-            this.rdoSRate3 = new System.Windows.Forms.RadioButton();
-            this.rdoSRate2 = new System.Windows.Forms.RadioButton();
-            this.rdoSRate1 = new System.Windows.Forms.RadioButton();
-            this.grpSMoney = new System.Windows.Forms.GroupBox();
-            this.lblSMoneyHigh = new System.Windows.Forms.Label();
-            this.txtSMoneyHigh = new System.Windows.Forms.TextBox();
-            this.lblSMoneyLow = new System.Windows.Forms.Label();
-            this.txtSMoneyLow = new System.Windows.Forms.TextBox();
-            this.rdoSMoney4 = new System.Windows.Forms.RadioButton();
-            this.rdoSMoney3 = new System.Windows.Forms.RadioButton();
-            this.rdoSMoney2 = new System.Windows.Forms.RadioButton();
-            this.rdoSMoney1 = new System.Windows.Forms.RadioButton();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.lblSRate = new System.Windows.Forms.Label();
-            this.lblSMoney = new System.Windows.Forms.Label();
-            this.lblSTime = new System.Windows.Forms.Label();
-            this.grpSTime = new System.Windows.Forms.GroupBox();
-            this.lblSTimeHigh = new System.Windows.Forms.Label();
-            this.txtSTimeHigh = new System.Windows.Forms.TextBox();
-            this.lblSTimeLow = new System.Windows.Forms.Label();
-            this.txtSTimeLow = new System.Windows.Forms.TextBox();
-            this.rdoSTime4 = new System.Windows.Forms.RadioButton();
-            this.rdoSTime3 = new System.Windows.Forms.RadioButton();
-            this.rdoSTime2 = new System.Windows.Forms.RadioButton();
-            this.rdoSTime1 = new System.Windows.Forms.RadioButton();
-            this.grpSort = new System.Windows.Forms.GroupBox();
-            this.rdoSortRate = new System.Windows.Forms.RadioButton();
-            this.rdoSortMoney = new System.Windows.Forms.RadioButton();
-            this.rdoSortTime = new System.Windows.Forms.RadioButton();
-            this.rdoSortDefault = new System.Windows.Forms.RadioButton();
-            this.grpSortMode = new System.Windows.Forms.GroupBox();
-            this.rdoSortDown = new System.Windows.Forms.RadioButton();
-            this.rdoSortUp = new System.Windows.Forms.RadioButton();
-            this.tapAnalyse = new System.Windows.Forms.TabPage();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.grvAnalyse = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mmuAnalyse = new System.Windows.Forms.MenuStrip();
-            this.mmuNew = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmuSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmuEmpty = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmuImport = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmuExport = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmuDiagram = new System.Windows.Forms.ToolStripMenuItem();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle196 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle197 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle198 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle199 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle200 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle201 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle202 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle203 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle204 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle205 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle206 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle207 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle208 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle209 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle210 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.picLogo2 = new System.Windows.Forms.PictureBox();
+            this.picLogo1 = new System.Windows.Forms.PictureBox();
+            this.tmrRushReflash = new System.Windows.Forms.Timer(this.components);
             this.tapRush = new System.Windows.Forms.TabPage();
             this.grvRush = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -157,10 +87,91 @@
             this.rdoRTime3 = new System.Windows.Forms.RadioButton();
             this.rdoRTime2 = new System.Windows.Forms.RadioButton();
             this.rdoRTime1 = new System.Windows.Forms.RadioButton();
-            this.picLogo2 = new System.Windows.Forms.PictureBox();
-            this.picLogo1 = new System.Windows.Forms.PictureBox();
-            this.tmrRushReflash = new System.Windows.Forms.Timer(this.components);
-            this.tabSelectModule.SuspendLayout();
+            this.tapAnalyse = new System.Windows.Forms.TabPage();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.grvAnalyse = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mmuAnalyse = new System.Windows.Forms.MenuStrip();
+            this.mmuNew = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmuSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmuEmpty = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmuImport = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmuExport = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmuDiagram = new System.Windows.Forms.ToolStripMenuItem();
+            this.tapSearch = new System.Windows.Forms.TabPage();
+            this.lblShowPg = new System.Windows.Forms.Label();
+            this.btnToRecord = new System.Windows.Forms.Button();
+            this.btnRateConfirm = new System.Windows.Forms.Button();
+            this.btnTimeConfirm = new System.Windows.Forms.Button();
+            this.btnPageDown = new System.Windows.Forms.Button();
+            this.btnPageUp = new System.Windows.Forms.Button();
+            this.grvSearch = new System.Windows.Forms.DataGridView();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.money = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inverst = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnRush = new System.Windows.Forms.Button();
+            this.btnMoneyConfirm = new System.Windows.Forms.Button();
+            this.lblSplit = new System.Windows.Forms.Label();
+            this.grpSRate = new System.Windows.Forms.GroupBox();
+            this.lblSRateHigh = new System.Windows.Forms.Label();
+            this.txtSRateHigh = new System.Windows.Forms.TextBox();
+            this.lblSRateLow = new System.Windows.Forms.Label();
+            this.txtSRateLow = new System.Windows.Forms.TextBox();
+            this.rdoSRate4 = new System.Windows.Forms.RadioButton();
+            this.rdoSRate3 = new System.Windows.Forms.RadioButton();
+            this.rdoSRate2 = new System.Windows.Forms.RadioButton();
+            this.rdoSRate1 = new System.Windows.Forms.RadioButton();
+            this.grpSMoney = new System.Windows.Forms.GroupBox();
+            this.lblSMoneyHigh = new System.Windows.Forms.Label();
+            this.txtSMoneyHigh = new System.Windows.Forms.TextBox();
+            this.lblSMoneyLow = new System.Windows.Forms.Label();
+            this.txtSMoneyLow = new System.Windows.Forms.TextBox();
+            this.rdoSMoney4 = new System.Windows.Forms.RadioButton();
+            this.rdoSMoney3 = new System.Windows.Forms.RadioButton();
+            this.rdoSMoney2 = new System.Windows.Forms.RadioButton();
+            this.rdoSMoney1 = new System.Windows.Forms.RadioButton();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.lblSRate = new System.Windows.Forms.Label();
+            this.lblSMoney = new System.Windows.Forms.Label();
+            this.lblSTime = new System.Windows.Forms.Label();
+            this.grpSTime = new System.Windows.Forms.GroupBox();
+            this.lblSTimeHigh = new System.Windows.Forms.Label();
+            this.txtSTimeHigh = new System.Windows.Forms.TextBox();
+            this.lblSTimeLow = new System.Windows.Forms.Label();
+            this.txtSTimeLow = new System.Windows.Forms.TextBox();
+            this.rdoSTime4 = new System.Windows.Forms.RadioButton();
+            this.rdoSTime3 = new System.Windows.Forms.RadioButton();
+            this.rdoSTime2 = new System.Windows.Forms.RadioButton();
+            this.rdoSTime1 = new System.Windows.Forms.RadioButton();
+            this.grpSort = new System.Windows.Forms.GroupBox();
+            this.rdoSortRate = new System.Windows.Forms.RadioButton();
+            this.rdoSortMoney = new System.Windows.Forms.RadioButton();
+            this.rdoSortTime = new System.Windows.Forms.RadioButton();
+            this.rdoSortDefault = new System.Windows.Forms.RadioButton();
+            this.grpSortMode = new System.Windows.Forms.GroupBox();
+            this.rdoSortDown = new System.Windows.Forms.RadioButton();
+            this.rdoSortUp = new System.Windows.Forms.RadioButton();
+            this.tabSelectModule = new System.Windows.Forms.TabControl();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).BeginInit();
+            this.tapRush.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grvRush)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            this.grpRMoney.SuspendLayout();
+            this.grpRTime.SuspendLayout();
+            this.tapAnalyse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grvAnalyse)).BeginInit();
+            this.mmuAnalyse.SuspendLayout();
             this.tapSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvSearch)).BeginInit();
             this.grpSRate.SuspendLayout();
@@ -168,44 +179,704 @@
             this.grpSTime.SuspendLayout();
             this.grpSort.SuspendLayout();
             this.grpSortMode.SuspendLayout();
-            this.tapAnalyse.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvAnalyse)).BeginInit();
-            this.mmuAnalyse.SuspendLayout();
-            this.tapRush.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvRush)).BeginInit();
-            this.groupBox6.SuspendLayout();
-            this.grpRMoney.SuspendLayout();
-            this.grpRTime.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).BeginInit();
+            this.tabSelectModule.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabSelectModule
+            // picLogo2
             // 
-            this.tabSelectModule.Controls.Add(this.tapSearch);
-            this.tabSelectModule.Controls.Add(this.tapAnalyse);
-            this.tabSelectModule.Controls.Add(this.tapRush);
-            this.tabSelectModule.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabSelectModule.Location = new System.Drawing.Point(0, 120);
-            this.tabSelectModule.Name = "tabSelectModule";
-            this.tabSelectModule.SelectedIndex = 0;
-            this.tabSelectModule.Size = new System.Drawing.Size(856, 600);
-            this.tabSelectModule.TabIndex = 1;
+            this.picLogo2.Image = global::VM.Properties.Resources.无标题1;
+            this.picLogo2.Location = new System.Drawing.Point(160, 24);
+            this.picLogo2.Name = "picLogo2";
+            this.picLogo2.Size = new System.Drawing.Size(640, 72);
+            this.picLogo2.TabIndex = 3;
+            this.picLogo2.TabStop = false;
+            // 
+            // picLogo1
+            // 
+            this.picLogo1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picLogo1.ErrorImage")));
+            this.picLogo1.Image = global::VM.Properties.Resources.无标题;
+            this.picLogo1.Location = new System.Drawing.Point(0, 0);
+            this.picLogo1.Name = "picLogo1";
+            this.picLogo1.Size = new System.Drawing.Size(136, 120);
+            this.picLogo1.TabIndex = 2;
+            this.picLogo1.TabStop = false;
+            // 
+            // tmrRushReflash
+            // 
+            this.tmrRushReflash.Interval = 10000;
+            this.tmrRushReflash.Tick += new System.EventHandler(this.tmrRushReflash_Tick);
+            // 
+            // tapRush
+            // 
+            this.tapRush.Controls.Add(this.grvRush);
+            this.tapRush.Controls.Add(this.btnRConfirm);
+            this.tapRush.Controls.Add(this.btnActionRush);
+            this.tapRush.Controls.Add(this.groupBox6);
+            this.tapRush.Controls.Add(this.grpRMoney);
+            this.tapRush.Controls.Add(this.lblRRate);
+            this.tapRush.Controls.Add(this.lblRMoney);
+            this.tapRush.Controls.Add(this.lblRTime);
+            this.tapRush.Controls.Add(this.grpRTime);
+            this.tapRush.Location = new System.Drawing.Point(4, 30);
+            this.tapRush.Name = "tapRush";
+            this.tapRush.Size = new System.Drawing.Size(848, 566);
+            this.tapRush.TabIndex = 2;
+            this.tapRush.Text = "抢购";
+            this.tapRush.UseVisualStyleBackColor = true;
+            // 
+            // grvRush
+            // 
+            dataGridViewCellStyle196.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            this.grvRush.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle196;
+            this.grvRush.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grvRush.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grvRush.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.grvRush.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            dataGridViewCellStyle197.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle197.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle197.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle197.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle197.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle197.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle197.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvRush.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle197;
+            this.grvRush.ColumnHeadersHeight = 30;
+            this.grvRush.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewButtonColumn1});
+            dataGridViewCellStyle198.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle198.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle198.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle198.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle198.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle198.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle198.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvRush.DefaultCellStyle = dataGridViewCellStyle198;
+            this.grvRush.Location = new System.Drawing.Point(8, 264);
+            this.grvRush.Name = "grvRush";
+            this.grvRush.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle199.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle199.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle199.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle199.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle199.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle199.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle199.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvRush.RowHeadersDefaultCellStyle = dataGridViewCellStyle199;
+            this.grvRush.RowHeadersVisible = false;
+            this.grvRush.RowHeadersWidth = 100;
+            dataGridViewCellStyle200.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grvRush.RowsDefaultCellStyle = dataGridViewCellStyle200;
+            this.grvRush.RowTemplate.Height = 23;
+            this.grvRush.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.grvRush.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.grvRush.Size = new System.Drawing.Size(832, 264);
+            this.grvRush.TabIndex = 22;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn7.HeaderText = "项目";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "time";
+            this.dataGridViewTextBoxColumn8.HeaderText = "投资期限";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "money";
+            this.dataGridViewTextBoxColumn9.HeaderText = "起投金额";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "rate";
+            this.dataGridViewTextBoxColumn10.HeaderText = "收益率";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.HeaderText = "投资";
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            // 
+            // btnRConfirm
+            // 
+            this.btnRConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRConfirm.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnRConfirm.Location = new System.Drawing.Point(768, 216);
+            this.btnRConfirm.Name = "btnRConfirm";
+            this.btnRConfirm.Size = new System.Drawing.Size(75, 32);
+            this.btnRConfirm.TabIndex = 19;
+            this.btnRConfirm.Text = "确定";
+            this.btnRConfirm.UseVisualStyleBackColor = true;
+            // 
+            // btnActionRush
+            // 
+            this.btnActionRush.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnActionRush.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnActionRush.Location = new System.Drawing.Point(328, 24);
+            this.btnActionRush.Name = "btnActionRush";
+            this.btnActionRush.Size = new System.Drawing.Size(136, 40);
+            this.btnActionRush.TabIndex = 18;
+            this.btnActionRush.Text = "开始抢购";
+            this.btnActionRush.UseVisualStyleBackColor = true;
+            this.btnActionRush.Click += new System.EventHandler(this.btnActionRush_Click);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.lblRRateHigh);
+            this.groupBox6.Controls.Add(this.txtRRateHigh);
+            this.groupBox6.Controls.Add(this.lblRRateLow);
+            this.groupBox6.Controls.Add(this.txtRRateLow);
+            this.groupBox6.Controls.Add(this.rdoRRate4);
+            this.groupBox6.Controls.Add(this.rdoRRate3);
+            this.groupBox6.Controls.Add(this.rdoRRate2);
+            this.groupBox6.Controls.Add(this.rdoRRate1);
+            this.groupBox6.Location = new System.Drawing.Point(144, 184);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(616, 48);
+            this.groupBox6.TabIndex = 17;
+            this.groupBox6.TabStop = false;
+            // 
+            // lblRRateHigh
+            // 
+            this.lblRRateHigh.AutoSize = true;
+            this.lblRRateHigh.Enabled = false;
+            this.lblRRateHigh.Location = new System.Drawing.Point(576, 24);
+            this.lblRRateHigh.Name = "lblRRateHigh";
+            this.lblRRateHigh.Size = new System.Drawing.Size(24, 21);
+            this.lblRRateHigh.TabIndex = 8;
+            this.lblRRateHigh.Text = "%";
+            // 
+            // txtRRateHigh
+            // 
+            this.txtRRateHigh.Enabled = false;
+            this.txtRRateHigh.Location = new System.Drawing.Point(504, 16);
+            this.txtRRateHigh.Name = "txtRRateHigh";
+            this.txtRRateHigh.Size = new System.Drawing.Size(56, 29);
+            this.txtRRateHigh.TabIndex = 7;
+            // 
+            // lblRRateLow
+            // 
+            this.lblRRateLow.AutoSize = true;
+            this.lblRRateLow.Enabled = false;
+            this.lblRRateLow.Location = new System.Drawing.Point(440, 24);
+            this.lblRRateLow.Name = "lblRRateLow";
+            this.lblRRateLow.Size = new System.Drawing.Size(36, 21);
+            this.lblRRateLow.TabIndex = 6;
+            this.lblRRateLow.Text = "%~";
+            // 
+            // txtRRateLow
+            // 
+            this.txtRRateLow.Enabled = false;
+            this.txtRRateLow.Location = new System.Drawing.Point(376, 16);
+            this.txtRRateLow.Name = "txtRRateLow";
+            this.txtRRateLow.Size = new System.Drawing.Size(64, 29);
+            this.txtRRateLow.TabIndex = 4;
+            // 
+            // rdoRRate4
+            // 
+            this.rdoRRate4.AutoSize = true;
+            this.rdoRRate4.Location = new System.Drawing.Point(320, 16);
+            this.rdoRRate4.Name = "rdoRRate4";
+            this.rdoRRate4.Size = new System.Drawing.Size(60, 25);
+            this.rdoRRate4.TabIndex = 3;
+            this.rdoRRate4.Tag = "1";
+            this.rdoRRate4.Text = "其它";
+            this.rdoRRate4.UseVisualStyleBackColor = true;
+            this.rdoRRate4.CheckedChanged += new System.EventHandler(this.rdoRRate4_CheckedChanged);
+            // 
+            // rdoRRate3
+            // 
+            this.rdoRRate3.AutoSize = true;
+            this.rdoRRate3.Location = new System.Drawing.Point(208, 16);
+            this.rdoRRate3.Name = "rdoRRate3";
+            this.rdoRRate3.Size = new System.Drawing.Size(92, 25);
+            this.rdoRRate3.TabIndex = 2;
+            this.rdoRRate3.Tag = "0";
+            this.rdoRRate3.Text = "10%以上";
+            this.rdoRRate3.UseVisualStyleBackColor = true;
+            this.rdoRRate3.CheckedChanged += new System.EventHandler(this.rdoRRate3_CheckedChanged);
+            // 
+            // rdoRRate2
+            // 
+            this.rdoRRate2.AutoSize = true;
+            this.rdoRRate2.Location = new System.Drawing.Point(104, 16);
+            this.rdoRRate2.Name = "rdoRRate2";
+            this.rdoRRate2.Size = new System.Drawing.Size(90, 25);
+            this.rdoRRate2.TabIndex = 1;
+            this.rdoRRate2.Tag = "0";
+            this.rdoRRate2.Text = "5%-10%";
+            this.rdoRRate2.UseVisualStyleBackColor = true;
+            this.rdoRRate2.CheckedChanged += new System.EventHandler(this.rdoRRate2_CheckedChanged);
+            // 
+            // rdoRRate1
+            // 
+            this.rdoRRate1.AutoSize = true;
+            this.rdoRRate1.Location = new System.Drawing.Point(0, 16);
+            this.rdoRRate1.Name = "rdoRRate1";
+            this.rdoRRate1.Size = new System.Drawing.Size(83, 25);
+            this.rdoRRate1.TabIndex = 0;
+            this.rdoRRate1.Tag = "0";
+            this.rdoRRate1.Text = "5%以下";
+            this.rdoRRate1.UseVisualStyleBackColor = true;
+            this.rdoRRate1.CheckedChanged += new System.EventHandler(this.rdoRRate1_CheckedChanged);
+            // 
+            // grpRMoney
+            // 
+            this.grpRMoney.Controls.Add(this.lblRMoneyHigh);
+            this.grpRMoney.Controls.Add(this.txtRMoneyHigh);
+            this.grpRMoney.Controls.Add(this.lblRMoneyLow);
+            this.grpRMoney.Controls.Add(this.txtRMoneyLow);
+            this.grpRMoney.Controls.Add(this.rdoRMoney4);
+            this.grpRMoney.Controls.Add(this.rdoRMoney3);
+            this.grpRMoney.Controls.Add(this.rdoRMoney2);
+            this.grpRMoney.Controls.Add(this.rdoRMoney1);
+            this.grpRMoney.Location = new System.Drawing.Point(144, 136);
+            this.grpRMoney.Name = "grpRMoney";
+            this.grpRMoney.Size = new System.Drawing.Size(616, 56);
+            this.grpRMoney.TabIndex = 16;
+            this.grpRMoney.TabStop = false;
+            // 
+            // lblRMoneyHigh
+            // 
+            this.lblRMoneyHigh.AutoSize = true;
+            this.lblRMoneyHigh.Enabled = false;
+            this.lblRMoneyHigh.Location = new System.Drawing.Point(576, 24);
+            this.lblRMoneyHigh.Name = "lblRMoneyHigh";
+            this.lblRMoneyHigh.Size = new System.Drawing.Size(26, 21);
+            this.lblRMoneyHigh.TabIndex = 8;
+            this.lblRMoneyHigh.Text = "万";
+            // 
+            // txtRMoneyHigh
+            // 
+            this.txtRMoneyHigh.Enabled = false;
+            this.txtRMoneyHigh.Location = new System.Drawing.Point(504, 16);
+            this.txtRMoneyHigh.Name = "txtRMoneyHigh";
+            this.txtRMoneyHigh.Size = new System.Drawing.Size(56, 29);
+            this.txtRMoneyHigh.TabIndex = 7;
+            // 
+            // lblRMoneyLow
+            // 
+            this.lblRMoneyLow.AutoSize = true;
+            this.lblRMoneyLow.Enabled = false;
+            this.lblRMoneyLow.Location = new System.Drawing.Point(440, 24);
+            this.lblRMoneyLow.Name = "lblRMoneyLow";
+            this.lblRMoneyLow.Size = new System.Drawing.Size(38, 21);
+            this.lblRMoneyLow.TabIndex = 6;
+            this.lblRMoneyLow.Text = "万~";
+            // 
+            // txtRMoneyLow
+            // 
+            this.txtRMoneyLow.Location = new System.Drawing.Point(376, 16);
+            this.txtRMoneyLow.Name = "txtRMoneyLow";
+            this.txtRMoneyLow.Size = new System.Drawing.Size(64, 29);
+            this.txtRMoneyLow.TabIndex = 4;
+            // 
+            // rdoRMoney4
+            // 
+            this.rdoRMoney4.AutoSize = true;
+            this.rdoRMoney4.Location = new System.Drawing.Point(320, 16);
+            this.rdoRMoney4.Name = "rdoRMoney4";
+            this.rdoRMoney4.Size = new System.Drawing.Size(60, 25);
+            this.rdoRMoney4.TabIndex = 3;
+            this.rdoRMoney4.Tag = "1";
+            this.rdoRMoney4.Text = "其它";
+            this.rdoRMoney4.UseVisualStyleBackColor = true;
+            this.rdoRMoney4.CheckedChanged += new System.EventHandler(this.rdoRMoney4_CheckedChanged);
+            // 
+            // rdoRMoney3
+            // 
+            this.rdoRMoney3.AutoSize = true;
+            this.rdoRMoney3.Location = new System.Drawing.Point(208, 16);
+            this.rdoRMoney3.Name = "rdoRMoney3";
+            this.rdoRMoney3.Size = new System.Drawing.Size(78, 25);
+            this.rdoRMoney3.TabIndex = 2;
+            this.rdoRMoney3.Tag = "0";
+            this.rdoRMoney3.Text = "5-10万";
+            this.rdoRMoney3.UseVisualStyleBackColor = true;
+            this.rdoRMoney3.CheckedChanged += new System.EventHandler(this.rdoRMoney3_CheckedChanged);
+            // 
+            // rdoRMoney2
+            // 
+            this.rdoRMoney2.AutoSize = true;
+            this.rdoRMoney2.Location = new System.Drawing.Point(96, 16);
+            this.rdoRMoney2.Name = "rdoRMoney2";
+            this.rdoRMoney2.Size = new System.Drawing.Size(69, 25);
+            this.rdoRMoney2.TabIndex = 1;
+            this.rdoRMoney2.Tag = "0";
+            this.rdoRMoney2.Text = "1-5万";
+            this.rdoRMoney2.UseVisualStyleBackColor = true;
+            this.rdoRMoney2.CheckedChanged += new System.EventHandler(this.rdoRMoney2_CheckedChanged);
+            // 
+            // rdoRMoney1
+            // 
+            this.rdoRMoney1.AutoSize = true;
+            this.rdoRMoney1.Location = new System.Drawing.Point(0, 16);
+            this.rdoRMoney1.Name = "rdoRMoney1";
+            this.rdoRMoney1.Size = new System.Drawing.Size(85, 25);
+            this.rdoRMoney1.TabIndex = 0;
+            this.rdoRMoney1.Tag = "0";
+            this.rdoRMoney1.Text = "1万以下";
+            this.rdoRMoney1.UseVisualStyleBackColor = true;
+            this.rdoRMoney1.CheckedChanged += new System.EventHandler(this.rdoRMoney1_CheckedChanged);
+            // 
+            // lblRRate
+            // 
+            this.lblRRate.AutoSize = true;
+            this.lblRRate.Enabled = false;
+            this.lblRRate.Location = new System.Drawing.Point(64, 200);
+            this.lblRRate.Name = "lblRRate";
+            this.lblRRate.Size = new System.Drawing.Size(58, 21);
+            this.lblRRate.TabIndex = 13;
+            this.lblRRate.Text = "收益率";
+            // 
+            // lblRMoney
+            // 
+            this.lblRMoney.AutoSize = true;
+            this.lblRMoney.Enabled = false;
+            this.lblRMoney.Location = new System.Drawing.Point(64, 160);
+            this.lblRMoney.Name = "lblRMoney";
+            this.lblRMoney.Size = new System.Drawing.Size(74, 21);
+            this.lblRMoney.TabIndex = 12;
+            this.lblRMoney.Text = "起投金额";
+            // 
+            // lblRTime
+            // 
+            this.lblRTime.AutoSize = true;
+            this.lblRTime.Enabled = false;
+            this.lblRTime.Location = new System.Drawing.Point(64, 104);
+            this.lblRTime.Name = "lblRTime";
+            this.lblRTime.Size = new System.Drawing.Size(74, 21);
+            this.lblRTime.TabIndex = 11;
+            this.lblRTime.Text = "投资期限";
+            // 
+            // grpRTime
+            // 
+            this.grpRTime.Controls.Add(this.lblRTimeHigh);
+            this.grpRTime.Controls.Add(this.txtRTimeHigh);
+            this.grpRTime.Controls.Add(this.lblRTimeLow);
+            this.grpRTime.Controls.Add(this.txtRTimeLow);
+            this.grpRTime.Controls.Add(this.rdoRTime4);
+            this.grpRTime.Controls.Add(this.rdoRTime3);
+            this.grpRTime.Controls.Add(this.rdoRTime2);
+            this.grpRTime.Controls.Add(this.rdoRTime1);
+            this.grpRTime.Location = new System.Drawing.Point(144, 88);
+            this.grpRTime.Name = "grpRTime";
+            this.grpRTime.Size = new System.Drawing.Size(616, 48);
+            this.grpRTime.TabIndex = 15;
+            this.grpRTime.TabStop = false;
+            // 
+            // lblRTimeHigh
+            // 
+            this.lblRTimeHigh.AutoSize = true;
+            this.lblRTimeHigh.Enabled = false;
+            this.lblRTimeHigh.Location = new System.Drawing.Point(576, 24);
+            this.lblRTimeHigh.Name = "lblRTimeHigh";
+            this.lblRTimeHigh.Size = new System.Drawing.Size(42, 21);
+            this.lblRTimeHigh.TabIndex = 8;
+            this.lblRTimeHigh.Text = "个月";
+            // 
+            // txtRTimeHigh
+            // 
+            this.txtRTimeHigh.Enabled = false;
+            this.txtRTimeHigh.Location = new System.Drawing.Point(504, 16);
+            this.txtRTimeHigh.Name = "txtRTimeHigh";
+            this.txtRTimeHigh.Size = new System.Drawing.Size(56, 29);
+            this.txtRTimeHigh.TabIndex = 7;
+            // 
+            // lblRTimeLow
+            // 
+            this.lblRTimeLow.AutoSize = true;
+            this.lblRTimeLow.Enabled = false;
+            this.lblRTimeLow.Location = new System.Drawing.Point(440, 24);
+            this.lblRTimeLow.Name = "lblRTimeLow";
+            this.lblRTimeLow.Size = new System.Drawing.Size(54, 21);
+            this.lblRTimeLow.TabIndex = 6;
+            this.lblRTimeLow.Text = "个月~";
+            // 
+            // txtRTimeLow
+            // 
+            this.txtRTimeLow.Enabled = false;
+            this.txtRTimeLow.Location = new System.Drawing.Point(376, 16);
+            this.txtRTimeLow.Name = "txtRTimeLow";
+            this.txtRTimeLow.Size = new System.Drawing.Size(64, 29);
+            this.txtRTimeLow.TabIndex = 4;
+            // 
+            // rdoRTime4
+            // 
+            this.rdoRTime4.AutoSize = true;
+            this.rdoRTime4.Location = new System.Drawing.Point(320, 16);
+            this.rdoRTime4.Name = "rdoRTime4";
+            this.rdoRTime4.Size = new System.Drawing.Size(60, 25);
+            this.rdoRTime4.TabIndex = 3;
+            this.rdoRTime4.Tag = "1";
+            this.rdoRTime4.Text = "其它";
+            this.rdoRTime4.UseVisualStyleBackColor = true;
+            this.rdoRTime4.CheckedChanged += new System.EventHandler(this.rdoRTime4_CheckedChanged);
+            // 
+            // rdoRTime3
+            // 
+            this.rdoRTime3.AutoSize = true;
+            this.rdoRTime3.Location = new System.Drawing.Point(208, 16);
+            this.rdoRTime3.Name = "rdoRTime3";
+            this.rdoRTime3.Size = new System.Drawing.Size(110, 25);
+            this.rdoRTime3.TabIndex = 2;
+            this.rdoRTime3.Tag = "0";
+            this.rdoRTime3.Text = "12个月以上";
+            this.rdoRTime3.UseVisualStyleBackColor = true;
+            this.rdoRTime3.CheckedChanged += new System.EventHandler(this.rdoRTime3_CheckedChanged);
+            // 
+            // rdoRTime2
+            // 
+            this.rdoRTime2.AutoSize = true;
+            this.rdoRTime2.Location = new System.Drawing.Point(104, 16);
+            this.rdoRTime2.Name = "rdoRTime2";
+            this.rdoRTime2.Size = new System.Drawing.Size(94, 25);
+            this.rdoRTime2.TabIndex = 1;
+            this.rdoRTime2.Tag = "0";
+            this.rdoRTime2.Text = "6-12个月";
+            this.rdoRTime2.UseVisualStyleBackColor = true;
+            this.rdoRTime2.CheckedChanged += new System.EventHandler(this.rdoRTime2_CheckedChanged);
+            // 
+            // rdoRTime1
+            // 
+            this.rdoRTime1.AutoSize = true;
+            this.rdoRTime1.Location = new System.Drawing.Point(0, 16);
+            this.rdoRTime1.Name = "rdoRTime1";
+            this.rdoRTime1.Size = new System.Drawing.Size(101, 25);
+            this.rdoRTime1.TabIndex = 0;
+            this.rdoRTime1.Tag = "0";
+            this.rdoRTime1.Text = "6个月以下";
+            this.rdoRTime1.UseVisualStyleBackColor = true;
+            this.rdoRTime1.CheckedChanged += new System.EventHandler(this.rdoRTime1_CheckedChanged);
+            // 
+            // tapAnalyse
+            // 
+            this.tapAnalyse.Controls.Add(this.btnDelete);
+            this.tapAnalyse.Controls.Add(this.btnAdd);
+            this.tapAnalyse.Controls.Add(this.grvAnalyse);
+            this.tapAnalyse.Controls.Add(this.mmuAnalyse);
+            this.tapAnalyse.Location = new System.Drawing.Point(4, 30);
+            this.tapAnalyse.Name = "tapAnalyse";
+            this.tapAnalyse.Padding = new System.Windows.Forms.Padding(3);
+            this.tapAnalyse.Size = new System.Drawing.Size(848, 566);
+            this.tapAnalyse.TabIndex = 1;
+            this.tapAnalyse.Text = "统计分析";
+            this.tapAnalyse.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnDelete.Location = new System.Drawing.Point(728, 512);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 32);
+            this.btnDelete.TabIndex = 19;
+            this.btnDelete.Text = "删除";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnAdd.Location = new System.Drawing.Point(632, 512);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 32);
+            this.btnAdd.TabIndex = 18;
+            this.btnAdd.Text = "增加";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // grvAnalyse
+            // 
+            this.grvAnalyse.AllowUserToAddRows = false;
+            this.grvAnalyse.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle201.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            this.grvAnalyse.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle201;
+            this.grvAnalyse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grvAnalyse.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grvAnalyse.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.grvAnalyse.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            dataGridViewCellStyle202.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle202.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle202.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle202.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle202.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle202.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle202.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvAnalyse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle202;
+            this.grvAnalyse.ColumnHeadersHeight = 30;
+            this.grvAnalyse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.dataGridViewTextBoxColumn5,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.dataGridViewTextBoxColumn6});
+            dataGridViewCellStyle203.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle203.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle203.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle203.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle203.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle203.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle203.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvAnalyse.DefaultCellStyle = dataGridViewCellStyle203;
+            this.grvAnalyse.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.grvAnalyse.Location = new System.Drawing.Point(0, 40);
+            this.grvAnalyse.Name = "grvAnalyse";
+            this.grvAnalyse.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle204.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle204.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle204.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle204.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle204.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle204.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle204.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvAnalyse.RowHeadersDefaultCellStyle = dataGridViewCellStyle204;
+            this.grvAnalyse.RowHeadersVisible = false;
+            this.grvAnalyse.RowHeadersWidth = 100;
+            dataGridViewCellStyle205.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grvAnalyse.RowsDefaultCellStyle = dataGridViewCellStyle205;
+            this.grvAnalyse.RowTemplate.Height = 23;
+            this.grvAnalyse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.grvAnalyse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grvAnalyse.Size = new System.Drawing.Size(840, 464);
+            this.grvAnalyse.TabIndex = 17;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "时间";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "类型";
+            this.Column2.Name = "Column2";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.HeaderText = "项目";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "投资";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "提现";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "项目当前余额";
+            this.Column5.Name = "Column5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.HeaderText = "盈利情况";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // mmuAnalyse
+            // 
+            this.mmuAnalyse.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.mmuAnalyse.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mmuNew,
+            this.mmuSave,
+            this.mmuEmpty,
+            this.mmuImport,
+            this.mmuExport,
+            this.mmuDiagram});
+            this.mmuAnalyse.Location = new System.Drawing.Point(3, 3);
+            this.mmuAnalyse.Name = "mmuAnalyse";
+            this.mmuAnalyse.Size = new System.Drawing.Size(842, 29);
+            this.mmuAnalyse.TabIndex = 0;
+            this.mmuAnalyse.Text = "menuStrip1";
+            // 
+            // mmuNew
+            // 
+            this.mmuNew.Name = "mmuNew";
+            this.mmuNew.Size = new System.Drawing.Size(54, 25);
+            this.mmuNew.Text = "新建";
+            this.mmuNew.Click += new System.EventHandler(this.mmuNew_Click);
+            // 
+            // mmuSave
+            // 
+            this.mmuSave.Name = "mmuSave";
+            this.mmuSave.Size = new System.Drawing.Size(54, 25);
+            this.mmuSave.Text = "保存";
+            this.mmuSave.Click += new System.EventHandler(this.mmuSave_Click);
+            // 
+            // mmuEmpty
+            // 
+            this.mmuEmpty.Name = "mmuEmpty";
+            this.mmuEmpty.Size = new System.Drawing.Size(54, 25);
+            this.mmuEmpty.Text = "清空";
+            this.mmuEmpty.Click += new System.EventHandler(this.mmuEmpty_Click);
+            // 
+            // mmuImport
+            // 
+            this.mmuImport.Name = "mmuImport";
+            this.mmuImport.Size = new System.Drawing.Size(54, 25);
+            this.mmuImport.Text = "导入";
+            this.mmuImport.Click += new System.EventHandler(this.mmuImport_Click);
+            // 
+            // mmuExport
+            // 
+            this.mmuExport.Name = "mmuExport";
+            this.mmuExport.Size = new System.Drawing.Size(54, 25);
+            this.mmuExport.Text = "导出";
+            this.mmuExport.Click += new System.EventHandler(this.mmuExport_Click);
+            // 
+            // mmuDiagram
+            // 
+            this.mmuDiagram.Name = "mmuDiagram";
+            this.mmuDiagram.Size = new System.Drawing.Size(86, 25);
+            this.mmuDiagram.Text = "统计分析";
+            this.mmuDiagram.Click += new System.EventHandler(this.mmuDiagram_Click);
             // 
             // tapSearch
             // 
+            this.tapSearch.Controls.Add(this.lblShowPg);
+            this.tapSearch.Controls.Add(this.btnToRecord);
             this.tapSearch.Controls.Add(this.btnRateConfirm);
             this.tapSearch.Controls.Add(this.btnTimeConfirm);
             this.tapSearch.Controls.Add(this.btnPageDown);
             this.tapSearch.Controls.Add(this.btnPageUp);
             this.tapSearch.Controls.Add(this.grvSearch);
+            this.tapSearch.Controls.Add(this.txtSearch);
             this.tapSearch.Controls.Add(this.btnRush);
             this.tapSearch.Controls.Add(this.btnMoneyConfirm);
             this.tapSearch.Controls.Add(this.lblSplit);
             this.tapSearch.Controls.Add(this.grpSRate);
             this.tapSearch.Controls.Add(this.grpSMoney);
             this.tapSearch.Controls.Add(this.btnSearch);
-            this.tapSearch.Controls.Add(this.txtSearch);
             this.tapSearch.Controls.Add(this.lblSRate);
             this.tapSearch.Controls.Add(this.lblSMoney);
             this.tapSearch.Controls.Add(this.lblSTime);
@@ -220,6 +891,26 @@
             this.tapSearch.TabIndex = 0;
             this.tapSearch.Text = "搜索查询";
             this.tapSearch.UseVisualStyleBackColor = true;
+            // 
+            // lblShowPg
+            // 
+            this.lblShowPg.AutoSize = true;
+            this.lblShowPg.Enabled = false;
+            this.lblShowPg.Location = new System.Drawing.Point(16, 520);
+            this.lblShowPg.Name = "lblShowPg";
+            this.lblShowPg.Size = new System.Drawing.Size(55, 21);
+            this.lblShowPg.TabIndex = 28;
+            this.lblShowPg.Text = "label1";
+            // 
+            // btnToRecord
+            // 
+            this.btnToRecord.Location = new System.Drawing.Point(552, 512);
+            this.btnToRecord.Name = "btnToRecord";
+            this.btnToRecord.Size = new System.Drawing.Size(96, 32);
+            this.btnToRecord.TabIndex = 27;
+            this.btnToRecord.Text = "加到记录";
+            this.btnToRecord.UseVisualStyleBackColor = true;
+            this.btnToRecord.Click += new System.EventHandler(this.btnToRecord_Click);
             // 
             // btnRateConfirm
             // 
@@ -244,7 +935,7 @@
             // 
             // btnPageDown
             // 
-            this.btnPageDown.Location = new System.Drawing.Point(680, 512);
+            this.btnPageDown.Location = new System.Drawing.Point(752, 512);
             this.btnPageDown.Name = "btnPageDown";
             this.btnPageDown.Size = new System.Drawing.Size(75, 32);
             this.btnPageDown.TabIndex = 18;
@@ -254,7 +945,7 @@
             // 
             // btnPageUp
             // 
-            this.btnPageUp.Location = new System.Drawing.Point(592, 512);
+            this.btnPageUp.Location = new System.Drawing.Point(664, 512);
             this.btnPageUp.Name = "btnPageUp";
             this.btnPageUp.Size = new System.Drawing.Size(75, 32);
             this.btnPageUp.TabIndex = 17;
@@ -267,20 +958,20 @@
             this.grvSearch.AllowUserToDeleteRows = false;
             this.grvSearch.AllowUserToResizeColumns = false;
             this.grvSearch.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            this.grvSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle206.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            this.grvSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle206;
             this.grvSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grvSearch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grvSearch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grvSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle207.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle207.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle207.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle207.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle207.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle207.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle207.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle207;
             this.grvSearch.ColumnHeadersHeight = 30;
             this.grvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.grvSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -289,37 +980,36 @@
             this.money,
             this.rate,
             this.inverst});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvSearch.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle208.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle208.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle208.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle208.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle208.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle208.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle208.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvSearch.DefaultCellStyle = dataGridViewCellStyle208;
             this.grvSearch.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.grvSearch.Location = new System.Drawing.Point(8, 232);
             this.grvSearch.Name = "grvSearch";
             this.grvSearch.ReadOnly = true;
             this.grvSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle209.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle209.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle209.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle209.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle209.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle209.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle209.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle209;
             this.grvSearch.RowHeadersVisible = false;
             this.grvSearch.RowHeadersWidth = 100;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grvSearch.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle210.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grvSearch.RowsDefaultCellStyle = dataGridViewCellStyle210;
             this.grvSearch.RowTemplate.Height = 23;
             this.grvSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.grvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grvSearch.Size = new System.Drawing.Size(832, 264);
             this.grvSearch.TabIndex = 16;
-            this.grvSearch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvSearch_CellClick);
             this.grvSearch.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grvSearch_CellMouseClick);
             // 
             // name
@@ -363,6 +1053,13 @@
             this.inverst.HeaderText = "投资";
             this.inverst.Name = "inverst";
             this.inverst.ReadOnly = true;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(544, 8);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(208, 29);
+            this.txtSearch.TabIndex = 3;
             // 
             // btnRush
             // 
@@ -606,13 +1303,6 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(544, 8);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(208, 29);
-            this.txtSearch.TabIndex = 3;
-            // 
             // lblSRate
             // 
             this.lblSRate.AutoSize = true;
@@ -838,655 +1528,17 @@
             this.rdoSortUp.UseVisualStyleBackColor = true;
             this.rdoSortUp.CheckedChanged += new System.EventHandler(this.rdoSortUp_CheckedChanged);
             // 
-            // tapAnalyse
-            // 
-            this.tapAnalyse.Controls.Add(this.btnDelete);
-            this.tapAnalyse.Controls.Add(this.btnAdd);
-            this.tapAnalyse.Controls.Add(this.grvAnalyse);
-            this.tapAnalyse.Controls.Add(this.mmuAnalyse);
-            this.tapAnalyse.Location = new System.Drawing.Point(4, 30);
-            this.tapAnalyse.Name = "tapAnalyse";
-            this.tapAnalyse.Padding = new System.Windows.Forms.Padding(3);
-            this.tapAnalyse.Size = new System.Drawing.Size(848, 566);
-            this.tapAnalyse.TabIndex = 1;
-            this.tapAnalyse.Text = "统计分析";
-            this.tapAnalyse.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDelete.Location = new System.Drawing.Point(728, 512);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 32);
-            this.btnDelete.TabIndex = 19;
-            this.btnDelete.Text = "删除";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnAdd.Location = new System.Drawing.Point(632, 512);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 32);
-            this.btnAdd.TabIndex = 18;
-            this.btnAdd.Text = "增加";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // grvAnalyse
-            // 
-            this.grvAnalyse.AllowUserToAddRows = false;
-            this.grvAnalyse.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            this.grvAnalyse.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.grvAnalyse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grvAnalyse.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.grvAnalyse.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.grvAnalyse.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvAnalyse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.grvAnalyse.ColumnHeadersHeight = 30;
-            this.grvAnalyse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.dataGridViewTextBoxColumn5,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.dataGridViewTextBoxColumn6});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvAnalyse.DefaultCellStyle = dataGridViewCellStyle8;
-            this.grvAnalyse.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.grvAnalyse.Location = new System.Drawing.Point(0, 40);
-            this.grvAnalyse.Name = "grvAnalyse";
-            this.grvAnalyse.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvAnalyse.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.grvAnalyse.RowHeadersVisible = false;
-            this.grvAnalyse.RowHeadersWidth = 100;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grvAnalyse.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.grvAnalyse.RowTemplate.Height = 23;
-            this.grvAnalyse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.grvAnalyse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvAnalyse.Size = new System.Drawing.Size(840, 464);
-            this.grvAnalyse.TabIndex = 17;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "时间";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "类型";
-            this.Column2.Name = "Column2";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.HeaderText = "项目";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "投资";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "提现";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "项目当前余额";
-            this.Column5.Name = "Column5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.HeaderText = "盈利情况";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // mmuAnalyse
-            // 
-            this.mmuAnalyse.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.mmuAnalyse.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mmuNew,
-            this.mmuSave,
-            this.mmuEmpty,
-            this.mmuImport,
-            this.mmuExport,
-            this.mmuDiagram});
-            this.mmuAnalyse.Location = new System.Drawing.Point(3, 3);
-            this.mmuAnalyse.Name = "mmuAnalyse";
-            this.mmuAnalyse.Size = new System.Drawing.Size(842, 29);
-            this.mmuAnalyse.TabIndex = 0;
-            this.mmuAnalyse.Text = "menuStrip1";
-            // 
-            // mmuNew
-            // 
-            this.mmuNew.Name = "mmuNew";
-            this.mmuNew.Size = new System.Drawing.Size(54, 25);
-            this.mmuNew.Text = "新建";
-            this.mmuNew.Click += new System.EventHandler(this.mmuNew_Click);
-            // 
-            // mmuSave
-            // 
-            this.mmuSave.Name = "mmuSave";
-            this.mmuSave.Size = new System.Drawing.Size(54, 25);
-            this.mmuSave.Text = "保存";
-            this.mmuSave.Click += new System.EventHandler(this.mmuSave_Click);
-            // 
-            // mmuEmpty
-            // 
-            this.mmuEmpty.Name = "mmuEmpty";
-            this.mmuEmpty.Size = new System.Drawing.Size(54, 25);
-            this.mmuEmpty.Text = "清空";
-            this.mmuEmpty.Click += new System.EventHandler(this.mmuEmpty_Click);
-            // 
-            // mmuImport
-            // 
-            this.mmuImport.Name = "mmuImport";
-            this.mmuImport.Size = new System.Drawing.Size(54, 25);
-            this.mmuImport.Text = "导入";
-            this.mmuImport.Click += new System.EventHandler(this.mmuImport_Click);
-            // 
-            // mmuExport
-            // 
-            this.mmuExport.Name = "mmuExport";
-            this.mmuExport.Size = new System.Drawing.Size(54, 25);
-            this.mmuExport.Text = "导出";
-            this.mmuExport.Click += new System.EventHandler(this.mmuExport_Click);
-            // 
-            // mmuDiagram
-            // 
-            this.mmuDiagram.Name = "mmuDiagram";
-            this.mmuDiagram.Size = new System.Drawing.Size(86, 25);
-            this.mmuDiagram.Text = "统计分析";
-            this.mmuDiagram.Click += new System.EventHandler(this.mmuDiagram_Click);
-            // 
-            // tapRush
-            // 
-            this.tapRush.Controls.Add(this.grvRush);
-            this.tapRush.Controls.Add(this.btnRConfirm);
-            this.tapRush.Controls.Add(this.btnActionRush);
-            this.tapRush.Controls.Add(this.groupBox6);
-            this.tapRush.Controls.Add(this.grpRMoney);
-            this.tapRush.Controls.Add(this.lblRRate);
-            this.tapRush.Controls.Add(this.lblRMoney);
-            this.tapRush.Controls.Add(this.lblRTime);
-            this.tapRush.Controls.Add(this.grpRTime);
-            this.tapRush.Location = new System.Drawing.Point(4, 30);
-            this.tapRush.Name = "tapRush";
-            this.tapRush.Size = new System.Drawing.Size(848, 566);
-            this.tapRush.TabIndex = 2;
-            this.tapRush.Text = "抢购";
-            this.tapRush.UseVisualStyleBackColor = true;
-            // 
-            // grvRush
-            // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            this.grvRush.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
-            this.grvRush.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grvRush.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.grvRush.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.grvRush.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvRush.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.grvRush.ColumnHeadersHeight = 30;
-            this.grvRush.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewButtonColumn1});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvRush.DefaultCellStyle = dataGridViewCellStyle13;
-            this.grvRush.Location = new System.Drawing.Point(8, 264);
-            this.grvRush.Name = "grvRush";
-            this.grvRush.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvRush.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            this.grvRush.RowHeadersVisible = false;
-            this.grvRush.RowHeadersWidth = 100;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grvRush.RowsDefaultCellStyle = dataGridViewCellStyle15;
-            this.grvRush.RowTemplate.Height = 23;
-            this.grvRush.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.grvRush.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grvRush.Size = new System.Drawing.Size(832, 264);
-            this.grvRush.TabIndex = 22;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn7.HeaderText = "项目";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "time";
-            this.dataGridViewTextBoxColumn8.HeaderText = "投资期限";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "money";
-            this.dataGridViewTextBoxColumn9.HeaderText = "起投金额";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "rate";
-            this.dataGridViewTextBoxColumn10.HeaderText = "收益率";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            this.dataGridViewButtonColumn1.HeaderText = "投资";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            // 
-            // btnRConfirm
-            // 
-            this.btnRConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRConfirm.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnRConfirm.Location = new System.Drawing.Point(768, 216);
-            this.btnRConfirm.Name = "btnRConfirm";
-            this.btnRConfirm.Size = new System.Drawing.Size(75, 32);
-            this.btnRConfirm.TabIndex = 19;
-            this.btnRConfirm.Text = "确定";
-            this.btnRConfirm.UseVisualStyleBackColor = true;
-            // 
-            // btnActionRush
-            // 
-            this.btnActionRush.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnActionRush.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnActionRush.Location = new System.Drawing.Point(328, 24);
-            this.btnActionRush.Name = "btnActionRush";
-            this.btnActionRush.Size = new System.Drawing.Size(136, 40);
-            this.btnActionRush.TabIndex = 18;
-            this.btnActionRush.Text = "开始抢购";
-            this.btnActionRush.UseVisualStyleBackColor = true;
-            this.btnActionRush.Click += new System.EventHandler(this.btnActionRush_Click);
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.lblRRateHigh);
-            this.groupBox6.Controls.Add(this.txtRRateHigh);
-            this.groupBox6.Controls.Add(this.lblRRateLow);
-            this.groupBox6.Controls.Add(this.txtRRateLow);
-            this.groupBox6.Controls.Add(this.rdoRRate4);
-            this.groupBox6.Controls.Add(this.rdoRRate3);
-            this.groupBox6.Controls.Add(this.rdoRRate2);
-            this.groupBox6.Controls.Add(this.rdoRRate1);
-            this.groupBox6.Location = new System.Drawing.Point(144, 184);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(616, 48);
-            this.groupBox6.TabIndex = 17;
-            this.groupBox6.TabStop = false;
-            // 
-            // lblRRateHigh
-            // 
-            this.lblRRateHigh.AutoSize = true;
-            this.lblRRateHigh.Enabled = false;
-            this.lblRRateHigh.Location = new System.Drawing.Point(576, 24);
-            this.lblRRateHigh.Name = "lblRRateHigh";
-            this.lblRRateHigh.Size = new System.Drawing.Size(24, 21);
-            this.lblRRateHigh.TabIndex = 8;
-            this.lblRRateHigh.Text = "%";
-            // 
-            // txtRRateHigh
-            // 
-            this.txtRRateHigh.Location = new System.Drawing.Point(504, 16);
-            this.txtRRateHigh.Name = "txtRRateHigh";
-            this.txtRRateHigh.Size = new System.Drawing.Size(56, 29);
-            this.txtRRateHigh.TabIndex = 7;
-            // 
-            // lblRRateLow
-            // 
-            this.lblRRateLow.AutoSize = true;
-            this.lblRRateLow.Enabled = false;
-            this.lblRRateLow.Location = new System.Drawing.Point(440, 24);
-            this.lblRRateLow.Name = "lblRRateLow";
-            this.lblRRateLow.Size = new System.Drawing.Size(36, 21);
-            this.lblRRateLow.TabIndex = 6;
-            this.lblRRateLow.Text = "%~";
-            // 
-            // txtRRateLow
-            // 
-            this.txtRRateLow.Location = new System.Drawing.Point(376, 16);
-            this.txtRRateLow.Name = "txtRRateLow";
-            this.txtRRateLow.Size = new System.Drawing.Size(64, 29);
-            this.txtRRateLow.TabIndex = 4;
-            // 
-            // rdoRRate4
-            // 
-            this.rdoRRate4.AutoSize = true;
-            this.rdoRRate4.Location = new System.Drawing.Point(320, 16);
-            this.rdoRRate4.Name = "rdoRRate4";
-            this.rdoRRate4.Size = new System.Drawing.Size(60, 25);
-            this.rdoRRate4.TabIndex = 3;
-            this.rdoRRate4.Text = "其它";
-            this.rdoRRate4.UseVisualStyleBackColor = true;
-            // 
-            // rdoRRate3
-            // 
-            this.rdoRRate3.AutoSize = true;
-            this.rdoRRate3.Location = new System.Drawing.Point(208, 16);
-            this.rdoRRate3.Name = "rdoRRate3";
-            this.rdoRRate3.Size = new System.Drawing.Size(92, 25);
-            this.rdoRRate3.TabIndex = 2;
-            this.rdoRRate3.Text = "10%以上";
-            this.rdoRRate3.UseVisualStyleBackColor = true;
-            // 
-            // rdoRRate2
-            // 
-            this.rdoRRate2.AutoSize = true;
-            this.rdoRRate2.Location = new System.Drawing.Point(104, 16);
-            this.rdoRRate2.Name = "rdoRRate2";
-            this.rdoRRate2.Size = new System.Drawing.Size(90, 25);
-            this.rdoRRate2.TabIndex = 1;
-            this.rdoRRate2.Text = "5%-10%";
-            this.rdoRRate2.UseVisualStyleBackColor = true;
-            // 
-            // rdoRRate1
-            // 
-            this.rdoRRate1.AutoSize = true;
-            this.rdoRRate1.Location = new System.Drawing.Point(0, 16);
-            this.rdoRRate1.Name = "rdoRRate1";
-            this.rdoRRate1.Size = new System.Drawing.Size(83, 25);
-            this.rdoRRate1.TabIndex = 0;
-            this.rdoRRate1.Text = "5%以下";
-            this.rdoRRate1.UseVisualStyleBackColor = true;
-            // 
-            // grpRMoney
-            // 
-            this.grpRMoney.Controls.Add(this.lblRMoneyHigh);
-            this.grpRMoney.Controls.Add(this.txtRMoneyHigh);
-            this.grpRMoney.Controls.Add(this.lblRMoneyLow);
-            this.grpRMoney.Controls.Add(this.txtRMoneyLow);
-            this.grpRMoney.Controls.Add(this.rdoRMoney4);
-            this.grpRMoney.Controls.Add(this.rdoRMoney3);
-            this.grpRMoney.Controls.Add(this.rdoRMoney2);
-            this.grpRMoney.Controls.Add(this.rdoRMoney1);
-            this.grpRMoney.Location = new System.Drawing.Point(144, 136);
-            this.grpRMoney.Name = "grpRMoney";
-            this.grpRMoney.Size = new System.Drawing.Size(616, 56);
-            this.grpRMoney.TabIndex = 16;
-            this.grpRMoney.TabStop = false;
-            // 
-            // lblRMoneyHigh
-            // 
-            this.lblRMoneyHigh.AutoSize = true;
-            this.lblRMoneyHigh.Enabled = false;
-            this.lblRMoneyHigh.Location = new System.Drawing.Point(576, 24);
-            this.lblRMoneyHigh.Name = "lblRMoneyHigh";
-            this.lblRMoneyHigh.Size = new System.Drawing.Size(26, 21);
-            this.lblRMoneyHigh.TabIndex = 8;
-            this.lblRMoneyHigh.Text = "万";
-            // 
-            // txtRMoneyHigh
-            // 
-            this.txtRMoneyHigh.Location = new System.Drawing.Point(504, 16);
-            this.txtRMoneyHigh.Name = "txtRMoneyHigh";
-            this.txtRMoneyHigh.Size = new System.Drawing.Size(56, 29);
-            this.txtRMoneyHigh.TabIndex = 7;
-            // 
-            // lblRMoneyLow
-            // 
-            this.lblRMoneyLow.AutoSize = true;
-            this.lblRMoneyLow.Enabled = false;
-            this.lblRMoneyLow.Location = new System.Drawing.Point(440, 24);
-            this.lblRMoneyLow.Name = "lblRMoneyLow";
-            this.lblRMoneyLow.Size = new System.Drawing.Size(38, 21);
-            this.lblRMoneyLow.TabIndex = 6;
-            this.lblRMoneyLow.Text = "万~";
-            // 
-            // txtRMoneyLow
-            // 
-            this.txtRMoneyLow.Location = new System.Drawing.Point(376, 16);
-            this.txtRMoneyLow.Name = "txtRMoneyLow";
-            this.txtRMoneyLow.Size = new System.Drawing.Size(64, 29);
-            this.txtRMoneyLow.TabIndex = 4;
-            // 
-            // rdoRMoney4
-            // 
-            this.rdoRMoney4.AutoSize = true;
-            this.rdoRMoney4.Location = new System.Drawing.Point(320, 16);
-            this.rdoRMoney4.Name = "rdoRMoney4";
-            this.rdoRMoney4.Size = new System.Drawing.Size(60, 25);
-            this.rdoRMoney4.TabIndex = 3;
-            this.rdoRMoney4.Text = "其它";
-            this.rdoRMoney4.UseVisualStyleBackColor = true;
-            // 
-            // rdoRMoney3
-            // 
-            this.rdoRMoney3.AutoSize = true;
-            this.rdoRMoney3.Location = new System.Drawing.Point(208, 16);
-            this.rdoRMoney3.Name = "rdoRMoney3";
-            this.rdoRMoney3.Size = new System.Drawing.Size(78, 25);
-            this.rdoRMoney3.TabIndex = 2;
-            this.rdoRMoney3.Text = "5-10万";
-            this.rdoRMoney3.UseVisualStyleBackColor = true;
-            // 
-            // rdoRMoney2
-            // 
-            this.rdoRMoney2.AutoSize = true;
-            this.rdoRMoney2.Location = new System.Drawing.Point(96, 16);
-            this.rdoRMoney2.Name = "rdoRMoney2";
-            this.rdoRMoney2.Size = new System.Drawing.Size(69, 25);
-            this.rdoRMoney2.TabIndex = 1;
-            this.rdoRMoney2.Text = "1-5万";
-            this.rdoRMoney2.UseVisualStyleBackColor = true;
-            // 
-            // rdoRMoney1
-            // 
-            this.rdoRMoney1.AutoSize = true;
-            this.rdoRMoney1.Location = new System.Drawing.Point(0, 16);
-            this.rdoRMoney1.Name = "rdoRMoney1";
-            this.rdoRMoney1.Size = new System.Drawing.Size(85, 25);
-            this.rdoRMoney1.TabIndex = 0;
-            this.rdoRMoney1.Text = "1万以下";
-            this.rdoRMoney1.UseVisualStyleBackColor = true;
-            // 
-            // lblRRate
-            // 
-            this.lblRRate.AutoSize = true;
-            this.lblRRate.Enabled = false;
-            this.lblRRate.Location = new System.Drawing.Point(64, 200);
-            this.lblRRate.Name = "lblRRate";
-            this.lblRRate.Size = new System.Drawing.Size(58, 21);
-            this.lblRRate.TabIndex = 13;
-            this.lblRRate.Text = "收益率";
-            // 
-            // lblRMoney
-            // 
-            this.lblRMoney.AutoSize = true;
-            this.lblRMoney.Enabled = false;
-            this.lblRMoney.Location = new System.Drawing.Point(64, 160);
-            this.lblRMoney.Name = "lblRMoney";
-            this.lblRMoney.Size = new System.Drawing.Size(74, 21);
-            this.lblRMoney.TabIndex = 12;
-            this.lblRMoney.Text = "起投金额";
-            // 
-            // lblRTime
-            // 
-            this.lblRTime.AutoSize = true;
-            this.lblRTime.Enabled = false;
-            this.lblRTime.Location = new System.Drawing.Point(64, 104);
-            this.lblRTime.Name = "lblRTime";
-            this.lblRTime.Size = new System.Drawing.Size(74, 21);
-            this.lblRTime.TabIndex = 11;
-            this.lblRTime.Text = "投资期限";
-            // 
-            // grpRTime
-            // 
-            this.grpRTime.Controls.Add(this.lblRTimeHigh);
-            this.grpRTime.Controls.Add(this.txtRTimeHigh);
-            this.grpRTime.Controls.Add(this.lblRTimeLow);
-            this.grpRTime.Controls.Add(this.txtRTimeLow);
-            this.grpRTime.Controls.Add(this.rdoRTime4);
-            this.grpRTime.Controls.Add(this.rdoRTime3);
-            this.grpRTime.Controls.Add(this.rdoRTime2);
-            this.grpRTime.Controls.Add(this.rdoRTime1);
-            this.grpRTime.Location = new System.Drawing.Point(144, 88);
-            this.grpRTime.Name = "grpRTime";
-            this.grpRTime.Size = new System.Drawing.Size(616, 48);
-            this.grpRTime.TabIndex = 15;
-            this.grpRTime.TabStop = false;
-            // 
-            // lblRTimeHigh
-            // 
-            this.lblRTimeHigh.AutoSize = true;
-            this.lblRTimeHigh.Enabled = false;
-            this.lblRTimeHigh.Location = new System.Drawing.Point(576, 24);
-            this.lblRTimeHigh.Name = "lblRTimeHigh";
-            this.lblRTimeHigh.Size = new System.Drawing.Size(42, 21);
-            this.lblRTimeHigh.TabIndex = 8;
-            this.lblRTimeHigh.Text = "个月";
-            // 
-            // txtRTimeHigh
-            // 
-            this.txtRTimeHigh.Location = new System.Drawing.Point(504, 16);
-            this.txtRTimeHigh.Name = "txtRTimeHigh";
-            this.txtRTimeHigh.Size = new System.Drawing.Size(56, 29);
-            this.txtRTimeHigh.TabIndex = 7;
-            // 
-            // lblRTimeLow
-            // 
-            this.lblRTimeLow.AutoSize = true;
-            this.lblRTimeLow.Enabled = false;
-            this.lblRTimeLow.Location = new System.Drawing.Point(440, 24);
-            this.lblRTimeLow.Name = "lblRTimeLow";
-            this.lblRTimeLow.Size = new System.Drawing.Size(54, 21);
-            this.lblRTimeLow.TabIndex = 6;
-            this.lblRTimeLow.Text = "个月~";
-            // 
-            // txtRTimeLow
-            // 
-            this.txtRTimeLow.Location = new System.Drawing.Point(376, 16);
-            this.txtRTimeLow.Name = "txtRTimeLow";
-            this.txtRTimeLow.Size = new System.Drawing.Size(64, 29);
-            this.txtRTimeLow.TabIndex = 4;
-            // 
-            // rdoRTime4
-            // 
-            this.rdoRTime4.AutoSize = true;
-            this.rdoRTime4.Location = new System.Drawing.Point(320, 16);
-            this.rdoRTime4.Name = "rdoRTime4";
-            this.rdoRTime4.Size = new System.Drawing.Size(60, 25);
-            this.rdoRTime4.TabIndex = 3;
-            this.rdoRTime4.Text = "其它";
-            this.rdoRTime4.UseVisualStyleBackColor = true;
-            // 
-            // rdoRTime3
-            // 
-            this.rdoRTime3.AutoSize = true;
-            this.rdoRTime3.Location = new System.Drawing.Point(208, 16);
-            this.rdoRTime3.Name = "rdoRTime3";
-            this.rdoRTime3.Size = new System.Drawing.Size(110, 25);
-            this.rdoRTime3.TabIndex = 2;
-            this.rdoRTime3.Text = "12个月以上";
-            this.rdoRTime3.UseVisualStyleBackColor = true;
-            // 
-            // rdoRTime2
-            // 
-            this.rdoRTime2.AutoSize = true;
-            this.rdoRTime2.Location = new System.Drawing.Point(104, 16);
-            this.rdoRTime2.Name = "rdoRTime2";
-            this.rdoRTime2.Size = new System.Drawing.Size(94, 25);
-            this.rdoRTime2.TabIndex = 1;
-            this.rdoRTime2.Text = "6-12个月";
-            this.rdoRTime2.UseVisualStyleBackColor = true;
-            // 
-            // rdoRTime1
-            // 
-            this.rdoRTime1.AutoSize = true;
-            this.rdoRTime1.Location = new System.Drawing.Point(0, 16);
-            this.rdoRTime1.Name = "rdoRTime1";
-            this.rdoRTime1.Size = new System.Drawing.Size(101, 25);
-            this.rdoRTime1.TabIndex = 0;
-            this.rdoRTime1.Text = "6个月以下";
-            this.rdoRTime1.UseVisualStyleBackColor = true;
-            // 
-            // picLogo2
-            // 
-            this.picLogo2.Image = global::VM.Properties.Resources.无标题1;
-            this.picLogo2.Location = new System.Drawing.Point(160, 24);
-            this.picLogo2.Name = "picLogo2";
-            this.picLogo2.Size = new System.Drawing.Size(640, 72);
-            this.picLogo2.TabIndex = 3;
-            this.picLogo2.TabStop = false;
-            // 
-            // picLogo1
-            // 
-            this.picLogo1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picLogo1.ErrorImage")));
-            this.picLogo1.Image = global::VM.Properties.Resources.无标题;
-            this.picLogo1.Location = new System.Drawing.Point(0, 0);
-            this.picLogo1.Name = "picLogo1";
-            this.picLogo1.Size = new System.Drawing.Size(136, 120);
-            this.picLogo1.TabIndex = 2;
-            this.picLogo1.TabStop = false;
-            // 
-            // tmrRushReflash
-            // 
-            this.tmrRushReflash.Interval = 10000;
-            this.tmrRushReflash.Tick += new System.EventHandler(this.tmrRushReflash_Tick);
+            // tabSelectModule
+            // 
+            this.tabSelectModule.Controls.Add(this.tapSearch);
+            this.tabSelectModule.Controls.Add(this.tapAnalyse);
+            this.tabSelectModule.Controls.Add(this.tapRush);
+            this.tabSelectModule.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tabSelectModule.Location = new System.Drawing.Point(0, 120);
+            this.tabSelectModule.Name = "tabSelectModule";
+            this.tabSelectModule.SelectedIndex = 0;
+            this.tabSelectModule.Size = new System.Drawing.Size(856, 600);
+            this.tabSelectModule.TabIndex = 1;
             // 
             // frmMain
             // 
@@ -1502,7 +1554,22 @@
             this.Padding = new System.Windows.Forms.Padding(10);
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.frmMain_Load);
-            this.tabSelectModule.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).EndInit();
+            this.tapRush.ResumeLayout(false);
+            this.tapRush.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grvRush)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.grpRMoney.ResumeLayout(false);
+            this.grpRMoney.PerformLayout();
+            this.grpRTime.ResumeLayout(false);
+            this.grpRTime.PerformLayout();
+            this.tapAnalyse.ResumeLayout(false);
+            this.tapAnalyse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grvAnalyse)).EndInit();
+            this.mmuAnalyse.ResumeLayout(false);
+            this.mmuAnalyse.PerformLayout();
             this.tapSearch.ResumeLayout(false);
             this.tapSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvSearch)).EndInit();
@@ -1516,80 +1583,25 @@
             this.grpSort.PerformLayout();
             this.grpSortMode.ResumeLayout(false);
             this.grpSortMode.PerformLayout();
-            this.tapAnalyse.ResumeLayout(false);
-            this.tapAnalyse.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvAnalyse)).EndInit();
-            this.mmuAnalyse.ResumeLayout(false);
-            this.mmuAnalyse.PerformLayout();
-            this.tapRush.ResumeLayout(false);
-            this.tapRush.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvRush)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.grpRMoney.ResumeLayout(false);
-            this.grpRMoney.PerformLayout();
-            this.grpRTime.ResumeLayout(false);
-            this.grpRTime.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).EndInit();
+            this.tabSelectModule.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabSelectModule;
-        private System.Windows.Forms.TabPage tapSearch;
-        private System.Windows.Forms.TabPage tapAnalyse;
-        private System.Windows.Forms.TabPage tapRush;
         private System.Windows.Forms.PictureBox picLogo1;
         private System.Windows.Forms.PictureBox picLogo2;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label lblSRate;
-        private System.Windows.Forms.Label lblSMoney;
-        private System.Windows.Forms.Label lblSTime;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.GroupBox grpSTime;
-        private System.Windows.Forms.RadioButton rdoSTime1;
-        private System.Windows.Forms.RadioButton rdoSTime4;
-        private System.Windows.Forms.RadioButton rdoSTime3;
-        private System.Windows.Forms.RadioButton rdoSTime2;
-        private System.Windows.Forms.Label lblSTimeHigh;
-        private System.Windows.Forms.TextBox txtSTimeHigh;
-        private System.Windows.Forms.Label lblSTimeLow;
-        private System.Windows.Forms.TextBox txtSTimeLow;
-        private System.Windows.Forms.GroupBox grpSMoney;
-        private System.Windows.Forms.Label lblSMoneyHigh;
-        private System.Windows.Forms.TextBox txtSMoneyHigh;
-        private System.Windows.Forms.Label lblSMoneyLow;
-        private System.Windows.Forms.TextBox txtSMoneyLow;
-        private System.Windows.Forms.RadioButton rdoSMoney4;
-        private System.Windows.Forms.RadioButton rdoSMoney3;
-        private System.Windows.Forms.RadioButton rdoSMoney2;
-        private System.Windows.Forms.RadioButton rdoSMoney1;
-        private System.Windows.Forms.Label lblSplit;
-        private System.Windows.Forms.GroupBox grpSRate;
-        private System.Windows.Forms.Label lblSRateHigh;
-        private System.Windows.Forms.TextBox txtSRateHigh;
-        private System.Windows.Forms.Label lblSRateLow;
-        private System.Windows.Forms.TextBox txtSRateLow;
-        private System.Windows.Forms.RadioButton rdoSRate4;
-        private System.Windows.Forms.RadioButton rdoSRate3;
-        private System.Windows.Forms.RadioButton rdoSRate2;
-        private System.Windows.Forms.RadioButton rdoSRate1;
-        private System.Windows.Forms.Button btnMoneyConfirm;
-        private System.Windows.Forms.Button btnRush;
-        private System.Windows.Forms.GroupBox grpSort;
-        private System.Windows.Forms.RadioButton rdoSortRate;
-        private System.Windows.Forms.RadioButton rdoSortMoney;
-        private System.Windows.Forms.RadioButton rdoSortTime;
-        private System.Windows.Forms.RadioButton rdoSortDefault;
-        private System.Windows.Forms.GroupBox grpSortMode;
-        private System.Windows.Forms.RadioButton rdoSortDown;
-        private System.Windows.Forms.RadioButton rdoSortUp;
-        private System.Windows.Forms.DataGridView grvSearch;
-        private System.Windows.Forms.Button btnPageDown;
-        private System.Windows.Forms.Button btnPageUp;
+        private System.Windows.Forms.Timer tmrRushReflash;
+        private System.Windows.Forms.TabPage tapRush;
+        private System.Windows.Forms.DataGridView grvRush;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.Button btnRConfirm;
+        private System.Windows.Forms.Button btnActionRush;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label lblRRateHigh;
         private System.Windows.Forms.TextBox txtRRateHigh;
@@ -1620,8 +1632,7 @@
         private System.Windows.Forms.RadioButton rdoRTime3;
         private System.Windows.Forms.RadioButton rdoRTime2;
         private System.Windows.Forms.RadioButton rdoRTime1;
-        private System.Windows.Forms.Button btnRConfirm;
-        private System.Windows.Forms.Button btnActionRush;
+        private System.Windows.Forms.TabPage tapAnalyse;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView grvAnalyse;
@@ -1632,19 +1643,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Button btnRateConfirm;
-        private System.Windows.Forms.Button btnTimeConfirm;
-        private System.Windows.Forms.DataGridView grvRush;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn money;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rate;
-        private System.Windows.Forms.DataGridViewButtonColumn inverst;
         private System.Windows.Forms.MenuStrip mmuAnalyse;
         private System.Windows.Forms.ToolStripMenuItem mmuNew;
         private System.Windows.Forms.ToolStripMenuItem mmuSave;
@@ -1652,7 +1650,63 @@
         private System.Windows.Forms.ToolStripMenuItem mmuImport;
         private System.Windows.Forms.ToolStripMenuItem mmuExport;
         private System.Windows.Forms.ToolStripMenuItem mmuDiagram;
-        private System.Windows.Forms.Timer tmrRushReflash;
+        private System.Windows.Forms.TabPage tapSearch;
+        private System.Windows.Forms.Button btnToRecord;
+        private System.Windows.Forms.Button btnRateConfirm;
+        private System.Windows.Forms.Button btnTimeConfirm;
+        private System.Windows.Forms.Button btnPageDown;
+        private System.Windows.Forms.Button btnPageUp;
+        private System.Windows.Forms.DataGridView grvSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn money;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rate;
+        private System.Windows.Forms.DataGridViewButtonColumn inverst;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnRush;
+        private System.Windows.Forms.Button btnMoneyConfirm;
+        private System.Windows.Forms.Label lblSplit;
+        private System.Windows.Forms.GroupBox grpSRate;
+        private System.Windows.Forms.Label lblSRateHigh;
+        private System.Windows.Forms.TextBox txtSRateHigh;
+        private System.Windows.Forms.Label lblSRateLow;
+        private System.Windows.Forms.TextBox txtSRateLow;
+        private System.Windows.Forms.RadioButton rdoSRate4;
+        private System.Windows.Forms.RadioButton rdoSRate3;
+        private System.Windows.Forms.RadioButton rdoSRate2;
+        private System.Windows.Forms.RadioButton rdoSRate1;
+        private System.Windows.Forms.GroupBox grpSMoney;
+        private System.Windows.Forms.Label lblSMoneyHigh;
+        private System.Windows.Forms.TextBox txtSMoneyHigh;
+        private System.Windows.Forms.Label lblSMoneyLow;
+        private System.Windows.Forms.TextBox txtSMoneyLow;
+        private System.Windows.Forms.RadioButton rdoSMoney4;
+        private System.Windows.Forms.RadioButton rdoSMoney3;
+        private System.Windows.Forms.RadioButton rdoSMoney2;
+        private System.Windows.Forms.RadioButton rdoSMoney1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label lblSRate;
+        private System.Windows.Forms.Label lblSMoney;
+        private System.Windows.Forms.Label lblSTime;
+        private System.Windows.Forms.GroupBox grpSTime;
+        private System.Windows.Forms.Label lblSTimeHigh;
+        private System.Windows.Forms.TextBox txtSTimeHigh;
+        private System.Windows.Forms.Label lblSTimeLow;
+        private System.Windows.Forms.TextBox txtSTimeLow;
+        private System.Windows.Forms.RadioButton rdoSTime4;
+        private System.Windows.Forms.RadioButton rdoSTime3;
+        private System.Windows.Forms.RadioButton rdoSTime2;
+        private System.Windows.Forms.RadioButton rdoSTime1;
+        private System.Windows.Forms.GroupBox grpSort;
+        private System.Windows.Forms.RadioButton rdoSortRate;
+        private System.Windows.Forms.RadioButton rdoSortMoney;
+        private System.Windows.Forms.RadioButton rdoSortTime;
+        private System.Windows.Forms.RadioButton rdoSortDefault;
+        private System.Windows.Forms.GroupBox grpSortMode;
+        private System.Windows.Forms.RadioButton rdoSortDown;
+        private System.Windows.Forms.RadioButton rdoSortUp;
+        private System.Windows.Forms.TabControl tabSelectModule;
+        public System.Windows.Forms.Label lblShowPg;
     }
 }
 

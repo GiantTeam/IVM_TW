@@ -50,3 +50,4 @@ C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.exe.man
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.application
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.exe
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.pdb
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.frmDialog.resources

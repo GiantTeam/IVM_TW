@@ -7,21 +7,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ControlClass;
+using EntityClass;
 namespace VM
 {
+    //using EntityClass;
+   // using ControlClass;
+
     public partial class frmMain : Form
     {
         public String strSearchInfo = null;
         public String strShowPg;
         public static String strAddInfo = null;
+        public String strExpression;
         public static int s_pgNum = 0;
         public static int s_allPg;
         public static int s_maxItem=900;
         const int c_ITEMNUM = 8;
         public mData g_SearchCondition;
+        public condition cdt;
         public RadioButton rdoTem;
         public static ListSortDirection s_lsdSUpDown = ListSortDirection.Ascending;
+        ProjectList projectList; 
+
+        public class condition
+        {
+            public String strTime;
+            public String strMoney;
+            public String strRate;
+            condition()
+            {
+                strTime = null;
+                strMoney = null;
+                strRate = null;
+            }
+        }
 
         public class mData
         {
@@ -39,37 +59,70 @@ namespace VM
             }
         }
 
+        public enum sortType
+        {
+            Default=0,
+            Time=1,
+            Money=2,
+            Rate=3
+        }
 
-        //***************************华丽的分割线***********************************************
+//***************************************华丽的分割线**************************************************
 
         public frmMain()
         {
             InitializeComponent();
         }
 
-        private void btnTimeConfirm_Click(object sender, EventArgs e)
+      
+//**************************************Search界面处理***********************************************
+       //重构函数：判断单选按钮组选中情况
+        public void  grvGetResult(GroupBox grp)
         {
-            /* foreach (Control ct in grpSTime.Controls) 
+            String strTem;
+             foreach (Control ct in grp.Controls) 
              { 
                  RadioButton rb = ct as RadioButton; 
                  if (rb.Checked) 
                  {
                      rdoTem = rb;
+                     break;
                  }
              }
-             if (rdoTem.Equals(rdoSTime4))
+
+             if (0 == Convert.ToInt32(rdoTem.Tag))
              {
-                 return txtSTimeLow.Txt+txtSTimeHigh;
+
              }
              else
              {
-                 return rdoTem.toText();
-
-             }*/
+                 strTem=rdoTem.Text;
+             }
+        }
+        
+        //将单选按钮组转化为对应表达式：
+        public String toExpression(RadioButton rdo)
+        {
+            strExpression = null;
+            if (rdo == rdoSTime1)
+            {
+                strExpression += "Time<6";
+            }
+            if (rdo == rdoSTime2)
+            {
+                strExpression += "Time>6&&Time<12";
+            }
+            if (rdo == rdoSTime3)
+            {
+                strExpression += "Time>12";
+            }
+            if (rdo == rdoSTime4)
+            {
+                strExpression += "Time>"+txtSTimeLow.Text+"&&Time<"+txtSTimeHigh.Text;
+            }
+            return strExpression;
         }
 
-
-//**************************************Search界面处理***********************************************
         //重构函数：根据当前页面和表格行数刷新显示表格
         private void grvReFresh()
         {
@@ -137,7 +190,7 @@ namespace VM
         //第一个参数为传入的选中单选按钮，第二三为对应的编辑框，第四位其后的确定按钮
         private void rdo_checkedChange(RadioButton rdo, TextBox txtLow, TextBox txtHigh, Button btnConfirm)
         {
-            if (1 == Convert.ToInt32(rdo.Tag))
+            if (0 == Convert.ToInt32(rdo.Tag))
             {
                 txtLow.Enabled = true;
                 txtHigh.Enabled = true;
@@ -145,6 +198,8 @@ namespace VM
             }
             else
             {
+                txtLow.Text = null;
+                txtHigh.Text = null;
                 txtLow.Enabled = false;
                 txtHigh.Enabled = false;
                 btnConfirm.Tag = 0;
@@ -177,7 +232,6 @@ namespace VM
         {
             rdo_checkedChange(rdoSMoney4, txtSMoneyLow, txtSMoneyHigh, btnMoneyConfirm);
         }
-
         private void rdoSMoney3_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoSMoney3, txtSMoneyLow, txtSMoneyHigh, btnMoneyConfirm);
@@ -219,9 +273,17 @@ namespace VM
         //重构排序方式：参数：选中的单选按钮
         private void rdoSort_checkedChange(RadioButton rdo)
         {
-            Int32 tIndex = Convert.ToInt32(rdo.Tag);
-            grvSearch.Sort(grvSearch.Columns[tIndex], s_lsdSUpDown);
+            if (rdo.Checked == true)
+            {   
+                  projectList = SearchControl.Sort(rdo.Text,s_lsdSUpDown );    
+            }
+             //    object a = rdo.Tag;  
+           // Int32 tIndex = Convert.ToInt32(rdo.Tag);
+            //sortType tIndex = (sortType)rdo.Tag;
+            //Int32 tem = Convert.ToInt32(tIndex);
+            //grvSearch.Sort(grvSearch.Columns[tem], s_lsdSUpDown);
         }
+
         //重构排序方式：参数：按钮所在的组合框，找到选中的按钮，再调用rdoSort_checkedChange
         private void rdoSort_checkedChange(GroupBox grpSort)
         {
@@ -539,6 +601,12 @@ namespace VM
         {
             rdo_checkedChange(rdoRRate1, txtRRateLow, txtRRateHigh, btnRConfirm);
         }
+
+        private void btnRConfirm_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 

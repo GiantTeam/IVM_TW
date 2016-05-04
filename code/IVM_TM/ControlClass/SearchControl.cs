@@ -11,9 +11,13 @@ namespace ControlClass
         private static ProjectList projectListForAll = Initializate.mProjectList;//总项目列表
         private static ProjectList ChildProjectList = projectListForAll;//筛选出的项目的列表
         public enum TimeSort { LongToShort,ShortTo}        
-        public  ProjectList Search(int TimeUp,int TimeDown,float RateUp,float RateDown,double MoneyUp,double MoneyDown)
+        public  ProjectList Search(Condition c)
         {
             //当无上限时，Up应设为 无穷大；当无下限时，Down应为0
+            return ChildProjectList;
+        }
+        public ProjectList Search(string Key)
+        {
             return ChildProjectList;
         }
         private  ProjectList SelectByTime(int Up,int Down)
@@ -35,6 +39,12 @@ namespace ControlClass
         public ProjectList ProjectList
         {
             get { return ChildProjectList; }
+            }
+       
+        public static ProjectList Sort(string Method,Enum UpOrDown)
+        {
+            
+            return ChildProjectList; 
         }
         public ProjectList TimeLongToShort ()
         {

@@ -1,4 +1,5 @@
-﻿namespace VM
+﻿
+namespace VM
 {
     partial class frmMain
     {

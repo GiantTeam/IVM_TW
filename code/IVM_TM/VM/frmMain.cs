@@ -14,6 +14,7 @@ namespace VM
     {
         public String strSearchInfo = null;
         public String strShowPg;
+        public static String strAddInfo = null;
         public static int s_pgNum = 0;
         public static int s_allPg;
         public static int s_maxItem=900;
@@ -294,8 +295,12 @@ namespace VM
         {
             //弹出对话框
             frmDialog dlgHint = new frmDialog();
-            dlgHint.ShowDialog();
-            dlgHint.Visible = true;
+             dlgHint.ShowDialog();
+             strAddInfo=dlgHint.forResult();
+             if (strAddInfo != null)
+             {
+                 MessageBox.Show(strAddInfo);
+             }
             //新增一行
             int index = addgrvRow(grvAnalyse);
             //赋值
@@ -464,8 +469,11 @@ namespace VM
         //刷新调用
         private void tmrRushReflash_Tick(object sender, EventArgs e)
         {
-            //tmrRushReflash();
-
+             String strTem=null;
+            //tmrRushReflash.Run();
+            //if(return!=null)
+            //strTem+="项目名称"+"起投金额\n"+"投资期限"+"收益率";
+           // MessageBox.Show(strTem);
         }
 
         //条件按钮组设置

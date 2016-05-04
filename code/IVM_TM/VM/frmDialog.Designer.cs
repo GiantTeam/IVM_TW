@@ -33,8 +33,8 @@
             this.lblHint = new System.Windows.Forms.Label();
             this.btnYes = new System.Windows.Forms.Button();
             this.btnCannel = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDTime = new System.Windows.Forms.TextBox();
+            this.txtDMoney = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblDTime
@@ -76,6 +76,7 @@
             this.btnYes.TabIndex = 3;
             this.btnYes.Text = "确定";
             this.btnYes.UseVisualStyleBackColor = true;
+            this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
             // 
             // btnCannel
             // 
@@ -86,20 +87,21 @@
             this.btnCannel.TabIndex = 4;
             this.btnCannel.Text = "取消";
             this.btnCannel.UseVisualStyleBackColor = true;
+            this.btnCannel.Click += new System.EventHandler(this.btnCannel_Click);
             // 
-            // textBox1
+            // txtDTime
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 21);
-            this.textBox1.TabIndex = 5;
+            this.txtDTime.Location = new System.Drawing.Point(112, 32);
+            this.txtDTime.Name = "txtDTime";
+            this.txtDTime.Size = new System.Drawing.Size(120, 21);
+            this.txtDTime.TabIndex = 5;
             // 
-            // textBox2
+            // txtDMoney
             // 
-            this.textBox2.Location = new System.Drawing.Point(112, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 21);
-            this.textBox2.TabIndex = 6;
+            this.txtDMoney.Location = new System.Drawing.Point(112, 64);
+            this.txtDMoney.Name = "txtDMoney";
+            this.txtDMoney.Size = new System.Drawing.Size(120, 21);
+            this.txtDMoney.TabIndex = 6;
             // 
             // frmDialog
             // 
@@ -107,8 +109,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(242, 127);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDMoney);
+            this.Controls.Add(this.txtDTime);
             this.Controls.Add(this.btnCannel);
             this.Controls.Add(this.btnYes);
             this.Controls.Add(this.lblHint);
@@ -132,7 +134,7 @@
         private System.Windows.Forms.Label lblHint;
         private System.Windows.Forms.Button btnYes;
         private System.Windows.Forms.Button btnCannel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDTime;
+        private System.Windows.Forms.TextBox txtDMoney;
     }
 }

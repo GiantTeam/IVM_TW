@@ -1,2 +1,14 @@
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibraryTests\obj\Debug\EntityClassTest.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibraryTests\obj\Debug\ClassLibraryTests.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibraryTests\bin\Debug\ClassLibraryTests.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibraryTests\bin\Debug\ClassLibraryTests.pdb
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibraryTests\bin\Debug\ClassLibrary.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibraryTests\bin\Debug\mscorlib.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibraryTests\bin\Debug\ClassLibrary.pdb
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibraryTests\bin\Debug\zh-Hans\mscorlib.resources.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibraryTests\bin\Debug\normidna.nlp
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibraryTests\bin\Debug\normnfc.nlp
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibraryTests\bin\Debug\normnfd.nlp
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibraryTests\bin\Debug\normnfkc.nlp
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibraryTests\bin\Debug\normnfkd.nlp
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibraryTests\obj\Debug\ClassLibraryTests.pdb

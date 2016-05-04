@@ -36,7 +36,7 @@ namespace ControlClass
                 {
                     mProject = SetProject(strTemp, intProjectListIndex);
                     mProject.strLink = strTemp;
-                    this.mProjectList.Add(mProject);
+                   // this.mProjectList.Add(mProject);
                 }
 
             }

@@ -1,2 +1,15 @@
 F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.pdb
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ClassLibrary.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\mscorlib.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ClassLibrary.pdb
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\zh-Hans\mscorlib.resources.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\normidna.nlp
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\normnfc.nlp
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\normnfd.nlp
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\normnfkc.nlp
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\normnfkd.nlp
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.pdb

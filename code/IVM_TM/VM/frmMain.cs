@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ControlClass;
-using EntityClass;
+using System.Collections;
+
+//using ControlClass;
+//using EntityClass;
 namespace VM
 {
     //using EntityClass;
@@ -23,24 +25,27 @@ namespace VM
         public static int s_pgNum = 0;
         public static int s_allPg;
         public static int s_maxItem=900;
+
         const int c_ITEMNUM = 8;
+        const int c_iMAX = 999999;
+        const int c_iMIN = -99999;
+        const double c_dMAX = 999999;
+        const double c_dMIN = -99999;
+
         public mData g_SearchCondition;
-        public condition cdt;
+        public Condition cdtS,cdtR;
         public RadioButton rdoTem;
         public static ListSortDirection s_lsdSUpDown = ListSortDirection.Ascending;
-        ProjectList projectList; 
 
-        public class condition
+       // ProjectList projectList; 
+        public class Condition
         {
-            public String strTime;
-            public String strMoney;
-            public String strRate;
-            condition()
-            {
-                strTime = null;
-                strMoney = null;
-                strRate = null;
-            }
+            public int TimeUp;
+            public int TimeDown;
+            public double RateUp;
+            public double RateDown;
+            public double MoneyDown;
+            public double MoneyUp;
         }
 
         public class mData
@@ -59,14 +64,6 @@ namespace VM
             }
         }
 
-        public enum sortType
-        {
-            Default=0,
-            Time=1,
-            Money=2,
-            Rate=3
-        }
-
 //***************************************华丽的分割线**************************************************
 
         public frmMain()
@@ -74,12 +71,137 @@ namespace VM
             InitializeComponent();
         }
 
+
+        //将单选按钮组转化为对应表达式：投资期限
+        public void grvSetTime()
+        {
+            if (true == rdoTimeAll.Checked)
+            {
+                cdtS.TimeDown = c_iMIN;
+                cdtS.TimeUp = c_iMAX;
+            }
+            if (true == rdoSTime1.Checked)
+            {
+                cdtS.TimeDown = c_iMIN;
+                cdtS.TimeUp = 6;
+                //strExpression += "Time<6";
+            }
+            if (true == rdoSTime2.Checked)
+            {
+                cdtS.TimeDown = 6;
+                cdtS.TimeUp = 12;
+                //strExpression += "Time>6&&Time<12";
+            }
+            if (true == rdoSTime3.Checked)
+            {
+                cdtS.TimeDown = 12;
+                cdtS.TimeUp = c_iMAX;
+                //strExpression += "Time>12";
+            }
+            if (true == rdoSTime4.Checked)
+            {
+                //strExpression += "Time>"+txtSTimeLow.Text+"&&Time<"+txtSTimeHigh.Text;
+                if (txtSTimeLow.Text != "" && txtSTimeHigh.Text != "")
+                {
+                    cdtS.TimeDown = Convert.ToInt32(txtSTimeLow.Text);
+                    cdtS.TimeUp = Convert.ToInt32(txtSTimeHigh.Text);
+                }
+                else
+                {
+                    MessageBox.Show("请将搜索信息补充完整！");
+                }
+            }
+
+        }
+
+        //将单选按钮组转化为对应表达式：投资金额
+        public void grvSetMoney()
+        {
+            if (true == rdoMoneyAll.Checked)
+            {
+                cdtS.MoneyDown = c_iMIN;
+                cdtS.MoneyUp = c_iMAX;
+            }
+            if (true == rdoSMoney1.Checked)
+            {
+                cdtS.MoneyDown = c_iMIN;
+                cdtS.MoneyUp = 1;
+                //strExpression += "Money<1";
+            }
+            if (true == rdoSMoney2.Checked)
+            {
+                cdtS.MoneyDown = 1;
+                cdtS.MoneyUp = 5;
+                //strExpression += "Money>1&&Money<5";
+            }
+            if (true == rdoSMoney3.Checked)
+            {
+                cdtS.MoneyDown = 5;
+                cdtS.MoneyUp = 10;
+                //strExpression += "Money>5&&Money<10";
+            }
+            if (true == rdoSMoney4.Checked)
+            {
+                //strExpression += "Money>"+txtSMoneyLow.Text+"&&Money<"+txtSMoneyHigh.Text;
+                if (txtSMoneyLow.Text != "" && txtSMoneyHigh.Text != "")
+                {
+                    cdtS.MoneyDown = Convert.ToInt32(txtSMoneyLow.Text);
+                    cdtS.MoneyUp = Convert.ToInt32(txtSMoneyHigh.Text);
+                }
+                else
+                {
+                    MessageBox.Show("请将搜索信息补充完整！");
+                }
+            }
+
+        }
+
+        //将单选按钮组转化为对应表达式：收益率
+        public void grvSetRate()
+        {
+            if (true == rdoRateAll.Checked)
+            {
+                cdtS.RateDown = c_iMIN;
+                cdtS.RateUp = c_iMAX;
+            }
+            if (true == rdoSRate1.Checked)
+            {
+                cdtS.RateDown = c_iMIN;
+                cdtS.RateUp = 5;
+                //strExpression += "Rate<5";
+            }
+            if (true == rdoSRate2.Checked)
+            {
+                cdtS.RateDown = 5;
+                cdtS.RateUp = 10;
+                //strExpression += "Rate>5&&Rate<10";
+            }
+            if (true == rdoSRate3.Checked)
+            {
+                cdtS.RateDown = 10;
+                cdtS.RateUp = c_dMAX;
+                //strExpression += "Rate>10";
+            }
+            if (true == rdoSRate4.Checked)
+            {
+                //strExpression += "Rate>"+txtSRateLow.Text+"&&Rate<"+txtSRateHigh.Text;
+                if (txtSRateLow.Text != "" && txtSRateHigh.Text != "")
+                {
+                    cdtS.RateDown = Convert.ToInt32(txtSRateLow.Text);
+                    cdtS.RateUp = Convert.ToInt32(txtSRateHigh.Text);
+                }
+                else
+                {
+                    MessageBox.Show("请将搜索信息补充完整！");
+                }
+            }
+
+        }
       
 //**************************************Search界面处理***********************************************
        //重构函数：判断单选按钮组选中情况
-        public void  grvGetResult(GroupBox grp)
+        public void   grvGetResult(GroupBox grp)
         {
-            String strTem;
              foreach (Control ct in grp.Controls) 
              { 
                  RadioButton rb = ct as RadioButton; 
@@ -89,38 +211,6 @@ namespace VM
                      break;
                  }
              }
-
-             if (0 == Convert.ToInt32(rdoTem.Tag))
-             {
-
-             }
-             else
-             {
-                 strTem=rdoTem.Text;
-             }
-        }
-        
-        //将单选按钮组转化为对应表达式：
-        public String toExpression(RadioButton rdo)
-        {
-            strExpression = null;
-            if (rdo == rdoSTime1)
-            {
-                strExpression += "Time<6";
-            }
-            if (rdo == rdoSTime2)
-            {
-                strExpression += "Time>6&&Time<12";
-            }
-            if (rdo == rdoSTime3)
-            {
-                strExpression += "Time>12";
-            }
-            if (rdo == rdoSTime4)
-            {
-                strExpression += "Time>"+txtSTimeLow.Text+"&&Time<"+txtSTimeHigh.Text;
-            }
-            return strExpression;
         }
 
         //重构函数：根据当前页面和表格行数刷新显示表格
@@ -188,13 +278,12 @@ namespace VM
         //页面上部：选择搜索条件
         //重构函数：点击单选按钮组，自有在“其它”的情况下，输入框可编辑,确定按钮值Tag为“1”
         //第一个参数为传入的选中单选按钮，第二三为对应的编辑框，第四位其后的确定按钮
-        private void rdo_checkedChange(RadioButton rdo, TextBox txtLow, TextBox txtHigh, Button btnConfirm)
+        private void rdo_checkedChange(RadioButton rdo, TextBox txtLow, TextBox txtHigh)
         {
             if (0 == Convert.ToInt32(rdo.Tag))
             {
                 txtLow.Enabled = true;
                 txtHigh.Enabled = true;
-                btnConfirm.Tag = 1;
             }
             else
             {
@@ -202,86 +291,117 @@ namespace VM
                 txtHigh.Text = null;
                 txtLow.Enabled = false;
                 txtHigh.Enabled = false;
-                btnConfirm.Tag = 0;
             }
         }
 
         //Search界面第一组单选按钮组处理：
         private void rdoSTime4_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoSTime4, txtSTimeLow, txtSTimeHigh, btnTimeConfirm);
+            rdo_checkedChange(rdoSTime4, txtSTimeLow, txtSTimeHigh);
         }
 
         private void rdoSTime3_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoSTime3, txtSTimeLow, txtSTimeHigh, btnTimeConfirm);
+            rdo_checkedChange(rdoSTime3, txtSTimeLow, txtSTimeHigh);
         }
 
         private void rdoSTime2_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoSTime2, txtSTimeLow, txtSTimeHigh, btnTimeConfirm);
+            rdo_checkedChange(rdoSTime2, txtSTimeLow, txtSTimeHigh);
         }
 
         private void rdoSTime1_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoSTime1, txtSTimeLow, txtSTimeHigh, btnTimeConfirm);
+            rdo_checkedChange(rdoSTime1, txtSTimeLow, txtSTimeHigh );
         }
 
+
+        private void rdoTimeAll_CheckedChanged(object sender, EventArgs e)
+        {
+            rdo_checkedChange(rdoTimeAll, txtSTimeLow, txtSTimeHigh );
+        }
         //第二组单选按钮框处理:处理起投金额
         private void rdoSMoney4_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoSMoney4, txtSMoneyLow, txtSMoneyHigh, btnMoneyConfirm);
+            rdo_checkedChange(rdoSMoney4, txtSMoneyLow, txtSMoneyHigh );
         }
         private void rdoSMoney3_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoSMoney3, txtSMoneyLow, txtSMoneyHigh, btnMoneyConfirm);
+            rdo_checkedChange(rdoSMoney3, txtSMoneyLow, txtSMoneyHigh );
         }
 
         private void rdoSMoney2_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoSMoney2, txtSMoneyLow, txtSMoneyHigh, btnMoneyConfirm);
+            rdo_checkedChange(rdoSMoney2, txtSMoneyLow, txtSMoneyHigh );
         }
 
         private void rdoSMoney1_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoSMoney1, txtSMoneyLow, txtSMoneyHigh, btnMoneyConfirm);
+            rdo_checkedChange(rdoSMoney1, txtSMoneyLow, txtSMoneyHigh );
         }
 
+
+        private void rdoMoneyAll_CheckedChanged(object sender, EventArgs e)
+        {
+            rdo_checkedChange(rdoMoneyAll, txtSMoneyLow, txtSMoneyHigh );
+        }
         //第三组单选按钮框处理:处理收益率
         private void rdoSRate4_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoSRate4, txtSRateLow, txtSRateHigh, btnRateConfirm);
+            rdo_checkedChange(rdoSRate4, txtSRateLow, txtSRateHigh );
         }
 
         private void rdoSRate3_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoSRate3, txtSRateLow, txtSRateHigh, btnRateConfirm);
+            rdo_checkedChange(rdoSRate3, txtSRateLow, txtSRateHigh );
         }
 
         private void rdoSRate2_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoSRate2, txtSRateLow, txtSRateHigh, btnRateConfirm);
+            rdo_checkedChange(rdoSRate2, txtSRateLow, txtSRateHigh );
         }
 
         private void rdoSRate1_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoSRate1, txtSRateLow, txtSRateHigh, btnRateConfirm);
+            rdo_checkedChange(rdoSRate1, txtSRateLow, txtSRateHigh );
         }
 
 
+        private void rdoRateAll_CheckedChanged(object sender, EventArgs e)
+        {
+            rdo_checkedChange(rdoRateAll, txtSRateLow, txtSRateHigh );
+        }
+
+//btnConfirm处理！！
+        private void btnTimeConfirm_Click(object sender, EventArgs e)
+        {
+            grvSetTime();
+        }
+
+        private void btnMoneyConfirm_Click(object sender, EventArgs e)
+        {
+            grvSetMoney();
+        }
+
+        private void btnRateConfirm_Click(object sender, EventArgs e)
+        {
+            grvSetRate();
+        }
+
+//排序！！
         //页面中部：设置排序方式
         //重构排序方式：参数：选中的单选按钮
         private void rdoSort_checkedChange(RadioButton rdo)
         {
-            if (rdo.Checked == true)
+          /*  if (rdo.Checked == true)
             {   
                   projectList = SearchControl.Sort(rdo.Text,s_lsdSUpDown );    
-            }
+            }*/
              //    object a = rdo.Tag;  
-           // Int32 tIndex = Convert.ToInt32(rdo.Tag);
+            Int32 tIndex = Convert.ToInt32(rdo.Tag);
             //sortType tIndex = (sortType)rdo.Tag;
             //Int32 tem = Convert.ToInt32(tIndex);
-            //grvSearch.Sort(grvSearch.Columns[tem], s_lsdSUpDown);
+            grvSearch.Sort(grvSearch.Columns[tIndex], s_lsdSUpDown);
         }
 
         //重构排序方式：参数：按钮所在的组合框，找到选中的按钮，再调用rdoSort_checkedChange
@@ -542,70 +662,79 @@ namespace VM
         //对第一组按钮组进行设置：投资期限
         private void rdoRTime4_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoRTime4, txtRTimeLow, txtRTimeHigh, btnRConfirm);
+            rdo_checkedChange(rdoRTime4, txtRTimeLow, txtRTimeHigh);
         }
 
         private void rdoRTime3_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoRTime3, txtRTimeLow, txtRTimeHigh, btnRConfirm);
+            rdo_checkedChange(rdoRTime3, txtRTimeLow, txtRTimeHigh);
         }
 
         private void rdoRTime2_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoRTime2, txtRTimeLow, txtRTimeHigh, btnRConfirm);
+            rdo_checkedChange(rdoRTime2, txtRTimeLow, txtRTimeHigh);
         }
 
         private void rdoRTime1_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoRTime1, txtRTimeLow, txtRTimeHigh, btnRConfirm);
+            rdo_checkedChange(rdoRTime1, txtRTimeLow, txtRTimeHigh);
         }
 
         //对第二组按钮组进行设置：投资金额
         private void rdoRMoney4_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoRMoney4, txtRMoneyLow, txtRMoneyHigh, btnRConfirm);
+            rdo_checkedChange(rdoRMoney4, txtRMoneyLow, txtRMoneyHigh);
         }
 
         private void rdoRMoney3_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoRMoney3, txtRMoneyLow, txtRMoneyHigh, btnRConfirm);
+            rdo_checkedChange(rdoRMoney3, txtRMoneyLow, txtRMoneyHigh);
         }
 
         private void rdoRMoney2_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoRMoney2, txtRMoneyLow, txtRMoneyHigh, btnRConfirm);
+            rdo_checkedChange(rdoRMoney2, txtRMoneyLow, txtRMoneyHigh);
         }
 
         private void rdoRMoney1_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoRMoney1, txtRMoneyLow, txtRMoneyHigh, btnRConfirm);
+            rdo_checkedChange(rdoRMoney1, txtRMoneyLow, txtRMoneyHigh);
         }
 
         //对第三组按钮组进行设置：收益率
         private void rdoRRate4_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoRRate4, txtRRateLow, txtRRateHigh, btnRConfirm);
+            rdo_checkedChange(rdoRRate4, txtRRateLow, txtRRateHigh);
         }
 
         private void rdoRRate3_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoRRate3, txtRRateLow, txtRRateHigh, btnRConfirm);
+            rdo_checkedChange(rdoRRate3, txtRRateLow, txtRRateHigh);
         }
 
         private void rdoRRate2_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoRRate2, txtRRateLow, txtRRateHigh, btnRConfirm);
+            rdo_checkedChange(rdoRRate2, txtRRateLow, txtRRateHigh);
         }
 
         private void rdoRRate1_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoRRate1, txtRRateLow, txtRRateHigh, btnRConfirm);
+            rdo_checkedChange(rdoRRate1, txtRRateLow, txtRRateHigh);
         }
 
         private void btnRConfirm_Click(object sender, EventArgs e)
         {
 
         }
+
+
+
+
+
+
+
+
+
 
 
 

@@ -31,21 +31,21 @@ namespace VM
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle106 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle107 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle108 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle109 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle110 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle111 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle112 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle113 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle114 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle115 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle116 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle117 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle118 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle119 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle120 = new System.Windows.Forms.DataGridViewCellStyle();
             this.picLogo2 = new System.Windows.Forms.PictureBox();
             this.picLogo1 = new System.Windows.Forms.PictureBox();
             this.tmrRushReflash = new System.Windows.Forms.Timer(this.components);
@@ -124,6 +124,7 @@ namespace VM
             this.btnMoneyConfirm = new System.Windows.Forms.Button();
             this.lblSplit = new System.Windows.Forms.Label();
             this.grpSRate = new System.Windows.Forms.GroupBox();
+            this.rdoRateAll = new System.Windows.Forms.RadioButton();
             this.lblSRateHigh = new System.Windows.Forms.Label();
             this.txtSRateHigh = new System.Windows.Forms.TextBox();
             this.lblSRateLow = new System.Windows.Forms.Label();
@@ -133,6 +134,7 @@ namespace VM
             this.rdoSRate2 = new System.Windows.Forms.RadioButton();
             this.rdoSRate1 = new System.Windows.Forms.RadioButton();
             this.grpSMoney = new System.Windows.Forms.GroupBox();
+            this.rdoMoneyAll = new System.Windows.Forms.RadioButton();
             this.lblSMoneyHigh = new System.Windows.Forms.Label();
             this.txtSMoneyHigh = new System.Windows.Forms.TextBox();
             this.lblSMoneyLow = new System.Windows.Forms.Label();
@@ -146,6 +148,7 @@ namespace VM
             this.lblSMoney = new System.Windows.Forms.Label();
             this.lblSTime = new System.Windows.Forms.Label();
             this.grpSTime = new System.Windows.Forms.GroupBox();
+            this.rdoTimeAll = new System.Windows.Forms.RadioButton();
             this.lblSTimeHigh = new System.Windows.Forms.Label();
             this.txtSTimeHigh = new System.Windows.Forms.TextBox();
             this.lblSTimeLow = new System.Windows.Forms.Label();
@@ -220,27 +223,27 @@ namespace VM
             this.tapRush.Controls.Add(this.grpRTime);
             this.tapRush.Location = new System.Drawing.Point(4, 30);
             this.tapRush.Name = "tapRush";
-            this.tapRush.Size = new System.Drawing.Size(848, 566);
+            this.tapRush.Size = new System.Drawing.Size(896, 566);
             this.tapRush.TabIndex = 2;
             this.tapRush.Text = "抢购";
             this.tapRush.UseVisualStyleBackColor = true;
             // 
             // grvRush
             // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            this.grvRush.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle106.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            this.grvRush.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle106;
             this.grvRush.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grvRush.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grvRush.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grvRush.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvRush.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle107.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle107.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle107.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle107.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle107.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle107.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle107.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvRush.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle107;
             this.grvRush.ColumnHeadersHeight = 30;
             this.grvRush.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7,
@@ -248,33 +251,33 @@ namespace VM
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewButtonColumn1});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvRush.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle108.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle108.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle108.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle108.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle108.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle108.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle108.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvRush.DefaultCellStyle = dataGridViewCellStyle108;
             this.grvRush.Location = new System.Drawing.Point(8, 264);
             this.grvRush.Name = "grvRush";
             this.grvRush.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvRush.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle109.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle109.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle109.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle109.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle109.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle109.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle109.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvRush.RowHeadersDefaultCellStyle = dataGridViewCellStyle109;
             this.grvRush.RowHeadersVisible = false;
             this.grvRush.RowHeadersWidth = 100;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grvRush.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle110.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grvRush.RowsDefaultCellStyle = dataGridViewCellStyle110;
             this.grvRush.RowTemplate.Height = 23;
             this.grvRush.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.grvRush.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grvRush.Size = new System.Drawing.Size(832, 264);
+            this.grvRush.Size = new System.Drawing.Size(864, 264);
             this.grvRush.TabIndex = 22;
             // 
             // dataGridViewTextBoxColumn7
@@ -322,7 +325,7 @@ namespace VM
             // 
             this.btnRConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRConfirm.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnRConfirm.Location = new System.Drawing.Point(768, 216);
+            this.btnRConfirm.Location = new System.Drawing.Point(784, 216);
             this.btnRConfirm.Name = "btnRConfirm";
             this.btnRConfirm.Size = new System.Drawing.Size(75, 32);
             this.btnRConfirm.TabIndex = 19;
@@ -334,7 +337,7 @@ namespace VM
             // 
             this.btnActionRush.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnActionRush.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnActionRush.Location = new System.Drawing.Point(328, 24);
+            this.btnActionRush.Location = new System.Drawing.Point(336, 24);
             this.btnActionRush.Name = "btnActionRush";
             this.btnActionRush.Size = new System.Drawing.Size(136, 40);
             this.btnActionRush.TabIndex = 18;
@@ -681,7 +684,7 @@ namespace VM
             this.tapAnalyse.Location = new System.Drawing.Point(4, 30);
             this.tapAnalyse.Name = "tapAnalyse";
             this.tapAnalyse.Padding = new System.Windows.Forms.Padding(3);
-            this.tapAnalyse.Size = new System.Drawing.Size(848, 566);
+            this.tapAnalyse.Size = new System.Drawing.Size(896, 566);
             this.tapAnalyse.TabIndex = 1;
             this.tapAnalyse.Text = "统计分析";
             this.tapAnalyse.UseVisualStyleBackColor = true;
@@ -714,20 +717,20 @@ namespace VM
             // 
             this.grvAnalyse.AllowUserToAddRows = false;
             this.grvAnalyse.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            this.grvAnalyse.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle111.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            this.grvAnalyse.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle111;
             this.grvAnalyse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grvAnalyse.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grvAnalyse.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grvAnalyse.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvAnalyse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle112.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle112.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle112.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle112.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle112.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle112.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle112.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvAnalyse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle112;
             this.grvAnalyse.ColumnHeadersHeight = 30;
             this.grvAnalyse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -737,34 +740,34 @@ namespace VM
             this.Column4,
             this.Column5,
             this.dataGridViewTextBoxColumn6});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvAnalyse.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle113.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle113.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle113.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle113.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle113.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle113.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle113.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvAnalyse.DefaultCellStyle = dataGridViewCellStyle113;
             this.grvAnalyse.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.grvAnalyse.Location = new System.Drawing.Point(0, 40);
             this.grvAnalyse.Name = "grvAnalyse";
             this.grvAnalyse.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvAnalyse.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle114.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle114.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle114.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle114.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle114.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle114.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle114.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvAnalyse.RowHeadersDefaultCellStyle = dataGridViewCellStyle114;
             this.grvAnalyse.RowHeadersVisible = false;
             this.grvAnalyse.RowHeadersWidth = 100;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grvAnalyse.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle115.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grvAnalyse.RowsDefaultCellStyle = dataGridViewCellStyle115;
             this.grvAnalyse.RowTemplate.Height = 23;
             this.grvAnalyse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.grvAnalyse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvAnalyse.Size = new System.Drawing.Size(840, 464);
+            this.grvAnalyse.Size = new System.Drawing.Size(880, 464);
             this.grvAnalyse.TabIndex = 17;
             // 
             // Column1
@@ -818,7 +821,7 @@ namespace VM
             this.mmuDiagram});
             this.mmuAnalyse.Location = new System.Drawing.Point(3, 3);
             this.mmuAnalyse.Name = "mmuAnalyse";
-            this.mmuAnalyse.Size = new System.Drawing.Size(842, 29);
+            this.mmuAnalyse.Size = new System.Drawing.Size(890, 29);
             this.mmuAnalyse.TabIndex = 0;
             this.mmuAnalyse.Text = "menuStrip1";
             // 
@@ -890,7 +893,7 @@ namespace VM
             this.tapSearch.Margin = new System.Windows.Forms.Padding(1);
             this.tapSearch.Name = "tapSearch";
             this.tapSearch.Padding = new System.Windows.Forms.Padding(1);
-            this.tapSearch.Size = new System.Drawing.Size(848, 566);
+            this.tapSearch.Size = new System.Drawing.Size(896, 566);
             this.tapSearch.TabIndex = 0;
             this.tapSearch.Text = "搜索查询";
             this.tapSearch.UseVisualStyleBackColor = true;
@@ -917,23 +920,25 @@ namespace VM
             // 
             // btnRateConfirm
             // 
-            this.btnRateConfirm.Location = new System.Drawing.Point(760, 138);
+            this.btnRateConfirm.Location = new System.Drawing.Point(808, 144);
             this.btnRateConfirm.Name = "btnRateConfirm";
             this.btnRateConfirm.Size = new System.Drawing.Size(75, 32);
             this.btnRateConfirm.TabIndex = 26;
             this.btnRateConfirm.Tag = "0";
             this.btnRateConfirm.Text = "确定";
             this.btnRateConfirm.UseVisualStyleBackColor = true;
+            this.btnRateConfirm.Click += new System.EventHandler(this.btnRateConfirm_Click);
             // 
             // btnTimeConfirm
             // 
-            this.btnTimeConfirm.Location = new System.Drawing.Point(760, 48);
+            this.btnTimeConfirm.Location = new System.Drawing.Point(808, 48);
             this.btnTimeConfirm.Name = "btnTimeConfirm";
             this.btnTimeConfirm.Size = new System.Drawing.Size(75, 32);
             this.btnTimeConfirm.TabIndex = 25;
             this.btnTimeConfirm.Tag = "0";
             this.btnTimeConfirm.Text = "确定";
             this.btnTimeConfirm.UseVisualStyleBackColor = true;
+            this.btnTimeConfirm.Click += new System.EventHandler(this.btnTimeConfirm_Click);
             // 
             // btnPageDown
             // 
@@ -960,20 +965,20 @@ namespace VM
             this.grvSearch.AllowUserToDeleteRows = false;
             this.grvSearch.AllowUserToResizeColumns = false;
             this.grvSearch.AllowUserToResizeRows = false;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            this.grvSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle116.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            this.grvSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle116;
             this.grvSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grvSearch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grvSearch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grvSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle117.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle117.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle117.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle117.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle117.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle117.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle117.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle117;
             this.grvSearch.ColumnHeadersHeight = 30;
             this.grvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.grvSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -982,35 +987,35 @@ namespace VM
             this.money,
             this.rate,
             this.inverst});
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvSearch.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle118.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle118.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle118.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle118.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle118.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle118.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle118.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvSearch.DefaultCellStyle = dataGridViewCellStyle118;
             this.grvSearch.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.grvSearch.Location = new System.Drawing.Point(8, 232);
             this.grvSearch.Name = "grvSearch";
             this.grvSearch.ReadOnly = true;
             this.grvSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle119.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle119.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle119.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle119.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle119.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle119.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle119.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle119;
             this.grvSearch.RowHeadersVisible = false;
             this.grvSearch.RowHeadersWidth = 100;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grvSearch.RowsDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle120.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grvSearch.RowsDefaultCellStyle = dataGridViewCellStyle120;
             this.grvSearch.RowTemplate.Height = 23;
             this.grvSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.grvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvSearch.Size = new System.Drawing.Size(832, 264);
+            this.grvSearch.Size = new System.Drawing.Size(864, 264);
             this.grvSearch.TabIndex = 16;
             this.grvSearch.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grvSearch_CellMouseClick);
             // 
@@ -1060,12 +1065,12 @@ namespace VM
             // 
             this.txtSearch.Location = new System.Drawing.Point(544, 8);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(208, 29);
+            this.txtSearch.Size = new System.Drawing.Size(248, 29);
             this.txtSearch.TabIndex = 3;
             // 
             // btnRush
             // 
-            this.btnRush.Location = new System.Drawing.Point(760, 192);
+            this.btnRush.Location = new System.Drawing.Point(808, 192);
             this.btnRush.Name = "btnRush";
             this.btnRush.Size = new System.Drawing.Size(75, 32);
             this.btnRush.TabIndex = 13;
@@ -1075,13 +1080,14 @@ namespace VM
             // 
             // btnMoneyConfirm
             // 
-            this.btnMoneyConfirm.Location = new System.Drawing.Point(760, 96);
+            this.btnMoneyConfirm.Location = new System.Drawing.Point(808, 96);
             this.btnMoneyConfirm.Name = "btnMoneyConfirm";
             this.btnMoneyConfirm.Size = new System.Drawing.Size(75, 32);
             this.btnMoneyConfirm.TabIndex = 12;
             this.btnMoneyConfirm.Tag = "0";
             this.btnMoneyConfirm.Text = "确定";
             this.btnMoneyConfirm.UseVisualStyleBackColor = true;
+            this.btnMoneyConfirm.Click += new System.EventHandler(this.btnMoneyConfirm_Click);
             // 
             // lblSplit
             // 
@@ -1089,12 +1095,13 @@ namespace VM
             this.lblSplit.Enabled = false;
             this.lblSplit.Location = new System.Drawing.Point(8, 184);
             this.lblSplit.Name = "lblSplit";
-            this.lblSplit.Size = new System.Drawing.Size(824, 2);
+            this.lblSplit.Size = new System.Drawing.Size(856, 2);
             this.lblSplit.TabIndex = 11;
             this.lblSplit.Text = "label10";
             // 
             // grpSRate
             // 
+            this.grpSRate.Controls.Add(this.rdoRateAll);
             this.grpSRate.Controls.Add(this.lblSRateHigh);
             this.grpSRate.Controls.Add(this.txtSRateHigh);
             this.grpSRate.Controls.Add(this.lblSRateLow);
@@ -1103,17 +1110,31 @@ namespace VM
             this.grpSRate.Controls.Add(this.rdoSRate3);
             this.grpSRate.Controls.Add(this.rdoSRate2);
             this.grpSRate.Controls.Add(this.rdoSRate1);
-            this.grpSRate.Location = new System.Drawing.Point(112, 128);
+            this.grpSRate.Location = new System.Drawing.Point(80, 128);
             this.grpSRate.Name = "grpSRate";
-            this.grpSRate.Size = new System.Drawing.Size(616, 48);
+            this.grpSRate.Size = new System.Drawing.Size(720, 48);
             this.grpSRate.TabIndex = 10;
             this.grpSRate.TabStop = false;
+            // 
+            // rdoRateAll
+            // 
+            this.rdoRateAll.AutoSize = true;
+            this.rdoRateAll.Checked = true;
+            this.rdoRateAll.Location = new System.Drawing.Point(16, 16);
+            this.rdoRateAll.Name = "rdoRateAll";
+            this.rdoRateAll.Size = new System.Drawing.Size(60, 25);
+            this.rdoRateAll.TabIndex = 30;
+            this.rdoRateAll.TabStop = true;
+            this.rdoRateAll.Tag = "4";
+            this.rdoRateAll.Text = "不限";
+            this.rdoRateAll.UseVisualStyleBackColor = true;
+            this.rdoRateAll.CheckedChanged += new System.EventHandler(this.rdoRateAll_CheckedChanged);
             // 
             // lblSRateHigh
             // 
             this.lblSRateHigh.AutoSize = true;
             this.lblSRateHigh.Enabled = false;
-            this.lblSRateHigh.Location = new System.Drawing.Point(576, 24);
+            this.lblSRateHigh.Location = new System.Drawing.Point(680, 24);
             this.lblSRateHigh.Name = "lblSRateHigh";
             this.lblSRateHigh.Size = new System.Drawing.Size(24, 21);
             this.lblSRateHigh.TabIndex = 8;
@@ -1122,7 +1143,7 @@ namespace VM
             // txtSRateHigh
             // 
             this.txtSRateHigh.Enabled = false;
-            this.txtSRateHigh.Location = new System.Drawing.Point(504, 16);
+            this.txtSRateHigh.Location = new System.Drawing.Point(608, 16);
             this.txtSRateHigh.Name = "txtSRateHigh";
             this.txtSRateHigh.Size = new System.Drawing.Size(56, 29);
             this.txtSRateHigh.TabIndex = 7;
@@ -1131,7 +1152,7 @@ namespace VM
             // 
             this.lblSRateLow.AutoSize = true;
             this.lblSRateLow.Enabled = false;
-            this.lblSRateLow.Location = new System.Drawing.Point(440, 24);
+            this.lblSRateLow.Location = new System.Drawing.Point(544, 24);
             this.lblSRateLow.Name = "lblSRateLow";
             this.lblSRateLow.Size = new System.Drawing.Size(36, 21);
             this.lblSRateLow.TabIndex = 6;
@@ -1140,7 +1161,7 @@ namespace VM
             // txtSRateLow
             // 
             this.txtSRateLow.Enabled = false;
-            this.txtSRateLow.Location = new System.Drawing.Point(376, 16);
+            this.txtSRateLow.Location = new System.Drawing.Point(464, 16);
             this.txtSRateLow.Name = "txtSRateLow";
             this.txtSRateLow.Size = new System.Drawing.Size(64, 29);
             this.txtSRateLow.TabIndex = 4;
@@ -1148,7 +1169,7 @@ namespace VM
             // rdoSRate4
             // 
             this.rdoSRate4.AutoSize = true;
-            this.rdoSRate4.Location = new System.Drawing.Point(320, 16);
+            this.rdoSRate4.Location = new System.Drawing.Point(400, 16);
             this.rdoSRate4.Name = "rdoSRate4";
             this.rdoSRate4.Size = new System.Drawing.Size(60, 25);
             this.rdoSRate4.TabIndex = 3;
@@ -1160,7 +1181,7 @@ namespace VM
             // rdoSRate3
             // 
             this.rdoSRate3.AutoSize = true;
-            this.rdoSRate3.Location = new System.Drawing.Point(208, 16);
+            this.rdoSRate3.Location = new System.Drawing.Point(288, 16);
             this.rdoSRate3.Name = "rdoSRate3";
             this.rdoSRate3.Size = new System.Drawing.Size(92, 25);
             this.rdoSRate3.TabIndex = 2;
@@ -1172,7 +1193,7 @@ namespace VM
             // rdoSRate2
             // 
             this.rdoSRate2.AutoSize = true;
-            this.rdoSRate2.Location = new System.Drawing.Point(104, 16);
+            this.rdoSRate2.Location = new System.Drawing.Point(184, 16);
             this.rdoSRate2.Name = "rdoSRate2";
             this.rdoSRate2.Size = new System.Drawing.Size(90, 25);
             this.rdoSRate2.TabIndex = 1;
@@ -1184,7 +1205,7 @@ namespace VM
             // rdoSRate1
             // 
             this.rdoSRate1.AutoSize = true;
-            this.rdoSRate1.Location = new System.Drawing.Point(0, 16);
+            this.rdoSRate1.Location = new System.Drawing.Point(80, 16);
             this.rdoSRate1.Name = "rdoSRate1";
             this.rdoSRate1.Size = new System.Drawing.Size(83, 25);
             this.rdoSRate1.TabIndex = 0;
@@ -1195,6 +1216,7 @@ namespace VM
             // 
             // grpSMoney
             // 
+            this.grpSMoney.Controls.Add(this.rdoMoneyAll);
             this.grpSMoney.Controls.Add(this.lblSMoneyHigh);
             this.grpSMoney.Controls.Add(this.txtSMoneyHigh);
             this.grpSMoney.Controls.Add(this.lblSMoneyLow);
@@ -1203,17 +1225,31 @@ namespace VM
             this.grpSMoney.Controls.Add(this.rdoSMoney3);
             this.grpSMoney.Controls.Add(this.rdoSMoney2);
             this.grpSMoney.Controls.Add(this.rdoSMoney1);
-            this.grpSMoney.Location = new System.Drawing.Point(112, 80);
+            this.grpSMoney.Location = new System.Drawing.Point(80, 80);
             this.grpSMoney.Name = "grpSMoney";
-            this.grpSMoney.Size = new System.Drawing.Size(616, 56);
+            this.grpSMoney.Size = new System.Drawing.Size(720, 56);
             this.grpSMoney.TabIndex = 9;
             this.grpSMoney.TabStop = false;
+            // 
+            // rdoMoneyAll
+            // 
+            this.rdoMoneyAll.AutoSize = true;
+            this.rdoMoneyAll.Checked = true;
+            this.rdoMoneyAll.Location = new System.Drawing.Point(16, 16);
+            this.rdoMoneyAll.Name = "rdoMoneyAll";
+            this.rdoMoneyAll.Size = new System.Drawing.Size(60, 25);
+            this.rdoMoneyAll.TabIndex = 29;
+            this.rdoMoneyAll.TabStop = true;
+            this.rdoMoneyAll.Tag = "4";
+            this.rdoMoneyAll.Text = "不限";
+            this.rdoMoneyAll.UseVisualStyleBackColor = true;
+            this.rdoMoneyAll.CheckedChanged += new System.EventHandler(this.rdoMoneyAll_CheckedChanged);
             // 
             // lblSMoneyHigh
             // 
             this.lblSMoneyHigh.AutoSize = true;
             this.lblSMoneyHigh.Enabled = false;
-            this.lblSMoneyHigh.Location = new System.Drawing.Point(576, 24);
+            this.lblSMoneyHigh.Location = new System.Drawing.Point(680, 24);
             this.lblSMoneyHigh.Name = "lblSMoneyHigh";
             this.lblSMoneyHigh.Size = new System.Drawing.Size(26, 21);
             this.lblSMoneyHigh.TabIndex = 8;
@@ -1222,7 +1258,7 @@ namespace VM
             // txtSMoneyHigh
             // 
             this.txtSMoneyHigh.Enabled = false;
-            this.txtSMoneyHigh.Location = new System.Drawing.Point(504, 16);
+            this.txtSMoneyHigh.Location = new System.Drawing.Point(608, 16);
             this.txtSMoneyHigh.Name = "txtSMoneyHigh";
             this.txtSMoneyHigh.Size = new System.Drawing.Size(56, 29);
             this.txtSMoneyHigh.TabIndex = 7;
@@ -1231,7 +1267,7 @@ namespace VM
             // 
             this.lblSMoneyLow.AutoSize = true;
             this.lblSMoneyLow.Enabled = false;
-            this.lblSMoneyLow.Location = new System.Drawing.Point(440, 24);
+            this.lblSMoneyLow.Location = new System.Drawing.Point(552, 24);
             this.lblSMoneyLow.Name = "lblSMoneyLow";
             this.lblSMoneyLow.Size = new System.Drawing.Size(38, 21);
             this.lblSMoneyLow.TabIndex = 6;
@@ -1240,7 +1276,7 @@ namespace VM
             // txtSMoneyLow
             // 
             this.txtSMoneyLow.Enabled = false;
-            this.txtSMoneyLow.Location = new System.Drawing.Point(376, 16);
+            this.txtSMoneyLow.Location = new System.Drawing.Point(464, 16);
             this.txtSMoneyLow.Name = "txtSMoneyLow";
             this.txtSMoneyLow.Size = new System.Drawing.Size(64, 29);
             this.txtSMoneyLow.TabIndex = 4;
@@ -1248,7 +1284,7 @@ namespace VM
             // rdoSMoney4
             // 
             this.rdoSMoney4.AutoSize = true;
-            this.rdoSMoney4.Location = new System.Drawing.Point(320, 16);
+            this.rdoSMoney4.Location = new System.Drawing.Point(400, 16);
             this.rdoSMoney4.Name = "rdoSMoney4";
             this.rdoSMoney4.Size = new System.Drawing.Size(60, 25);
             this.rdoSMoney4.TabIndex = 3;
@@ -1260,7 +1296,7 @@ namespace VM
             // rdoSMoney3
             // 
             this.rdoSMoney3.AutoSize = true;
-            this.rdoSMoney3.Location = new System.Drawing.Point(208, 16);
+            this.rdoSMoney3.Location = new System.Drawing.Point(288, 16);
             this.rdoSMoney3.Name = "rdoSMoney3";
             this.rdoSMoney3.Size = new System.Drawing.Size(78, 25);
             this.rdoSMoney3.TabIndex = 2;
@@ -1272,7 +1308,7 @@ namespace VM
             // rdoSMoney2
             // 
             this.rdoSMoney2.AutoSize = true;
-            this.rdoSMoney2.Location = new System.Drawing.Point(96, 16);
+            this.rdoSMoney2.Location = new System.Drawing.Point(184, 16);
             this.rdoSMoney2.Name = "rdoSMoney2";
             this.rdoSMoney2.Size = new System.Drawing.Size(69, 25);
             this.rdoSMoney2.TabIndex = 1;
@@ -1284,7 +1320,7 @@ namespace VM
             // rdoSMoney1
             // 
             this.rdoSMoney1.AutoSize = true;
-            this.rdoSMoney1.Location = new System.Drawing.Point(0, 16);
+            this.rdoSMoney1.Location = new System.Drawing.Point(80, 16);
             this.rdoSMoney1.Name = "rdoSMoney1";
             this.rdoSMoney1.Size = new System.Drawing.Size(85, 25);
             this.rdoSMoney1.TabIndex = 0;
@@ -1297,7 +1333,7 @@ namespace VM
             // 
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSearch.Location = new System.Drawing.Point(760, 5);
+            this.btnSearch.Location = new System.Drawing.Point(808, 8);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 32);
             this.btnSearch.TabIndex = 4;
@@ -1309,7 +1345,7 @@ namespace VM
             // 
             this.lblSRate.AutoSize = true;
             this.lblSRate.Enabled = false;
-            this.lblSRate.Location = new System.Drawing.Point(32, 144);
+            this.lblSRate.Location = new System.Drawing.Point(8, 144);
             this.lblSRate.Name = "lblSRate";
             this.lblSRate.Size = new System.Drawing.Size(58, 21);
             this.lblSRate.TabIndex = 2;
@@ -1319,7 +1355,7 @@ namespace VM
             // 
             this.lblSMoney.AutoSize = true;
             this.lblSMoney.Enabled = false;
-            this.lblSMoney.Location = new System.Drawing.Point(32, 104);
+            this.lblSMoney.Location = new System.Drawing.Point(8, 96);
             this.lblSMoney.Name = "lblSMoney";
             this.lblSMoney.Size = new System.Drawing.Size(74, 21);
             this.lblSMoney.TabIndex = 1;
@@ -1329,7 +1365,7 @@ namespace VM
             // 
             this.lblSTime.AutoSize = true;
             this.lblSTime.Enabled = false;
-            this.lblSTime.Location = new System.Drawing.Point(32, 48);
+            this.lblSTime.Location = new System.Drawing.Point(8, 48);
             this.lblSTime.Name = "lblSTime";
             this.lblSTime.Size = new System.Drawing.Size(74, 21);
             this.lblSTime.TabIndex = 0;
@@ -1337,6 +1373,7 @@ namespace VM
             // 
             // grpSTime
             // 
+            this.grpSTime.Controls.Add(this.rdoTimeAll);
             this.grpSTime.Controls.Add(this.lblSTimeHigh);
             this.grpSTime.Controls.Add(this.txtSTimeHigh);
             this.grpSTime.Controls.Add(this.lblSTimeLow);
@@ -1345,17 +1382,31 @@ namespace VM
             this.grpSTime.Controls.Add(this.rdoSTime3);
             this.grpSTime.Controls.Add(this.rdoSTime2);
             this.grpSTime.Controls.Add(this.rdoSTime1);
-            this.grpSTime.Location = new System.Drawing.Point(112, 32);
+            this.grpSTime.Location = new System.Drawing.Point(80, 32);
             this.grpSTime.Name = "grpSTime";
-            this.grpSTime.Size = new System.Drawing.Size(616, 48);
+            this.grpSTime.Size = new System.Drawing.Size(720, 48);
             this.grpSTime.TabIndex = 5;
             this.grpSTime.TabStop = false;
+            // 
+            // rdoTimeAll
+            // 
+            this.rdoTimeAll.AutoSize = true;
+            this.rdoTimeAll.Checked = true;
+            this.rdoTimeAll.Location = new System.Drawing.Point(16, 16);
+            this.rdoTimeAll.Name = "rdoTimeAll";
+            this.rdoTimeAll.Size = new System.Drawing.Size(60, 25);
+            this.rdoTimeAll.TabIndex = 9;
+            this.rdoTimeAll.TabStop = true;
+            this.rdoTimeAll.Tag = "4";
+            this.rdoTimeAll.Text = "不限";
+            this.rdoTimeAll.UseVisualStyleBackColor = true;
+            this.rdoTimeAll.CheckedChanged += new System.EventHandler(this.rdoTimeAll_CheckedChanged);
             // 
             // lblSTimeHigh
             // 
             this.lblSTimeHigh.AutoSize = true;
             this.lblSTimeHigh.Enabled = false;
-            this.lblSTimeHigh.Location = new System.Drawing.Point(576, 24);
+            this.lblSTimeHigh.Location = new System.Drawing.Point(672, 24);
             this.lblSTimeHigh.Name = "lblSTimeHigh";
             this.lblSTimeHigh.Size = new System.Drawing.Size(42, 21);
             this.lblSTimeHigh.TabIndex = 8;
@@ -1364,7 +1415,7 @@ namespace VM
             // txtSTimeHigh
             // 
             this.txtSTimeHigh.Enabled = false;
-            this.txtSTimeHigh.Location = new System.Drawing.Point(504, 16);
+            this.txtSTimeHigh.Location = new System.Drawing.Point(608, 16);
             this.txtSTimeHigh.Name = "txtSTimeHigh";
             this.txtSTimeHigh.Size = new System.Drawing.Size(56, 29);
             this.txtSTimeHigh.TabIndex = 7;
@@ -1373,7 +1424,7 @@ namespace VM
             // 
             this.lblSTimeLow.AutoSize = true;
             this.lblSTimeLow.Enabled = false;
-            this.lblSTimeLow.Location = new System.Drawing.Point(440, 24);
+            this.lblSTimeLow.Location = new System.Drawing.Point(544, 24);
             this.lblSTimeLow.Name = "lblSTimeLow";
             this.lblSTimeLow.Size = new System.Drawing.Size(54, 21);
             this.lblSTimeLow.TabIndex = 6;
@@ -1382,7 +1433,7 @@ namespace VM
             // txtSTimeLow
             // 
             this.txtSTimeLow.Enabled = false;
-            this.txtSTimeLow.Location = new System.Drawing.Point(376, 16);
+            this.txtSTimeLow.Location = new System.Drawing.Point(464, 16);
             this.txtSTimeLow.Name = "txtSTimeLow";
             this.txtSTimeLow.Size = new System.Drawing.Size(64, 29);
             this.txtSTimeLow.TabIndex = 4;
@@ -1390,7 +1441,7 @@ namespace VM
             // rdoSTime4
             // 
             this.rdoSTime4.AutoSize = true;
-            this.rdoSTime4.Location = new System.Drawing.Point(320, 16);
+            this.rdoSTime4.Location = new System.Drawing.Point(400, 16);
             this.rdoSTime4.Name = "rdoSTime4";
             this.rdoSTime4.Size = new System.Drawing.Size(60, 25);
             this.rdoSTime4.TabIndex = 3;
@@ -1402,7 +1453,7 @@ namespace VM
             // rdoSTime3
             // 
             this.rdoSTime3.AutoSize = true;
-            this.rdoSTime3.Location = new System.Drawing.Point(208, 16);
+            this.rdoSTime3.Location = new System.Drawing.Point(288, 16);
             this.rdoSTime3.Name = "rdoSTime3";
             this.rdoSTime3.Size = new System.Drawing.Size(110, 25);
             this.rdoSTime3.TabIndex = 2;
@@ -1414,7 +1465,7 @@ namespace VM
             // rdoSTime2
             // 
             this.rdoSTime2.AutoSize = true;
-            this.rdoSTime2.Location = new System.Drawing.Point(104, 16);
+            this.rdoSTime2.Location = new System.Drawing.Point(184, 16);
             this.rdoSTime2.Name = "rdoSTime2";
             this.rdoSTime2.Size = new System.Drawing.Size(94, 25);
             this.rdoSTime2.TabIndex = 1;
@@ -1426,7 +1477,7 @@ namespace VM
             // rdoSTime1
             // 
             this.rdoSTime1.AutoSize = true;
-            this.rdoSTime1.Location = new System.Drawing.Point(0, 16);
+            this.rdoSTime1.Location = new System.Drawing.Point(80, 16);
             this.rdoSTime1.Name = "rdoSTime1";
             this.rdoSTime1.Size = new System.Drawing.Size(101, 25);
             this.rdoSTime1.TabIndex = 0;
@@ -1454,7 +1505,7 @@ namespace VM
             this.rdoSortRate.Name = "rdoSortRate";
             this.rdoSortRate.Size = new System.Drawing.Size(76, 25);
             this.rdoSortRate.TabIndex = 3;
-            this.rdoSortRate.Tag = "Rate";
+            this.rdoSortRate.Tag = "3";
             this.rdoSortRate.Text = "收益率";
             this.rdoSortRate.UseVisualStyleBackColor = true;
             this.rdoSortRate.CheckedChanged += new System.EventHandler(this.rdoSortRate_CheckedChanged);
@@ -1466,7 +1517,7 @@ namespace VM
             this.rdoSortMoney.Name = "rdoSortMoney";
             this.rdoSortMoney.Size = new System.Drawing.Size(92, 25);
             this.rdoSortMoney.TabIndex = 2;
-            this.rdoSortMoney.Tag = "Money";
+            this.rdoSortMoney.Tag = "2";
             this.rdoSortMoney.Text = "起投金额";
             this.rdoSortMoney.UseVisualStyleBackColor = true;
             this.rdoSortMoney.CheckedChanged += new System.EventHandler(this.rdoSortMoney_CheckedChanged);
@@ -1478,7 +1529,7 @@ namespace VM
             this.rdoSortTime.Name = "rdoSortTime";
             this.rdoSortTime.Size = new System.Drawing.Size(92, 25);
             this.rdoSortTime.TabIndex = 1;
-            this.rdoSortTime.Tag = "Time";
+            this.rdoSortTime.Tag = "1";
             this.rdoSortTime.Text = "投资期限";
             this.rdoSortTime.UseVisualStyleBackColor = true;
             this.rdoSortTime.CheckedChanged += new System.EventHandler(this.rdoSortTime_CheckedChanged);
@@ -1492,7 +1543,7 @@ namespace VM
             this.rdoSortDefault.Size = new System.Drawing.Size(92, 25);
             this.rdoSortDefault.TabIndex = 0;
             this.rdoSortDefault.TabStop = true;
-            this.rdoSortDefault.Tag = "Default";
+            this.rdoSortDefault.Tag = "0";
             this.rdoSortDefault.Text = "默认排序";
             this.rdoSortDefault.UseVisualStyleBackColor = true;
             this.rdoSortDefault.CheckedChanged += new System.EventHandler(this.rdoSortDefault_CheckedChanged);
@@ -1543,7 +1594,7 @@ namespace VM
             this.tabSelectModule.Location = new System.Drawing.Point(0, 120);
             this.tabSelectModule.Name = "tabSelectModule";
             this.tabSelectModule.SelectedIndex = 0;
-            this.tabSelectModule.Size = new System.Drawing.Size(856, 600);
+            this.tabSelectModule.Size = new System.Drawing.Size(904, 600);
             this.tabSelectModule.TabIndex = 1;
             // 
             // frmMain
@@ -1713,6 +1764,9 @@ namespace VM
         private System.Windows.Forms.RadioButton rdoSortUp;
         private System.Windows.Forms.TabControl tabSelectModule;
         public System.Windows.Forms.Label lblShowPg;
+        private System.Windows.Forms.RadioButton rdoMoneyAll;
+        private System.Windows.Forms.RadioButton rdoTimeAll;
+        private System.Windows.Forms.RadioButton rdoRateAll;
     }
 }
 

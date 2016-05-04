@@ -56,7 +56,7 @@
             this.lblDMoney.Name = "lblDMoney";
             this.lblDMoney.Size = new System.Drawing.Size(109, 12);
             this.lblDMoney.TabIndex = 1;
-            this.lblDMoney.Text = "投资金额（元）：";
+            this.lblDMoney.Text = "投资金额（万）：";
             // 
             // lblHint
             // 

@@ -8,14 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using ControlClass;
+using EntityClass;
 
-//using ControlClass;
-//using EntityClass;
 namespace VM
 {
-    //using EntityClass;
-   // using ControlClass;
-
     public partial class frmMain : Form
     {
         public String strSearchInfo = null;
@@ -24,7 +21,7 @@ namespace VM
         public String strExpression;
         public static int s_pgNum = 0;
         public static int s_allPg;
-        public static int s_maxItem=900;
+        public static int s_maxItem=22;
 
         const int c_ITEMNUM = 8;
         const int c_iMAX = 999999;
@@ -32,12 +29,13 @@ namespace VM
         const double c_dMAX = 999999;
         const double c_dMIN = -99999;
 
-        public mData g_SearchCondition;
+       // public mData g_SearchCondition;
         public Condition cdtS,cdtR;
         public RadioButton rdoTem;
         public static ListSortDirection s_lsdSUpDown = ListSortDirection.Ascending;
 
-       // ProjectList projectList; 
+        Project project;
+        ProjectList projectList; 
         public class Condition
         {
             public int TimeUp;
@@ -48,7 +46,7 @@ namespace VM
             public double MoneyUp;
         }
 
-        public class mData
+       /* public class mData
         {
             public String name;
             public String money;
@@ -62,7 +60,7 @@ namespace VM
                 date = "2016/4/30";
                 rate = "5%";
             }
-        }
+        }*/
 
 //***************************************华丽的分割线**************************************************
 
@@ -219,13 +217,33 @@ namespace VM
            // s_pgNum;当前页数
            // c_ITEMNUM;
            //s_allPg;总页数
-            for (int tem = 0 ; tem < c_ITEMNUM; tem++)
+            int itemNum = s_pgNum * c_ITEMNUM;
+            int i = 0;
+            for (; i < c_ITEMNUM && itemNum+i<s_maxItem; i++)
             {
-                grvSearch.Rows[tem].Cells[0].Value = tem+s_pgNum*c_ITEMNUM;
-                grvSearch.Rows[tem].Cells[1].Value = s_pgNum * c_ITEMNUM;
-                grvSearch.Rows[tem].Cells[2].Value = (s_pgNum + 1) * c_ITEMNUM;
-                grvSearch.Rows[tem].Cells[3].Value = 100 - tem;
-            }      
+                //Project project;
+                ProjectList projectList=new ProjectList(); 
+                grvSearch.Rows[i].Cells[0].Value = projectList.proArray[i + s_pgNum * c_ITEMNUM].intId;
+                grvSearch.Rows[i].Cells[1].Value = s_pgNum * c_ITEMNUM;
+                grvSearch.Rows[i].Cells[2].Value = (s_pgNum + 1) * c_ITEMNUM;
+                grvSearch.Rows[i].Cells[3].Value = 100 - i;
+            }
+
+            if (i != c_ITEMNUM)
+            {
+                for (; i < c_ITEMNUM; i++)
+                {
+                    grvSearch.Rows[i].Visible = false;
+                }
+            }
+            else
+            {
+                for (i=0; i < c_ITEMNUM; i++)
+                {
+                    grvSearch.Rows[i].Visible = true;
+                }
+            }
+
         }
 
         //重构函数：为表格添加行
@@ -237,29 +255,32 @@ namespace VM
             return index;
         }
 
+        //显示页面数
         public void showPage()
         {
-            strShowPg = "当前页数：" + s_pgNum + "      总页数：" + (int)s_maxItem/c_ITEMNUM;
+            s_allPg = (int)s_maxItem % c_ITEMNUM == 0 ? s_maxItem / c_ITEMNUM : s_maxItem / c_ITEMNUM + 1;
+            strShowPg = "当前页数：" + (s_pgNum+1) + "      总页数：" + s_allPg;
             lblShowPg.Text = strShowPg;
         }
         //**************程序开始**************
         //加载框架
         private void frmMain_Load(object sender, EventArgs e)
         {
-            mData record = new mData();
+          //  mData record = new mData();
             record.setData();
+            showPage();
 
             for (int i = 0; i < 8; i++)
             {
                 int index = addgrvRow(grvSearch);
-                grvSearch.Rows[index].Cells[0].Value = record.name;
+              /*  grvSearch.Rows[index].Cells[0].Value = record.name;
                 grvSearch.Rows[index].Cells[1].Value = record.date;
                 grvSearch.Rows[index].Cells[2].Value = record.money;
-                grvSearch.Rows[index].Cells[3].Value = record.rate;
+                grvSearch.Rows[index].Cells[3].Value = record.rate;*/
                 grvSearch.Rows[index].Cells[4].Value = "投资";
             }
             this.grvSearch.AutoGenerateColumns = false;
-            showPage();
+
         }
 
 
@@ -505,7 +526,7 @@ namespace VM
         private void btnPageDown_Click(object sender, EventArgs e)
         {
             //s_pgNum = s_pgNum * c_ITEMNUM < s_maxItem ? s_pgNum++ : s_pgNum;
-            if (s_pgNum < s_maxItem)
+            if (s_pgNum+1 < s_allPg)
             {
                 s_pgNum++;
             }

@@ -12,7 +12,7 @@ namespace EntityClass
     {
 
         //Use Facade Pattern
-        ArrayList proArray = new ArrayList();
+        public ArrayList proArray = new ArrayList();
        // int a = proArray[3].id;
         public void Add(Project mProject)
         {

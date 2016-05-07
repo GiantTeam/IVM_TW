@@ -18,6 +18,12 @@ namespace ControlClass
 
         public static ProjectList mProjectList = new ProjectList();//项目列表
         //从若干网页中筛选出所有项目的信息，生成总项目列表项
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Program1");
+            Console.ReadKey();
+        }
         public Initializate()
         {
             SetProjectList();

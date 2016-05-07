@@ -223,7 +223,7 @@ namespace VM
             {
                 //Project project;
                 ProjectList projectList=new ProjectList(); 
-                grvSearch.Rows[i].Cells[0].Value = projectList.proArray[i + s_pgNum * c_ITEMNUM].intId;
+                grvSearch.Rows[i].Cells[0].Value = projectList.getProject(i + s_pgNum * c_ITEMNUM).intId;
                 grvSearch.Rows[i].Cells[1].Value = s_pgNum * c_ITEMNUM;
                 grvSearch.Rows[i].Cells[2].Value = (s_pgNum + 1) * c_ITEMNUM;
                 grvSearch.Rows[i].Cells[3].Value = 100 - i;
@@ -267,17 +267,28 @@ namespace VM
         private void frmMain_Load(object sender, EventArgs e)
         {
           //  mData record = new mData();
-            record.setData();
+          // record.setData();
             showPage();
-
-            for (int i = 0; i < 8; i++)
+            new Initializate();
+            for (int i = 0; i < 8 && i < Initializate.mProjectList.Count(); i++)
             {
+                
                 int index = addgrvRow(grvSearch);
-              /*  grvSearch.Rows[index].Cells[0].Value = record.name;
-                grvSearch.Rows[index].Cells[1].Value = record.date;
-                grvSearch.Rows[index].Cells[2].Value = record.money;
-                grvSearch.Rows[index].Cells[3].Value = record.rate;*/
-                grvSearch.Rows[index].Cells[4].Value = "投资";
+
+               
+                
+                    grvSearch.Rows[index].Cells[0].Value = Initializate.mProjectList.getProject(i).name;
+                    grvSearch.Rows[index].Cells[1].Value = Initializate.mProjectList.getProject(i).intTime;
+                    grvSearch.Rows[index].Cells[2].Value = Initializate.mProjectList.getProject(i).dblMoney;
+                    grvSearch.Rows[index].Cells[3].Value = Initializate.mProjectList.getProject(i).dblRate;
+                    /*  grvSearch.Rows[index].Cells[0].Value = record.name;
+                      grvSearch.Rows[index].Cells[1].Value = record.date;
+                      grvSearch.Rows[index].Cells[2].Value = record.money;
+                      grvSearch.Rows[index].Cells[3].Value = record.rate;*/
+                    grvSearch.Rows[index].Cells[4].Value = "投资";
+                
+
+            
             }
             this.grvSearch.AutoGenerateColumns = false;
 

@@ -11,9 +11,14 @@ namespace EntityClass
     public class ProjectList
     {
 
+        ArrayList proArray = new ArrayList();
+
         //Use Facade Pattern
-        public ArrayList proArray = new ArrayList();
-       // int a = proArray[3].id;
+        public Project getProject(int i)
+        {
+            return (Project)proArray[i];
+        }
+        // int a = proArray[3].id;
         public void Add(Project mProject)
         {
             proArray.Add(mProject);
@@ -24,9 +29,10 @@ namespace EntityClass
         }
         public void Sort()
         {
-             proArray.Sort();
+            proArray.Sort();
         }
 
     }
 
 }
+

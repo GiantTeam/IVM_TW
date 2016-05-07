@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EntityClass;
+using ClassLibrary;
+
 namespace ControlClass
 {
     public class SearchControl

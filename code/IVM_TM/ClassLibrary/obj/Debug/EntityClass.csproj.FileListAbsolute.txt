@@ -10,3 +10,8 @@ C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\EntityClass.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\ClassLibrary.dll
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\ClassLibrary.pdb
+G:\git\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\ClassLibrary.dll
+G:\git\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\ClassLibrary.pdb
+G:\git\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\EntityClass.csprojResolveAssemblyReference.cache
+G:\git\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\ClassLibrary.dll
+G:\git\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\ClassLibrary.pdb

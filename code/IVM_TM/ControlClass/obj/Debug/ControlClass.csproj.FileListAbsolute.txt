@@ -13,3 +13,5 @@ C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\normnfkd.nlp
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.dll
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.pdb
+G:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.csprojResolveAssemblyReference.cache
+G:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.pdb

@@ -51,3 +51,11 @@ C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.applica
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.exe
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.pdb
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.frmDialog.resources
+G:\git\IVM_TW\code\IVM_TM\VM\bin\Debug\VM.exe.config
+G:\git\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.exe
+G:\git\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.pdb
+G:\git\IVM_TW\code\IVM_TM\VM\obj\Debug\IVM_TM.csprojResolveAssemblyReference.cache
+G:\git\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.frmDialog.resources
+G:\git\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.frmMain.resources
+G:\git\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.Properties.Resources.resources
+G:\git\IVM_TW\code\IVM_TM\VM\obj\Debug\IVM_TM.csproj.GenerateResource.Cache

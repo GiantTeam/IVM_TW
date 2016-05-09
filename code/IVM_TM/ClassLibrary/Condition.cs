@@ -8,12 +8,29 @@ namespace ClassLibrary
 {
     public class Condition
     {
-        public int TimeUp;
-        public int TimeDown;
-        public double RateUp;
-        public double RateDown;
-        public double MoneyDown;
-        public double MoneyUp;
+        public string TimeUp;
+        public string TimeDown;
+        public string RateUp;
+        public string RateDown;
+        public string MoneyDown;
+        public string MoneyUp;
+        public string projectName;
+        public int currentPage;
+        public string IsAuction;
+        public int sort;
+        public Condition()
+        {
+            this.TimeDown = null;
+            this.TimeUp = null;
+            this.RateDown = null;
+            this.RateUp = null;
+            this.MoneyDown = null;
+            this.MoneyUp = null;
+            this.projectName = "";
+            this.IsAuction = null;
+            this.currentPage = 1;
+            this.sort = 0;
+        }
     }
-        
+    
 }

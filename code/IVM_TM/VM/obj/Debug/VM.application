@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="VM.exe.manifest" size="3387">
+    <dependentAssembly dependencyType="install" codebase="VM.exe.manifest" size="4669">
       <assemblyIdentity name="VM.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WCo9ssh/8Xt6QIhJ7M7raDUh2Kr8EOZL8cEAzI+KMvA=</dsig:DigestValue>
+        <dsig:DigestValue>ghcGSg7S15t23i5nG1E22Br5ZTrY5mTj+p/osiN72qs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
-//using ControlClass;
-//using EntityClass;
+using ControlClass;
+using EntityClass;
+using ClassLibrary;
 
 namespace VM
 {
@@ -23,42 +24,27 @@ namespace VM
         public static int s_allPg;
         public static int s_maxItem=22;
 
-        const int c_ITEMNUM = 8;
+        const int c_ITEMNUM = 9;
         const int c_iMAX = 999999;
         const int c_iMIN = -99999;
         const double c_dMAX = 999999;
         const double c_dMIN = -99999;
 
-        public Condition cdtS,cdtR;
+        public Condition cdtS; 
+        public Condition cdtR; 
         public RadioButton rdoTem;
         public static ListSortDirection s_lsdSUpDown = ListSortDirection.Ascending;
 
        // Project project;
        // ProjectList projectList; 
-        public class Condition
-        {
-            public int TimeUp;
-            public int TimeDown;
-            public double RateUp;
-            public double RateDown;
-            public double MoneyDown;
-            public double MoneyUp;
-            public void set(Condition cdt)
-            {
-                this.TimeDown = cdt.TimeDown;
-                this.TimeUp = cdt.TimeUp;
-                this.MoneyDown = cdt.MoneyDown;
-                this.MoneyUp = cdt.MoneyUp;
-                this.RateUp = cdt.RateUp;
-                this.RateDown = cdt.RateDown;
-            }
-        }
+    
 
 //***************************************华丽的分割线**************************************************
 
         public frmMain()
         {
             InitializeComponent();
+            new Initializate();
         }
 
         //将单选按钮组转化为对应表达式：投资期限
@@ -70,39 +56,46 @@ namespace VM
             {
                 case 0:
                     {
-                        if (txtl.Text != "" && txth.Text != "")
+                        if (txtl.Text == "")
                         {
-                            cdt.TimeDown = Convert.ToInt32(txtl.Text);
-                            cdt.TimeUp = Convert.ToInt32(txth.Text);
+                            cdt.TimeDown = null;
                         }
                         else
                         {
-                            MessageBox.Show("请将搜索信息补充完整！");
+                            cdt.TimeDown = (txtl.Text).Trim();
+                        }
+                        if (txth.Text == "")
+                        {
+                            cdt.TimeUp = null;
+                        }
+                        else
+                        {
+                            cdt.TimeUp = (txth.Text).Trim();
                         }
                         break;
                     }
                 case 1:
                     {
-                        cdtS.TimeDown = 12;
-                        cdtS.TimeUp = c_iMAX;
+                        cdt.TimeDown = "12";
+                        cdt.TimeUp = null;
                         break;
                     }
                 case 2:
                     {
-                        cdt.TimeDown = 6;
-                        cdt.TimeUp = 12;
+                        cdt.TimeDown = "6";
+                        cdt.TimeUp = "12";
                         break;
                     }
                 case 3:
                     {
-                        cdt.TimeDown = c_iMIN;
-                        cdt.TimeUp = 6;
+                        cdt.TimeDown = null;
+                        cdt.TimeUp = "6";
                         break;
                     }
                 case 4:
                     {
-                        cdt.TimeDown = c_iMIN;
-                        cdt.TimeUp = c_iMAX;
+                        cdt.TimeDown = null;
+                        cdt.TimeUp = null;
                         break;
                     }
                 default:
@@ -119,39 +112,47 @@ namespace VM
             {
                 case 0:
                     {
-                        if (txtl.Text != "" && txth.Text != "")
+                        if (txtl.Text == "")
                         {
-                            cdt.MoneyDown = Convert.ToDouble(txtl.Text);
-                            cdt.MoneyUp = Convert.ToDouble(txth.Text);
+                            cdt.MoneyDown = null;
                         }
                         else
                         {
-                            MessageBox.Show("请将搜索信息补充完整！");
+                            cdt.MoneyDown = (txtl.Text).Trim();
+                        }
+                        if (txth.Text == "")
+                        {
+                            cdt.MoneyUp = null;
+                        }
+                        else
+                        {
+                            cdt.MoneyUp = (txth.Text).Trim();
                         }
                         break;
+                       
                     }
                 case 1:
                     {
-                        cdt.MoneyDown = 5;
-                        cdt.MoneyUp = 10;
+                        cdt.MoneyDown = "5";
+                        cdt.MoneyUp = "10";
                         break;
                     }
                 case 2:
                     {
-                        cdt.MoneyDown = 1;
-                        cdt.MoneyUp = 5;
+                        cdt.MoneyDown = "1";
+                        cdt.MoneyUp = "5";
                         break;
                     }
                 case 3:
                     {
-                        cdt.MoneyDown = c_dMIN;
-                        cdt.MoneyUp = 1;
+                        cdt.MoneyDown = null;
+                        cdt.MoneyUp = "1";
                         break;
                     }
                 case 4:
                     {
-                        cdt.MoneyDown = c_dMIN;
-                        cdt.MoneyUp = c_dMAX;
+                        cdt.MoneyDown = null;
+                        cdt.MoneyUp = null;
                         break;
                     }
                 default:
@@ -168,39 +169,46 @@ namespace VM
             {
                 case 0:
                     {
-                        if (txtl.Text != "" && txth.Text != "")
+                        if (txtl.Text == "")
                         {
-                            cdt.RateDown = Convert.ToDouble(txtl.Text);
-                            cdt.RateUp = Convert.ToDouble(txth.Text);
+                            cdt.RateDown = null;
                         }
                         else
                         {
-                            MessageBox.Show("请将搜索信息补充完整！");
+                            cdt.RateDown = (txtl.Text).Trim();
+                        }
+                        if (txth.Text == "")
+                        {
+                            cdt.RateUp = null;
+                        }
+                        else
+                        {
+                            cdt.RateUp = (txth.Text).Trim();
                         }
                         break;
                     }
                 case 1:
                     {
-                        cdt.RateDown = 10;
-                        cdt.RateUp = c_dMAX;
+                        cdt.RateDown = "10";
+                        cdt.RateUp = null;
                         break;
                     }
                 case 2:
                     {
-                        cdt.RateDown = 5;
-                        cdt.RateUp = 10;
+                        cdt.RateDown = "5";
+                        cdt.RateUp = "10";
                         break;
                     }
                 case 3:
                     {
-                        cdt.RateDown = c_dMIN;
-                        cdt.RateUp = 5;
+                        cdt.RateDown = null;
+                        cdt.RateUp = "5";
                         break;
                     }
                 case 4:
                     {
-                        cdt.RateDown = c_dMIN;
-                        cdt.RateUp = c_dMAX;
+                        cdt.RateDown = null;
+                        cdt.RateUp = null;
                         break;
                     }
                 default:
@@ -253,36 +261,25 @@ namespace VM
         //重构函数：根据当前页面和表格行数刷新显示表格
         private void grReFresh()
         {
-           // s_pgNum;当前页数
-           // c_ITEMNUM;
-           //s_allPg;总页数
-            int itemNum = s_pgNum * c_ITEMNUM;
-            int i = 0;
-            for (; i < c_ITEMNUM && itemNum+i<s_maxItem; i++)
+            // s_pgNum;当前页数
+            // c_ITEMNUM;
+            //s_allPg;总页数
+            //  int itemNum = s_pgNum * c_ITEMNUM;
+            ProjectList proList = new ProjectList();
+            proList = SearchControl.ChildProjectList;
+            for (int i = 0; i < c_ITEMNUM && i < proList.Count() ; i++)
             {
                 //Project project;
-               // ProjectList projectList=new ProjectList(); 
-               // grpSearch.Rows[i].Cells[0].Value = projectList.proArray[i + s_pgNum * c_ITEMNUM].intId;
-                grpSearch.Rows[i].Cells[0].Value = i + s_pgNum * c_ITEMNUM;
-                grpSearch.Rows[i].Cells[1].Value = s_pgNum * c_ITEMNUM;
-                grpSearch.Rows[i].Cells[2].Value = (s_pgNum + 1) * c_ITEMNUM;
-                grpSearch.Rows[i].Cells[3].Value = 100 - i;
-            }
-
-            if (i != c_ITEMNUM)
-            {
-                
-                for (; i < c_ITEMNUM; i++)
-                {
-                    grpSearch.Rows[i].Visible = false;
-                }
-            }
-            else
-            {
-                for (i=0; i < c_ITEMNUM; i++)
-                {
-                    grpSearch.Rows[i].Visible = true;
-                }
+                // ProjectList projectList=new ProjectList(); 
+                // grpSearch.Rows[i].Cells[0].Value = projectList.proArray[i + s_pgNum * c_ITEMNUM].intId;
+                grpSearch.Rows[i].Cells[0].Value = proList.getProject(i).name;
+                grpSearch.Rows[i].Cells[1].Value = proList.getProject(i).intTime;
+                grpSearch.Rows[i].Cells[2].Value = proList.getProject(i).dblMoney;
+                grpSearch.Rows[i].Cells[3].Value = proList.getProject(i).dblRate;
+             //   grpSearch.Rows[i].Cells[0].Value = i + s_pgNum * c_ITEMNUM;
+             //   grpSearch.Rows[i].Cells[1].Value = s_pgNum * c_ITEMNUM;
+              //  grpSearch.Rows[i].Cells[2].Value = (s_pgNum + 1) * c_ITEMNUM;
+              //  grpSearch.Rows[i].Cells[3].Value = 100 - i;
             }
 
         }
@@ -310,7 +307,7 @@ namespace VM
             showPage();
             cdtS = new Condition();
             cdtR = new Condition();
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 9; i++)
             {
                 int index = addgrpRow(grpSearch);
                 grpSearch.Rows[index].Cells[4].Value = "双击投资";
@@ -356,21 +353,32 @@ namespace VM
         private void rdoSTime4_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoSTime4, txtSTimeLow, txtSTimeHigh);
+     
         }
 
         private void rdoSTime3_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoSTime3, txtSTimeLow, txtSTimeHigh);
+            grpSetTime(grpSTime, cdtS, txtSTimeLow, txtSTimeHigh);
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
+            grReFresh();
         }
 
         private void rdoSTime2_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoSTime2, txtSTimeLow, txtSTimeHigh);
+            grpSetTime(grpSTime, cdtS, txtSTimeLow, txtSTimeHigh);
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
+            grReFresh();
         }
 
         private void rdoSTime1_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoSTime1, txtSTimeLow, txtSTimeHigh );
+            grpSetTime(grpSTime, cdtS, txtSTimeLow, txtSTimeHigh);
+          
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown,cdtS.TimeUp,cdtS.MoneyDown,cdtS.MoneyUp,cdtS.RateDown,cdtS.RateUp,cdtS.projectName,cdtS.IsAuction,cdtS.currentPage,cdtS.sort);
+            grReFresh();
         }
 
 
@@ -434,6 +442,9 @@ namespace VM
         private void btnTimeConfirm_Click(object sender, EventArgs e)
         {
             grpSetTime(grpSTime, cdtS, txtSTimeLow, txtSTimeHigh);
+          //  grpSetTime(grpSTime, cdtS, txtSTimeLow, txtSTimeHigh);
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
+            grReFresh();
         }
 
         private void btnMoneyConfirm_Click(object sender, EventArgs e)
@@ -522,7 +533,7 @@ namespace VM
             grpSetMoney(grpSMoney, cdtS, txtSMoneyLow, txtSMoneyHigh);
             grpSetRate(grpSRate, cdtS, txtSRateLow, txtSRateHigh);
 
-            cdtR.set(cdtS);
+          //  cdtR.set(cdtS);
 
             grpSetgrp(grpSTime,grpRTime);
             grpSetgrp(grpSMoney, grpRMoney);

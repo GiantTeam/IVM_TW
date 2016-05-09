@@ -82,3 +82,7 @@ G:\git\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.Properties.Resources.resources
 G:\git\IVM_TW\code\IVM_TM\VM\obj\Debug\IVM_TM.csproj.GenerateResource.Cache
 G:\git\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.exe.manifest
 G:\git\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.application
+G:\git\IVM_TW\code\IVM_TM\VM\bin\Debug\ClassLibrary.dll
+G:\git\IVM_TW\code\IVM_TM\VM\bin\Debug\ControlClass.exe
+G:\git\IVM_TW\code\IVM_TM\VM\bin\Debug\ClassLibrary.pdb
+G:\git\IVM_TW\code\IVM_TM\VM\bin\Debug\ControlClass.pdb

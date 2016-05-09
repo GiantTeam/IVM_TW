@@ -14,7 +14,7 @@ namespace ControlClass
     public class Initializate
     {
         
-        List<string> aLinkList = new List<string>() { "https://list.lu.com/list/p2p" };
+        List<string> aLinkList = new List<string>() { "https://list.lu.com/list/transfer-p2p" };
 
         public static ProjectList mProjectList = new ProjectList();//项目列表
         //从若干网页中筛选出所有项目的信息，生成总项目列表项
@@ -28,7 +28,7 @@ namespace ControlClass
         {
             SetProjectList();
         }
-
+        //初始化ProjectList
         private void SetProjectList()
         {
             int intProjectListIndex = 0;
@@ -39,15 +39,13 @@ namespace ControlClass
                 if (strTemp.Length != 0)
                 {
                     SetProject(strTemp, intProjectListIndex);
-
-                    // this.mProjectList.Add(mProject);
                 }
 
             }
 
         }
 
-        //从网页内容中整理出项目信息，返回一条项目信息
+        //从网页内容中整理出项目信息，返回一条条的项目信息
         private void SetProject(string strWebContent, int intProjectListIndex)
         {
             if (intProjectListIndex == 0)

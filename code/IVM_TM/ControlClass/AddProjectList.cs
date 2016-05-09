@@ -41,9 +41,8 @@ namespace ControlClass
                 project.name = projectName;
 
                 start = strWebContent.IndexOf("<p class=\"num-style\">", end) + "<p class=\"num-style\">".Length;
-                end = strWebContent.IndexOf("%</p>", start);
-                Double projectRate = Convert.ToDouble(strWebContent.Substring(start, end - start));
-                project.dblRate = projectRate;
+                end = strWebContent.IndexOf("</p>", start);
+                project.dblRate = strWebContent.Substring(start, end - start);
 
                 start = strWebContent.IndexOf("<p>", end) + "<p>".Length;
                 end = strWebContent.IndexOf("</p>", start);
@@ -52,8 +51,7 @@ namespace ControlClass
 
                 start = strWebContent.IndexOf("<em class=\"num-style\">", end) + "<em class=\"num-style\">".Length;
                 end = strWebContent.IndexOf("</em>", start);
-                Double projectMoney = Convert.ToDouble(strWebContent.Substring(start, end - start));
-                project.dblMoney = projectMoney;
+                project.dblMoney = strWebContent.Substring(start, end - start);
 
                 mProjectList.Add(project);
             }

@@ -11,8 +11,8 @@ namespace EntityClass
     {
         public int intId;  //理财产品编号
         public string intTime; //投资期限
-        public double dblRate; //项目收益率
-        public double dblMoney;  //项目起投金额
+        public string dblRate; //项目收益率
+        public string dblMoney;  //项目转让金额
         public string strLink; //理财产品链接
         public string name;//投资项目名称
 
@@ -20,8 +20,8 @@ namespace EntityClass
         {
             this.intId = intId;
             this.intTime = "";
-            this.dblMoney = 0;
-            this.dblMoney = 0;
+            this.dblMoney = "";
+            this.dblMoney ="";
             this.strLink = "";
             this.name = "";
         }

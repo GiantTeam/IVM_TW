@@ -50,7 +50,7 @@ namespace VM
             this.picLogo1 = new System.Windows.Forms.PictureBox();
             this.tmrRushReflash = new System.Windows.Forms.Timer(this.components);
             this.tapRush = new System.Windows.Forms.TabPage();
-            this.grvRush = new System.Windows.Forms.DataGridView();
+            this.grpRush = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +58,7 @@ namespace VM
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnRConfirm = new System.Windows.Forms.Button();
             this.btnActionRush = new System.Windows.Forms.Button();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.grpRRate = new System.Windows.Forms.GroupBox();
             this.lblRRateHigh = new System.Windows.Forms.Label();
             this.txtRRateHigh = new System.Windows.Forms.TextBox();
             this.lblRRateLow = new System.Windows.Forms.Label();
@@ -91,7 +91,7 @@ namespace VM
             this.tapAnalyse = new System.Windows.Forms.TabPage();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.grvAnalyse = new System.Windows.Forms.DataGridView();
+            this.grpAnalyse = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,7 +105,7 @@ namespace VM
             this.mmuEmpty = new System.Windows.Forms.ToolStripMenuItem();
             this.mmuImport = new System.Windows.Forms.ToolStripMenuItem();
             this.mmuExport = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmuDiagram = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmuChart = new System.Windows.Forms.ToolStripMenuItem();
             this.tapSearch = new System.Windows.Forms.TabPage();
             this.lblShowPg = new System.Windows.Forms.Label();
             this.btnToRecord = new System.Windows.Forms.Button();
@@ -113,7 +113,7 @@ namespace VM
             this.btnTimeConfirm = new System.Windows.Forms.Button();
             this.btnPageDown = new System.Windows.Forms.Button();
             this.btnPageUp = new System.Windows.Forms.Button();
-            this.grvSearch = new System.Windows.Forms.DataGridView();
+            this.grpSearch = new System.Windows.Forms.DataGridView();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.money = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -169,15 +169,15 @@ namespace VM
             ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).BeginInit();
             this.tapRush.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvRush)).BeginInit();
-            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpRush)).BeginInit();
+            this.grpRRate.SuspendLayout();
             this.grpRMoney.SuspendLayout();
             this.grpRTime.SuspendLayout();
             this.tapAnalyse.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvAnalyse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpAnalyse)).BeginInit();
             this.mmuAnalyse.SuspendLayout();
             this.tapSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpSearch)).BeginInit();
             this.grpSRate.SuspendLayout();
             this.grpSMoney.SuspendLayout();
             this.grpSTime.SuspendLayout();
@@ -212,10 +212,10 @@ namespace VM
             // 
             // tapRush
             // 
-            this.tapRush.Controls.Add(this.grvRush);
+            this.tapRush.Controls.Add(this.grpRush);
             this.tapRush.Controls.Add(this.btnRConfirm);
             this.tapRush.Controls.Add(this.btnActionRush);
-            this.tapRush.Controls.Add(this.groupBox6);
+            this.tapRush.Controls.Add(this.grpRRate);
             this.tapRush.Controls.Add(this.grpRMoney);
             this.tapRush.Controls.Add(this.lblRRate);
             this.tapRush.Controls.Add(this.lblRMoney);
@@ -228,14 +228,15 @@ namespace VM
             this.tapRush.Text = "抢购";
             this.tapRush.UseVisualStyleBackColor = true;
             // 
-            // grvRush
+            // grpRush
             // 
+            this.grpRush.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            this.grvRush.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.grvRush.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grvRush.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.grvRush.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.grvRush.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            this.grpRush.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grpRush.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grpRush.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grpRush.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.grpRush.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -243,9 +244,9 @@ namespace VM
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvRush.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.grvRush.ColumnHeadersHeight = 30;
-            this.grvRush.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grpRush.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.grpRush.ColumnHeadersHeight = 30;
+            this.grpRush.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
@@ -258,10 +259,10 @@ namespace VM
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvRush.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grvRush.Location = new System.Drawing.Point(8, 264);
-            this.grvRush.Name = "grvRush";
-            this.grvRush.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.grpRush.DefaultCellStyle = dataGridViewCellStyle3;
+            this.grpRush.Location = new System.Drawing.Point(8, 264);
+            this.grpRush.Name = "grpRush";
+            this.grpRush.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -269,16 +270,16 @@ namespace VM
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvRush.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.grvRush.RowHeadersVisible = false;
-            this.grvRush.RowHeadersWidth = 100;
+            this.grpRush.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.grpRush.RowHeadersVisible = false;
+            this.grpRush.RowHeadersWidth = 100;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grvRush.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.grvRush.RowTemplate.Height = 23;
-            this.grvRush.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.grvRush.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grvRush.Size = new System.Drawing.Size(864, 264);
-            this.grvRush.TabIndex = 22;
+            this.grpRush.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.grpRush.RowTemplate.Height = 23;
+            this.grpRush.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.grpRush.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.grpRush.Size = new System.Drawing.Size(864, 264);
+            this.grpRush.TabIndex = 22;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -345,21 +346,21 @@ namespace VM
             this.btnActionRush.UseVisualStyleBackColor = true;
             this.btnActionRush.Click += new System.EventHandler(this.btnActionRush_Click);
             // 
-            // groupBox6
+            // grpRRate
             // 
-            this.groupBox6.Controls.Add(this.lblRRateHigh);
-            this.groupBox6.Controls.Add(this.txtRRateHigh);
-            this.groupBox6.Controls.Add(this.lblRRateLow);
-            this.groupBox6.Controls.Add(this.txtRRateLow);
-            this.groupBox6.Controls.Add(this.rdoRRate4);
-            this.groupBox6.Controls.Add(this.rdoRRate3);
-            this.groupBox6.Controls.Add(this.rdoRRate2);
-            this.groupBox6.Controls.Add(this.rdoRRate1);
-            this.groupBox6.Location = new System.Drawing.Point(144, 184);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(616, 48);
-            this.groupBox6.TabIndex = 17;
-            this.groupBox6.TabStop = false;
+            this.grpRRate.Controls.Add(this.lblRRateHigh);
+            this.grpRRate.Controls.Add(this.txtRRateHigh);
+            this.grpRRate.Controls.Add(this.lblRRateLow);
+            this.grpRRate.Controls.Add(this.txtRRateLow);
+            this.grpRRate.Controls.Add(this.rdoRRate4);
+            this.grpRRate.Controls.Add(this.rdoRRate3);
+            this.grpRRate.Controls.Add(this.rdoRRate2);
+            this.grpRRate.Controls.Add(this.rdoRRate1);
+            this.grpRRate.Location = new System.Drawing.Point(144, 184);
+            this.grpRRate.Name = "grpRRate";
+            this.grpRRate.Size = new System.Drawing.Size(616, 48);
+            this.grpRRate.TabIndex = 17;
+            this.grpRRate.TabStop = false;
             // 
             // lblRRateHigh
             // 
@@ -679,7 +680,7 @@ namespace VM
             // 
             this.tapAnalyse.Controls.Add(this.btnDelete);
             this.tapAnalyse.Controls.Add(this.btnAdd);
-            this.tapAnalyse.Controls.Add(this.grvAnalyse);
+            this.tapAnalyse.Controls.Add(this.grpAnalyse);
             this.tapAnalyse.Controls.Add(this.mmuAnalyse);
             this.tapAnalyse.Location = new System.Drawing.Point(4, 30);
             this.tapAnalyse.Name = "tapAnalyse";
@@ -713,16 +714,16 @@ namespace VM
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // grvAnalyse
+            // grpAnalyse
             // 
-            this.grvAnalyse.AllowUserToAddRows = false;
-            this.grvAnalyse.AllowUserToDeleteRows = false;
+            this.grpAnalyse.AllowUserToAddRows = false;
+            this.grpAnalyse.AllowUserToDeleteRows = false;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            this.grvAnalyse.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.grvAnalyse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grvAnalyse.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.grvAnalyse.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.grvAnalyse.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            this.grpAnalyse.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.grpAnalyse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grpAnalyse.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grpAnalyse.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.grpAnalyse.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -730,9 +731,9 @@ namespace VM
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvAnalyse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.grvAnalyse.ColumnHeadersHeight = 30;
-            this.grvAnalyse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grpAnalyse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.grpAnalyse.ColumnHeadersHeight = 30;
+            this.grpAnalyse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.dataGridViewTextBoxColumn5,
@@ -747,11 +748,11 @@ namespace VM
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvAnalyse.DefaultCellStyle = dataGridViewCellStyle8;
-            this.grvAnalyse.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.grvAnalyse.Location = new System.Drawing.Point(0, 40);
-            this.grvAnalyse.Name = "grvAnalyse";
-            this.grvAnalyse.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.grpAnalyse.DefaultCellStyle = dataGridViewCellStyle8;
+            this.grpAnalyse.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.grpAnalyse.Location = new System.Drawing.Point(0, 40);
+            this.grpAnalyse.Name = "grpAnalyse";
+            this.grpAnalyse.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -759,16 +760,16 @@ namespace VM
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvAnalyse.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.grvAnalyse.RowHeadersVisible = false;
-            this.grvAnalyse.RowHeadersWidth = 100;
+            this.grpAnalyse.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.grpAnalyse.RowHeadersVisible = false;
+            this.grpAnalyse.RowHeadersWidth = 100;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grvAnalyse.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.grvAnalyse.RowTemplate.Height = 23;
-            this.grvAnalyse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.grvAnalyse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvAnalyse.Size = new System.Drawing.Size(880, 464);
-            this.grvAnalyse.TabIndex = 17;
+            this.grpAnalyse.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.grpAnalyse.RowTemplate.Height = 23;
+            this.grpAnalyse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.grpAnalyse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grpAnalyse.Size = new System.Drawing.Size(880, 464);
+            this.grpAnalyse.TabIndex = 17;
             // 
             // Column1
             // 
@@ -818,7 +819,7 @@ namespace VM
             this.mmuEmpty,
             this.mmuImport,
             this.mmuExport,
-            this.mmuDiagram});
+            this.mmuChart});
             this.mmuAnalyse.Location = new System.Drawing.Point(3, 3);
             this.mmuAnalyse.Name = "mmuAnalyse";
             this.mmuAnalyse.Size = new System.Drawing.Size(890, 29);
@@ -860,12 +861,13 @@ namespace VM
             this.mmuExport.Text = "导出";
             this.mmuExport.Click += new System.EventHandler(this.mmuExport_Click);
             // 
-            // mmuDiagram
+            // mmuChart
             // 
-            this.mmuDiagram.Name = "mmuDiagram";
-            this.mmuDiagram.Size = new System.Drawing.Size(86, 25);
-            this.mmuDiagram.Text = "统计分析";
-            this.mmuDiagram.Click += new System.EventHandler(this.mmuDiagram_Click);
+            this.mmuChart.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mmuChart.Name = "mmuChart";
+            this.mmuChart.Size = new System.Drawing.Size(86, 25);
+            this.mmuChart.Text = "图表分析";
+            this.mmuChart.Click += new System.EventHandler(this.mmuChart_Click);
             // 
             // tapSearch
             // 
@@ -875,7 +877,7 @@ namespace VM
             this.tapSearch.Controls.Add(this.btnTimeConfirm);
             this.tapSearch.Controls.Add(this.btnPageDown);
             this.tapSearch.Controls.Add(this.btnPageUp);
-            this.tapSearch.Controls.Add(this.grvSearch);
+            this.tapSearch.Controls.Add(this.grpSearch);
             this.tapSearch.Controls.Add(this.txtSearch);
             this.tapSearch.Controls.Add(this.btnRush);
             this.tapSearch.Controls.Add(this.btnMoneyConfirm);
@@ -960,17 +962,18 @@ namespace VM
             this.btnPageUp.UseVisualStyleBackColor = true;
             this.btnPageUp.Click += new System.EventHandler(this.btnPageUp_Click);
             // 
-            // grvSearch
+            // grpSearch
             // 
-            this.grvSearch.AllowUserToDeleteRows = false;
-            this.grvSearch.AllowUserToResizeColumns = false;
-            this.grvSearch.AllowUserToResizeRows = false;
+            this.grpSearch.AllowUserToAddRows = false;
+            this.grpSearch.AllowUserToDeleteRows = false;
+            this.grpSearch.AllowUserToResizeColumns = false;
+            this.grpSearch.AllowUserToResizeRows = false;
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            this.grvSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
-            this.grvSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grvSearch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.grvSearch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.grvSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            this.grpSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.grpSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grpSearch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grpSearch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.grpSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -978,10 +981,10 @@ namespace VM
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.grvSearch.ColumnHeadersHeight = 30;
-            this.grvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.grvSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grpSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.grpSearch.ColumnHeadersHeight = 30;
+            this.grpSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.grpSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
             this.time,
             this.money,
@@ -994,12 +997,12 @@ namespace VM
             dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvSearch.DefaultCellStyle = dataGridViewCellStyle13;
-            this.grvSearch.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.grvSearch.Location = new System.Drawing.Point(8, 232);
-            this.grvSearch.Name = "grvSearch";
-            this.grvSearch.ReadOnly = true;
-            this.grvSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.grpSearch.DefaultCellStyle = dataGridViewCellStyle13;
+            this.grpSearch.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.grpSearch.Location = new System.Drawing.Point(8, 232);
+            this.grpSearch.Name = "grpSearch";
+            this.grpSearch.ReadOnly = true;
+            this.grpSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -1007,17 +1010,17 @@ namespace VM
             dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            this.grvSearch.RowHeadersVisible = false;
-            this.grvSearch.RowHeadersWidth = 100;
+            this.grpSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.grpSearch.RowHeadersVisible = false;
+            this.grpSearch.RowHeadersWidth = 100;
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grvSearch.RowsDefaultCellStyle = dataGridViewCellStyle15;
-            this.grvSearch.RowTemplate.Height = 23;
-            this.grvSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.grvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvSearch.Size = new System.Drawing.Size(864, 264);
-            this.grvSearch.TabIndex = 16;
-            this.grvSearch.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grvSearch_CellMouseClick);
+            this.grpSearch.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.grpSearch.RowTemplate.Height = 23;
+            this.grpSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.grpSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grpSearch.Size = new System.Drawing.Size(864, 264);
+            this.grpSearch.TabIndex = 16;
+            this.grpSearch.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grpSearch_CellMouseClick);
             // 
             // name
             // 
@@ -1615,21 +1618,21 @@ namespace VM
             ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).EndInit();
             this.tapRush.ResumeLayout(false);
             this.tapRush.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvRush)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpRush)).EndInit();
+            this.grpRRate.ResumeLayout(false);
+            this.grpRRate.PerformLayout();
             this.grpRMoney.ResumeLayout(false);
             this.grpRMoney.PerformLayout();
             this.grpRTime.ResumeLayout(false);
             this.grpRTime.PerformLayout();
             this.tapAnalyse.ResumeLayout(false);
             this.tapAnalyse.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvAnalyse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpAnalyse)).EndInit();
             this.mmuAnalyse.ResumeLayout(false);
             this.mmuAnalyse.PerformLayout();
             this.tapSearch.ResumeLayout(false);
             this.tapSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpSearch)).EndInit();
             this.grpSRate.ResumeLayout(false);
             this.grpSRate.PerformLayout();
             this.grpSMoney.ResumeLayout(false);
@@ -1651,7 +1654,7 @@ namespace VM
         private System.Windows.Forms.PictureBox picLogo2;
         private System.Windows.Forms.Timer tmrRushReflash;
         private System.Windows.Forms.TabPage tapRush;
-        private System.Windows.Forms.DataGridView grvRush;
+        private System.Windows.Forms.DataGridView grpRush;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
@@ -1659,7 +1662,7 @@ namespace VM
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
         private System.Windows.Forms.Button btnRConfirm;
         private System.Windows.Forms.Button btnActionRush;
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox grpRRate;
         private System.Windows.Forms.Label lblRRateHigh;
         private System.Windows.Forms.TextBox txtRRateHigh;
         private System.Windows.Forms.Label lblRRateLow;
@@ -1692,7 +1695,7 @@ namespace VM
         private System.Windows.Forms.TabPage tapAnalyse;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DataGridView grvAnalyse;
+        private System.Windows.Forms.DataGridView grpAnalyse;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
@@ -1706,14 +1709,14 @@ namespace VM
         private System.Windows.Forms.ToolStripMenuItem mmuEmpty;
         private System.Windows.Forms.ToolStripMenuItem mmuImport;
         private System.Windows.Forms.ToolStripMenuItem mmuExport;
-        private System.Windows.Forms.ToolStripMenuItem mmuDiagram;
+        private System.Windows.Forms.ToolStripMenuItem mmuChart;
         private System.Windows.Forms.TabPage tapSearch;
         private System.Windows.Forms.Button btnToRecord;
         private System.Windows.Forms.Button btnRateConfirm;
         private System.Windows.Forms.Button btnTimeConfirm;
         private System.Windows.Forms.Button btnPageDown;
         private System.Windows.Forms.Button btnPageUp;
-        private System.Windows.Forms.DataGridView grvSearch;
+        private System.Windows.Forms.DataGridView grpSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn time;
         private System.Windows.Forms.DataGridViewTextBoxColumn money;

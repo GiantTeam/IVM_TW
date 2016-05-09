@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
-using ControlClass;
-using EntityClass;
+//using ControlClass;
+//using EntityClass;
 
 namespace VM
 {
@@ -29,13 +29,12 @@ namespace VM
         const double c_dMAX = 999999;
         const double c_dMIN = -99999;
 
-       // public mData g_SearchCondition;
         public Condition cdtS,cdtR;
         public RadioButton rdoTem;
         public static ListSortDirection s_lsdSUpDown = ListSortDirection.Ascending;
 
-        Project project;
-        ProjectList projectList; 
+       // Project project;
+       // ProjectList projectList; 
         public class Condition
         {
             public int TimeUp;
@@ -44,23 +43,16 @@ namespace VM
             public double RateDown;
             public double MoneyDown;
             public double MoneyUp;
-        }
-
-       /* public class mData
-        {
-            public String name;
-            public String money;
-            public String date;
-            public String rate;
-
-            public void setData()
+            public void set(Condition cdt)
             {
-                name = "lin";
-                money = "200";
-                date = "2016/4/30";
-                rate = "5%";
+                this.TimeDown = cdt.TimeDown;
+                this.TimeUp = cdt.TimeUp;
+                this.MoneyDown = cdt.MoneyDown;
+                this.MoneyUp = cdt.MoneyUp;
+                this.RateUp = cdt.RateUp;
+                this.RateDown = cdt.RateDown;
             }
-        }*/
+        }
 
 //***************************************华丽的分割线**************************************************
 
@@ -71,34 +63,30 @@ namespace VM
 
 
         //将单选按钮组转化为对应表达式：投资期限
-        public void grvSetTime()
+        public void grpSetTime()
         {
             if (true == rdoTimeAll.Checked)
             {
-                cdtS.TimeDown = c_iMIN;
-                cdtS.TimeUp = c_iMAX;
+               cdtS.TimeDown = c_iMIN;
+               cdtS.TimeUp = c_iMAX;
             }
             if (true == rdoSTime1.Checked)
             {
-                cdtS.TimeDown = c_iMIN;
+                 cdtS.TimeDown = c_iMIN;
                 cdtS.TimeUp = 6;
-                //strExpression += "Time<6";
             }
             if (true == rdoSTime2.Checked)
             {
                 cdtS.TimeDown = 6;
                 cdtS.TimeUp = 12;
-                //strExpression += "Time>6&&Time<12";
             }
             if (true == rdoSTime3.Checked)
             {
                 cdtS.TimeDown = 12;
                 cdtS.TimeUp = c_iMAX;
-                //strExpression += "Time>12";
             }
             if (true == rdoSTime4.Checked)
             {
-                //strExpression += "Time>"+txtSTimeLow.Text+"&&Time<"+txtSTimeHigh.Text;
                 if (txtSTimeLow.Text != "" && txtSTimeHigh.Text != "")
                 {
                     cdtS.TimeDown = Convert.ToInt32(txtSTimeLow.Text);
@@ -113,7 +101,7 @@ namespace VM
         }
 
         //将单选按钮组转化为对应表达式：投资金额
-        public void grvSetMoney()
+        public void grpSetMoney()
         {
             if (true == rdoMoneyAll.Checked)
             {
@@ -124,27 +112,23 @@ namespace VM
             {
                 cdtS.MoneyDown = c_iMIN;
                 cdtS.MoneyUp = 1;
-                //strExpression += "Money<1";
             }
             if (true == rdoSMoney2.Checked)
             {
                 cdtS.MoneyDown = 1;
                 cdtS.MoneyUp = 5;
-                //strExpression += "Money>1&&Money<5";
             }
             if (true == rdoSMoney3.Checked)
             {
                 cdtS.MoneyDown = 5;
                 cdtS.MoneyUp = 10;
-                //strExpression += "Money>5&&Money<10";
             }
             if (true == rdoSMoney4.Checked)
-            {
-                //strExpression += "Money>"+txtSMoneyLow.Text+"&&Money<"+txtSMoneyHigh.Text;
+            {  
                 if (txtSMoneyLow.Text != "" && txtSMoneyHigh.Text != "")
                 {
-                    cdtS.MoneyDown = Convert.ToInt32(txtSMoneyLow.Text);
-                    cdtS.MoneyUp = Convert.ToInt32(txtSMoneyHigh.Text);
+                    cdtS.MoneyDown = Convert.ToDouble(txtSMoneyLow.Text);
+                    cdtS.MoneyUp = Convert.ToDouble(txtSMoneyHigh.Text);
                 }
                 else
                 {
@@ -155,7 +139,7 @@ namespace VM
         }
 
         //将单选按钮组转化为对应表达式：收益率
-        public void grvSetRate()
+        public void grpSetRate()
         {
             if (true == rdoRateAll.Checked)
             {
@@ -166,27 +150,23 @@ namespace VM
             {
                 cdtS.RateDown = c_iMIN;
                 cdtS.RateUp = 5;
-                //strExpression += "Rate<5";
             }
             if (true == rdoSRate2.Checked)
             {
                 cdtS.RateDown = 5;
                 cdtS.RateUp = 10;
-                //strExpression += "Rate>5&&Rate<10";
             }
             if (true == rdoSRate3.Checked)
             {
                 cdtS.RateDown = 10;
                 cdtS.RateUp = c_dMAX;
-                //strExpression += "Rate>10";
             }
             if (true == rdoSRate4.Checked)
             {
-                //strExpression += "Rate>"+txtSRateLow.Text+"&&Rate<"+txtSRateHigh.Text;
                 if (txtSRateLow.Text != "" && txtSRateHigh.Text != "")
                 {
-                    cdtS.RateDown = Convert.ToInt32(txtSRateLow.Text);
-                    cdtS.RateUp = Convert.ToInt32(txtSRateHigh.Text);
+                    cdtS.RateDown = Convert.ToDouble(txtSRateLow.Text);
+                    cdtS.RateUp = Convert.ToDouble(txtSRateHigh.Text);
                 }
                 else
                 {
@@ -198,7 +178,7 @@ namespace VM
       
 //**************************************Search界面处理***********************************************
        //重构函数：判断单选按钮组选中情况
-        public void   grvGetResult(GroupBox grp)
+        public void   grpGetResult(GroupBox grp)
         {
              foreach (Control ct in grp.Controls) 
              { 
@@ -211,8 +191,44 @@ namespace VM
              }
         }
 
+        public void grpSetgrp(GroupBox grp1, GroupBox grp2)
+        {
+            Boolean flag = false;
+            foreach (Control ct in grp1.Controls)
+            {
+                RadioButton rb1 = ct as RadioButton;
+                if (rb1.Checked == true)
+                {
+                    foreach (Control ct2 in grp2.Controls)
+                    {
+                        RadioButton rb2 = ct2 as RadioButton;
+                        if (rb2.Tag == rb1.Tag)
+                            rb2.Checked = true;
+                        else
+                            rb2.Checked = false;
+                    }
+                    if (Convert.ToInt32(rb1.Tag) == 0)
+                    {
+                        flag = true;
+                    }
+                }
+                if (flag == true)
+                {
+                    TextBox tb1 = ct as TextBox;
+                    foreach (Control ct2 in grp2.Controls)
+                    {
+                        TextBox tb2 = ct2 as TextBox;
+                        if (tb1.Tag == tb2.Tag)
+                        {
+                            tb2.Text = tb1.Text;
+                        }
+                    }
+                }
+            }
+        }
+ 
         //重构函数：根据当前页面和表格行数刷新显示表格
-        private void grvReFresh()
+        private void grReFresh()
         {
            // s_pgNum;当前页数
            // c_ITEMNUM;
@@ -222,36 +238,38 @@ namespace VM
             for (; i < c_ITEMNUM && itemNum+i<s_maxItem; i++)
             {
                 //Project project;
-                ProjectList projectList=new ProjectList(); 
-                grvSearch.Rows[i].Cells[0].Value = projectList.getProject(i + s_pgNum * c_ITEMNUM).intId;
-                grvSearch.Rows[i].Cells[1].Value = s_pgNum * c_ITEMNUM;
-                grvSearch.Rows[i].Cells[2].Value = (s_pgNum + 1) * c_ITEMNUM;
-                grvSearch.Rows[i].Cells[3].Value = 100 - i;
+               // ProjectList projectList=new ProjectList(); 
+               // grpSearch.Rows[i].Cells[0].Value = projectList.proArray[i + s_pgNum * c_ITEMNUM].intId;
+                grpSearch.Rows[i].Cells[0].Value = i + s_pgNum * c_ITEMNUM;
+                grpSearch.Rows[i].Cells[1].Value = s_pgNum * c_ITEMNUM;
+                grpSearch.Rows[i].Cells[2].Value = (s_pgNum + 1) * c_ITEMNUM;
+                grpSearch.Rows[i].Cells[3].Value = 100 - i;
             }
 
             if (i != c_ITEMNUM)
             {
+                
                 for (; i < c_ITEMNUM; i++)
                 {
-                    grvSearch.Rows[i].Visible = false;
+                    grpSearch.Rows[i].Visible = false;
                 }
             }
             else
             {
                 for (i=0; i < c_ITEMNUM; i++)
                 {
-                    grvSearch.Rows[i].Visible = true;
+                    grpSearch.Rows[i].Visible = true;
                 }
             }
 
         }
 
         //重构函数：为表格添加行
-        private int addgrvRow(DataGridView grv)
+        private int addgrpRow(DataGridView grp)
         {
             DataGridViewRow Row = new DataGridViewRow();
-            grv.RowHeadersWidth = 45;
-            int index = grv.Rows.Add(Row);
+            grp.RowHeadersWidth = 45;
+            int index = grp.Rows.Add(Row);
             return index;
         }
 
@@ -262,35 +280,20 @@ namespace VM
             strShowPg = "当前页数：" + (s_pgNum+1) + "      总页数：" + s_allPg;
             lblShowPg.Text = strShowPg;
         }
-        //**************程序开始**************
+ //**********************************程序开始************************************************
         //加载框架
         private void frmMain_Load(object sender, EventArgs e)
         {
-          //  mData record = new mData();
-          // record.setData();
             showPage();
-            new Initializate();
-            for (int i = 0; i < 8 && i < Initializate.mProjectList.Count(); i++)
+            cdtS = new Condition();
+            cdtR = new Condition();
+            for (int i = 0; i < 8; i++)
             {
-                
-                int index = addgrvRow(grvSearch);
-
-               
-                
-                    grvSearch.Rows[index].Cells[0].Value = Initializate.mProjectList.getProject(i).name;
-                    grvSearch.Rows[index].Cells[1].Value = Initializate.mProjectList.getProject(i).intTime;
-                    grvSearch.Rows[index].Cells[2].Value = Initializate.mProjectList.getProject(i).dblMoney;
-                    grvSearch.Rows[index].Cells[3].Value = Initializate.mProjectList.getProject(i).dblRate;
-                    /*  grvSearch.Rows[index].Cells[0].Value = record.name;
-                      grvSearch.Rows[index].Cells[1].Value = record.date;
-                      grvSearch.Rows[index].Cells[2].Value = record.money;
-                      grvSearch.Rows[index].Cells[3].Value = record.rate;*/
-                    grvSearch.Rows[index].Cells[4].Value = "投资";
-                
-
-            
+                int index = addgrpRow(grpSearch);
+                grpSearch.Rows[index].Cells[4].Value = "投资";
             }
-            this.grvSearch.AutoGenerateColumns = false;
+            grReFresh();
+            this.grpSearch.AutoGenerateColumns = false;
 
         }
 
@@ -407,17 +410,17 @@ namespace VM
 //btnConfirm处理！！
         private void btnTimeConfirm_Click(object sender, EventArgs e)
         {
-            grvSetTime();
+            grpSetTime();
         }
 
         private void btnMoneyConfirm_Click(object sender, EventArgs e)
         {
-            grvSetMoney();
+            grpSetMoney();
         }
 
         private void btnRateConfirm_Click(object sender, EventArgs e)
         {
-            grvSetRate();
+            grpSetRate();
         }
 
 //排序！！
@@ -433,7 +436,7 @@ namespace VM
             Int32 tIndex = Convert.ToInt32(rdo.Tag);
             //sortType tIndex = (sortType)rdo.Tag;
             //Int32 tem = Convert.ToInt32(tIndex);
-            grvSearch.Sort(grvSearch.Columns[tIndex], s_lsdSUpDown);
+            grpSearch.Sort(grpSearch.Columns[tIndex], s_lsdSUpDown);
         }
 
         //重构排序方式：参数：按钮所在的组合框，找到选中的按钮，再调用rdoSort_checkedChange
@@ -491,7 +494,10 @@ namespace VM
         //抢购按钮
         private void btnRush_Click(object sender, EventArgs e)
         {
-
+            grpSetgrp(grpSTime,grpRTime);
+            grpSetgrp(grpSMoney, grpRMoney);
+            grpSetgrp(grpSRate, grpRRate);
+            cdtR.set(cdtS);
         }
 
 
@@ -499,7 +505,7 @@ namespace VM
         //点击表格“投资”按钮跳到对应网页
         //注：LinkGet()未实现，应该修改为点击“投资”响应，点击其他选项不相应。
 
-        private void grvSearch_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void grpSearch_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             //  System.Diagnostics.Process.Start("http://baidu.com");
         }
@@ -516,9 +522,9 @@ namespace VM
                  MessageBox.Show(strAddInfo);
              }
             //新增一行
-            int index = addgrvRow(grvAnalyse);
+            int index = addgrpRow(grpAnalyse);
             //赋值
-            grvAnalyse.Rows[index].Cells[0].Value = 0;
+            grpAnalyse.Rows[index].Cells[0].Value = 0;
         }
 
         //翻页设置：上一页
@@ -529,7 +535,7 @@ namespace VM
             {
                 s_pgNum--;
             }
-            grvReFresh();
+            grReFresh();
             showPage();
         }
 
@@ -541,7 +547,7 @@ namespace VM
             {
                 s_pgNum++;
             }
-            grvReFresh();
+            grReFresh();
             showPage();
         }
 
@@ -578,9 +584,9 @@ namespace VM
         private void deleteAll()
         {
             int index;
-            for (index = 0; index < grvAnalyse.Rows.Count; )
+            for (index = 0; index < grpAnalyse.Rows.Count; )
             {
-                grvAnalyse.Rows.Remove(grvAnalyse.Rows[index]);
+                grpAnalyse.Rows.Remove(grpAnalyse.Rows[index]);
             }
         }
 
@@ -623,9 +629,11 @@ namespace VM
         }
 
         //页面中部：表格处理
-        private void mmuDiagram_Click(object sender, EventArgs e)
+        private void mmuChart_Click(object sender, EventArgs e)
         {
-
+            frmChart chart;
+            chart = new frmChart();
+            chart.Show();
         }
 
         //页面下部
@@ -633,22 +641,22 @@ namespace VM
         private void btnAdd_Click(object sender, EventArgs e)
         {
             int index;
-            for (index = 0; index < grvAnalyse.Rows.Count; index++)
+            for (index = 0; index < grpAnalyse.Rows.Count; index++)
             {
-                grvAnalyse.Rows[index].Selected = false;
+                grpAnalyse.Rows[index].Selected = false;
             }
-            index=addgrvRow(grvAnalyse);
-            grvAnalyse.Rows[index].Selected = true;
-            grvAnalyse.Rows[index].Cells[0].Value= index;
+            index=addgrpRow(grpAnalyse);
+            grpAnalyse.Rows[index].Selected = true;
+            grpAnalyse.Rows[index].Cells[0].Value= index;
         }
 
         //删除按钮
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            for (int i = this.grvAnalyse.SelectedRows.Count; i > 0; i--)
+            for (int i = this.grpAnalyse.SelectedRows.Count; i > 0; i--)
             {
-                int ID = Convert.ToInt32(grvAnalyse.SelectedRows[i - 1].Cells[0].Value);
-                grvAnalyse.Rows.RemoveAt(grvAnalyse.SelectedRows[i - 1].Index);
+                int ID = Convert.ToInt32(grpAnalyse.SelectedRows[i - 1].Cells[0].Value);
+                grpAnalyse.Rows.RemoveAt(grpAnalyse.SelectedRows[i - 1].Index);
                 /* 使用获得的ID删除数据库的数据
                  string SQL = "delete  from UserInfo where UserId='"+ID.ToString()+"'";
                  int s =Convert.ToInt32(cl.Execute(SQL));  //cl是操作类的一个对像，Execute()是类中的一个方法

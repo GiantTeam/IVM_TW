@@ -1,12 +1,5 @@
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\ClassLibrary.dll
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\ClassLibrary.pdb
-C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\mscorlib.dll
-C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\zh-Hans\mscorlib.resources.dll
-C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\normidna.nlp
-C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\normnfc.nlp
-C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\normnfd.nlp
-C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\normnfkc.nlp
-C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\normnfkd.nlp
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\EntityClass.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\ClassLibrary.dll
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\ClassLibrary.pdb

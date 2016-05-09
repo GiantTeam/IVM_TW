@@ -1021,6 +1021,7 @@ namespace VM
             this.grpSearch.Size = new System.Drawing.Size(864, 264);
             this.grpSearch.TabIndex = 16;
             this.grpSearch.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grpSearch_CellMouseClick);
+            this.grpSearch.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grpSearch_CellMouseDoubleClick);
             // 
             // name
             // 

@@ -313,7 +313,7 @@ namespace VM
             for (int i = 0; i < 8; i++)
             {
                 int index = addgrpRow(grpSearch);
-                grpSearch.Rows[index].Cells[4].Value = "投资";
+                grpSearch.Rows[index].Cells[4].Value = "双击投资";
             }
             grReFresh();
             this.grpSearch.AutoGenerateColumns = false;
@@ -558,7 +558,17 @@ namespace VM
 
         private void grpSearch_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //  System.Diagnostics.Process.Start("http://baidu.com");
+            
+        }
+
+
+        private void grpSearch_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int currentItem = s_pgNum * c_ITEMNUM + e.RowIndex;
+            string link = "";
+            if (!link.Equals(""))
+                System.Diagnostics.Process.Start(link);
+            MessageBox.Show("you are linking to..." + link);
         }
      
         //增加记录
@@ -819,6 +829,7 @@ namespace VM
             grpSetMoney(grpRMoney, cdtS, txtSMoneyLow, txtSMoneyHigh);
             grpSetRate(grpRRate, cdtS, txtSRateLow, txtSRateHigh);
         }
+
 
 
 

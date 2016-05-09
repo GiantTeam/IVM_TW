@@ -61,172 +61,195 @@ namespace VM
             InitializeComponent();
         }
 
-
         //将单选按钮组转化为对应表达式：投资期限
-        public void grpSetTime()
+        public void grpSetTime(GroupBox grp,Condition cdt,TextBox txtl,TextBox txth)
         {
-            if (true == rdoTimeAll.Checked)
+            int tem;
+            tem = grpGetResult(grp);
+            switch (tem)
             {
-               cdtS.TimeDown = c_iMIN;
-               cdtS.TimeUp = c_iMAX;
+                case 0:
+                    {
+                        if (txtl.Text != "" && txth.Text != "")
+                        {
+                            cdt.TimeDown = Convert.ToInt32(txtl.Text);
+                            cdt.TimeUp = Convert.ToInt32(txth.Text);
+                        }
+                        else
+                        {
+                            MessageBox.Show("请将搜索信息补充完整！");
+                        }
+                        break;
+                    }
+                case 1:
+                    {
+                        cdtS.TimeDown = 12;
+                        cdtS.TimeUp = c_iMAX;
+                        break;
+                    }
+                case 2:
+                    {
+                        cdt.TimeDown = 6;
+                        cdt.TimeUp = 12;
+                        break;
+                    }
+                case 3:
+                    {
+                        cdt.TimeDown = c_iMIN;
+                        cdt.TimeUp = 6;
+                        break;
+                    }
+                case 4:
+                    {
+                        cdt.TimeDown = c_iMIN;
+                        cdt.TimeUp = c_iMAX;
+                        break;
+                    }
+                default:
+                    break;
             }
-            if (true == rdoSTime1.Checked)
-            {
-                 cdtS.TimeDown = c_iMIN;
-                cdtS.TimeUp = 6;
-            }
-            if (true == rdoSTime2.Checked)
-            {
-                cdtS.TimeDown = 6;
-                cdtS.TimeUp = 12;
-            }
-            if (true == rdoSTime3.Checked)
-            {
-                cdtS.TimeDown = 12;
-                cdtS.TimeUp = c_iMAX;
-            }
-            if (true == rdoSTime4.Checked)
-            {
-                if (txtSTimeLow.Text != "" && txtSTimeHigh.Text != "")
-                {
-                    cdtS.TimeDown = Convert.ToInt32(txtSTimeLow.Text);
-                    cdtS.TimeUp = Convert.ToInt32(txtSTimeHigh.Text);
-                }
-                else
-                {
-                    MessageBox.Show("请将搜索信息补充完整！");
-                }
-            }
-
         }
 
         //将单选按钮组转化为对应表达式：投资金额
-        public void grpSetMoney()
+        public void grpSetMoney(GroupBox grp, Condition cdt, TextBox txtl, TextBox txth)
         {
-            if (true == rdoMoneyAll.Checked)
+            int tem;
+            tem = grpGetResult(grp);
+            switch (tem)
             {
-                cdtS.MoneyDown = c_iMIN;
-                cdtS.MoneyUp = c_iMAX;
+                case 0:
+                    {
+                        if (txtl.Text != "" && txth.Text != "")
+                        {
+                            cdt.MoneyDown = Convert.ToDouble(txtl.Text);
+                            cdt.MoneyUp = Convert.ToDouble(txth.Text);
+                        }
+                        else
+                        {
+                            MessageBox.Show("请将搜索信息补充完整！");
+                        }
+                        break;
+                    }
+                case 1:
+                    {
+                        cdt.MoneyDown = 5;
+                        cdt.MoneyUp = 10;
+                        break;
+                    }
+                case 2:
+                    {
+                        cdt.MoneyDown = 1;
+                        cdt.MoneyUp = 5;
+                        break;
+                    }
+                case 3:
+                    {
+                        cdt.MoneyDown = c_dMIN;
+                        cdt.MoneyUp = 1;
+                        break;
+                    }
+                case 4:
+                    {
+                        cdt.MoneyDown = c_dMIN;
+                        cdt.MoneyUp = c_dMAX;
+                        break;
+                    }
+                default:
+                    break;
             }
-            if (true == rdoSMoney1.Checked)
-            {
-                cdtS.MoneyDown = c_iMIN;
-                cdtS.MoneyUp = 1;
-            }
-            if (true == rdoSMoney2.Checked)
-            {
-                cdtS.MoneyDown = 1;
-                cdtS.MoneyUp = 5;
-            }
-            if (true == rdoSMoney3.Checked)
-            {
-                cdtS.MoneyDown = 5;
-                cdtS.MoneyUp = 10;
-            }
-            if (true == rdoSMoney4.Checked)
-            {  
-                if (txtSMoneyLow.Text != "" && txtSMoneyHigh.Text != "")
-                {
-                    cdtS.MoneyDown = Convert.ToDouble(txtSMoneyLow.Text);
-                    cdtS.MoneyUp = Convert.ToDouble(txtSMoneyHigh.Text);
-                }
-                else
-                {
-                    MessageBox.Show("请将搜索信息补充完整！");
-                }
-            }
-
         }
 
         //将单选按钮组转化为对应表达式：收益率
-        public void grpSetRate()
+        public void grpSetRate(GroupBox grp, Condition cdt, TextBox txtl, TextBox txth)
         {
-            if (true == rdoRateAll.Checked)
+            int tem;
+            tem = grpGetResult(grp);
+            switch (tem)
             {
-                cdtS.RateDown = c_iMIN;
-                cdtS.RateUp = c_iMAX;
+                case 0:
+                    {
+                        if (txtl.Text != "" && txth.Text != "")
+                        {
+                            cdt.RateDown = Convert.ToDouble(txtl.Text);
+                            cdt.RateUp = Convert.ToDouble(txth.Text);
+                        }
+                        else
+                        {
+                            MessageBox.Show("请将搜索信息补充完整！");
+                        }
+                        break;
+                    }
+                case 1:
+                    {
+                        cdt.RateDown = 10;
+                        cdt.RateUp = c_dMAX;
+                        break;
+                    }
+                case 2:
+                    {
+                        cdt.RateDown = 5;
+                        cdt.RateUp = 10;
+                        break;
+                    }
+                case 3:
+                    {
+                        cdt.RateDown = c_dMIN;
+                        cdt.RateUp = 5;
+                        break;
+                    }
+                case 4:
+                    {
+                        cdt.RateDown = c_dMIN;
+                        cdt.RateUp = c_dMAX;
+                        break;
+                    }
+                default:
+                    break;
             }
-            if (true == rdoSRate1.Checked)
-            {
-                cdtS.RateDown = c_iMIN;
-                cdtS.RateUp = 5;
-            }
-            if (true == rdoSRate2.Checked)
-            {
-                cdtS.RateDown = 5;
-                cdtS.RateUp = 10;
-            }
-            if (true == rdoSRate3.Checked)
-            {
-                cdtS.RateDown = 10;
-                cdtS.RateUp = c_dMAX;
-            }
-            if (true == rdoSRate4.Checked)
-            {
-                if (txtSRateLow.Text != "" && txtSRateHigh.Text != "")
-                {
-                    cdtS.RateDown = Convert.ToDouble(txtSRateLow.Text);
-                    cdtS.RateUp = Convert.ToDouble(txtSRateHigh.Text);
-                }
-                else
-                {
-                    MessageBox.Show("请将搜索信息补充完整！");
-                }
-            }
-
         }
       
 //**************************************Search界面处理***********************************************
        //重构函数：判断单选按钮组选中情况
-        public void   grpGetResult(GroupBox grp)
+        public Int32  grpGetResult(GroupBox grp)
         {
              foreach (Control ct in grp.Controls) 
-             { 
-                 RadioButton rb = ct as RadioButton; 
-                 if (rb.Checked) 
+             {
+                 if (ct is RadioButton)
                  {
-                     rdoTem = rb;
-                     break;
+                     RadioButton rb = ct as RadioButton;
+                     if (rb.Checked == true)
+                     {
+                         return Convert.ToInt32(rb.Tag);
+                     }
                  }
              }
+             return -1;
         }
 
         public void grpSetgrp(GroupBox grp1, GroupBox grp2)
         {
-            Boolean flag = false;
-            foreach (Control ct in grp1.Controls)
+            int tem;
+            tem=grpGetResult(grp1);
+            if (-1 != tem)
             {
-                RadioButton rb1 = ct as RadioButton;
-                if (rb1.Checked == true)
+                foreach (Control ct in grp2.Controls)
                 {
-                    foreach (Control ct2 in grp2.Controls)
+                    if (ct is RadioButton)
                     {
-                        RadioButton rb2 = ct2 as RadioButton;
-                        if (rb2.Tag == rb1.Tag)
-                            rb2.Checked = true;
-                        else
-                            rb2.Checked = false;
-                    }
-                    if (Convert.ToInt32(rb1.Tag) == 0)
-                    {
-                        flag = true;
-                    }
-                }
-                if (flag == true)
-                {
-                    TextBox tb1 = ct as TextBox;
-                    foreach (Control ct2 in grp2.Controls)
-                    {
-                        TextBox tb2 = ct2 as TextBox;
-                        if (tb1.Tag == tb2.Tag)
+                        RadioButton rb = ct as RadioButton;
+                        if (Convert.ToInt32(rb.Tag) == tem)
                         {
-                            tb2.Text = tb1.Text;
+                            rb.Checked = true;
+                        }
+                        else
+                        {
+                            rb.Checked = false;
                         }
                     }
                 }
             }
         }
- 
+
         //重构函数：根据当前页面和表格行数刷新显示表格
         private void grReFresh()
         {
@@ -410,17 +433,17 @@ namespace VM
 //btnConfirm处理！！
         private void btnTimeConfirm_Click(object sender, EventArgs e)
         {
-            grpSetTime();
+            grpSetTime(grpSTime, cdtS, txtSTimeLow, txtSTimeHigh);
         }
 
         private void btnMoneyConfirm_Click(object sender, EventArgs e)
         {
-            grpSetMoney();
+            grpSetMoney(grpSMoney,cdtS,txtSMoneyLow,txtSMoneyHigh);
         }
 
         private void btnRateConfirm_Click(object sender, EventArgs e)
         {
-            grpSetRate();
+            grpSetRate(grpSRate,cdtS,txtSRateLow,txtSRateHigh);
         }
 
 //排序！！
@@ -494,10 +517,38 @@ namespace VM
         //抢购按钮
         private void btnRush_Click(object sender, EventArgs e)
         {
+            int tem;
+            grpSetTime(grpSTime,cdtS,txtSTimeLow,txtSTimeHigh);
+            grpSetMoney(grpSMoney, cdtS, txtSMoneyLow, txtSMoneyHigh);
+            grpSetRate(grpSRate, cdtS, txtSRateLow, txtSRateHigh);
+
+            cdtR.set(cdtS);
+
             grpSetgrp(grpSTime,grpRTime);
             grpSetgrp(grpSMoney, grpRMoney);
             grpSetgrp(grpSRate, grpRRate);
-            cdtR.set(cdtS);
+
+            tem = grpGetResult(grpRTime);
+            if (tem == 0)
+            {
+                txtRTimeLow.Text = cdtR.TimeDown.ToString();
+                txtRTimeHigh.Text = cdtR.TimeUp.ToString();
+            }
+
+            tem = grpGetResult(grpRMoney);
+            if (tem == 0)
+            {
+                txtRMoneyLow.Text = cdtR.MoneyDown.ToString();
+                txtRMoneyHigh.Text = cdtR.MoneyUp.ToString();
+            }
+
+            tem = grpGetResult(grpRRate);
+            if (tem == 0)
+            {
+                txtRRateLow.Text = cdtR.RateDown.ToString();
+                txtRRateHigh.Text = cdtR.RateUp.ToString();
+            }
+            
         }
 
 
@@ -682,7 +733,7 @@ namespace VM
             }
             else
             {
-                btnActionRush.Enabled = false;
+                tmrRushReflash.Enabled = false;
                 btnActionRush.Text = "开始抢购";       
             }
 
@@ -691,7 +742,7 @@ namespace VM
         //刷新调用
         private void tmrRushReflash_Tick(object sender, EventArgs e)
         {
-             String strTem=null;
+             //String strTem=null;
             //tmrRushReflash.Run();
             //if(return!=null)
             //strTem+="项目名称"+"起投金额\n"+"投资期限"+"收益率";
@@ -764,8 +815,11 @@ namespace VM
 
         private void btnRConfirm_Click(object sender, EventArgs e)
         {
-
+            grpSetTime(grpRTime, cdtS, txtSTimeLow, txtSTimeHigh);
+            grpSetMoney(grpRMoney, cdtS, txtSMoneyLow, txtSMoneyHigh);
+            grpSetRate(grpRRate, cdtS, txtSRateLow, txtSRateHigh);
         }
+
 
 
 

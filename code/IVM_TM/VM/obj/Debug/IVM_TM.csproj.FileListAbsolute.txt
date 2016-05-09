@@ -66,3 +66,4 @@ E:\IVM_TW\code\IVM_TM\VM\bin\Debug\VM.pdb
 E:\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.exe.manifest
 E:\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.application
 E:\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.frmChart.resources
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.frmChart.resources

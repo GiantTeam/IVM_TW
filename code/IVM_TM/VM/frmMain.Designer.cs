@@ -922,6 +922,7 @@ namespace VM
             // 
             // btnRateConfirm
             // 
+            this.btnRateConfirm.Enabled = false;
             this.btnRateConfirm.Location = new System.Drawing.Point(808, 144);
             this.btnRateConfirm.Name = "btnRateConfirm";
             this.btnRateConfirm.Size = new System.Drawing.Size(75, 32);
@@ -933,6 +934,7 @@ namespace VM
             // 
             // btnTimeConfirm
             // 
+            this.btnTimeConfirm.Enabled = false;
             this.btnTimeConfirm.Location = new System.Drawing.Point(808, 48);
             this.btnTimeConfirm.Name = "btnTimeConfirm";
             this.btnTimeConfirm.Size = new System.Drawing.Size(75, 32);
@@ -1085,6 +1087,7 @@ namespace VM
             // 
             // btnMoneyConfirm
             // 
+            this.btnMoneyConfirm.Enabled = false;
             this.btnMoneyConfirm.Location = new System.Drawing.Point(808, 96);
             this.btnMoneyConfirm.Name = "btnMoneyConfirm";
             this.btnMoneyConfirm.Size = new System.Drawing.Size(75, 32);

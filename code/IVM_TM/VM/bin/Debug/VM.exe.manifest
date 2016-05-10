@@ -61,19 +61,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1UJ/9K53a52Xw0lcafG0hHWzIk7mGxNYP2vr9V+7KKI=</dsig:DigestValue>
+        <dsig:DigestValue>FW15ryQbSmqGBd4tHpx88WxVVU7nsQjpySLrAobd6hI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="93712">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="95760">
       <assemblyIdentity name="VM" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>naXN9oJkxLrLqtmgYk6v72ovsH487ImNkftGNyYs1R0=</dsig:DigestValue>
+        <dsig:DigestValue>lu38a+PBKGaa99rsVAJRRrKWFec+RXIwW0LzCSE4Evk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

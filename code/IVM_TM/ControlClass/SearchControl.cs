@@ -12,7 +12,7 @@ namespace ControlClass
     {
         public static ProjectList projectListForAll = new ProjectList();
        //总项目列表
-        public static ProjectList ChildProjectList = Initializate.mProjectList;
+        public static ProjectList ChildProjectList = new ProjectList();
        
         //筛选出的项目的列表       
         
@@ -26,7 +26,6 @@ namespace ControlClass
                 string url = ReturnUrl(lowMonth, HighMonth, lowMoney, HighMoney, RateLow, RateHigh, projectName, IsAuction, currentPage, sort);
                 string webContent = GetWebContent.LoadDataFromWeb(url);
                 string projectStrLink = "https://list.lu.com";
-                if(ChildProjectList.Count() != 0)
                 ChildProjectList = AddProjectList.addProject(new ProjectList(), webContent, projectStrLink);
             
         }
@@ -45,11 +44,11 @@ namespace ControlClass
             }
             if (RateLow != null)
             {
-                RateLow = (double.Parse(RateLow.Substring(0, (RateLow.Length - 2))) * 0.01).ToString();
+                RateLow = ((Convert.ToDouble(RateLow)) * 0.01).ToString();
             }
             if (RateHigh != null)
             {
-                RateHigh = (double.Parse(RateHigh.Substring(0, (RateHigh.Length - 2))) * 0.01).ToString();
+                RateHigh = ((Convert.ToDouble(RateHigh)) * 0.01).ToString();
             }
             string sortString = null;
             if (sort == 1)

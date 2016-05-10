@@ -24,12 +24,6 @@ namespace VM
         public static int s_allPg;
         public static int s_maxItem=22;
 
-        const int c_ITEMNUM = 9;
-        const int c_iMAX = 999999;
-        const int c_iMIN = -99999;
-        const double c_dMAX = 999999;
-        const double c_dMIN = -99999;
-
         public static Condition cdtS = new Condition();
         public static Condition cdtR = new Condition(); 
         public RadioButton rdoTem;
@@ -133,20 +127,20 @@ namespace VM
                     }
                 case 1:
                     {
-                        cdt.MoneyDown = "5";
-                        cdt.MoneyUp = "10";
+                        cdt.MoneyDown = "50000";
+                        cdt.MoneyUp = "100000";
                         break;
                     }
                 case 2:
                     {
-                        cdt.MoneyDown = "1";
-                        cdt.MoneyUp = "5";
+                        cdt.MoneyDown = "10000";
+                        cdt.MoneyUp = "50000";
                         break;
                     }
                 case 3:
                     {
                         cdt.MoneyDown = null;
-                        cdt.MoneyUp = "1";
+                        cdt.MoneyUp = "10000";
                         break;
                     }
                 case 4:
@@ -270,19 +264,18 @@ namespace VM
             // dt.Rows.Clear();
             // grpSearch.DataSource = dt;
 
-            try
-            {
-                DataTable dt_xx = (DataTable)grpSearch.DataSource;
-                dt_xx.Rows.Clear();
-                grpSearch.DataSource = dt_xx;
+            for (int i = 0; i < 9 ; i++)
+            {             
+                grpSearch.Rows[i].Cells[0].Value = null;
+                grpSearch.Rows[i].Cells[1].Value =null ;
+                grpSearch.Rows[i].Cells[2].Value = null;
+                grpSearch.Rows[i].Cells[3].Value = null;
+                grpSearch.Rows[i].Cells[4].Value = null;          
             }
-            catch (Exception ex)
-
-            { }
 
             ProjectList proList = new ProjectList();
             proList = SearchControl.ChildProjectList;
-            for (int i = 0; i < 8 && i < proList.Count() ; i++)
+            for (int i = 0; i < 9 && i < proList.Count() ; i++)
             {
                 //Project project;
                 // ProjectList projectList=new ProjectList(); 
@@ -291,10 +284,11 @@ namespace VM
                 grpSearch.Rows[i].Cells[1].Value = proList.getProject(i).intTime;
                 grpSearch.Rows[i].Cells[2].Value = proList.getProject(i).dblMoney;
                 grpSearch.Rows[i].Cells[3].Value = proList.getProject(i).dblRate;
-             //   grpSearch.Rows[i].Cells[0].Value = i + s_pgNum * c_ITEMNUM;
-             //   grpSearch.Rows[i].Cells[1].Value = s_pgNum * c_ITEMNUM;
-              //  grpSearch.Rows[i].Cells[2].Value = (s_pgNum + 1) * c_ITEMNUM;
-              //  grpSearch.Rows[i].Cells[3].Value = 100 - i;
+                grpSearch.Rows[i].Cells[4].Value = "双击投资";
+                //   grpSearch.Rows[i].Cells[0].Value = i + s_pgNum * c_ITEMNUM;
+                //   grpSearch.Rows[i].Cells[1].Value = s_pgNum * c_ITEMNUM;
+                //  grpSearch.Rows[i].Cells[2].Value = (s_pgNum + 1) * c_ITEMNUM;
+                //  grpSearch.Rows[i].Cells[3].Value = 100 - i;
             }
 
         }
@@ -311,7 +305,7 @@ namespace VM
         //显示页面数
         public void showPage()
         {
-            s_allPg = (int)s_maxItem % c_ITEMNUM == 0 ? s_maxItem / c_ITEMNUM : s_maxItem / c_ITEMNUM + 1;
+            s_allPg = (int)s_maxItem % 9 == 0 ? s_maxItem / 9 : s_maxItem / 9 + 1;
             strShowPg = "当前页数：" + (s_pgNum+1) + "      总页数：" + s_allPg;
             lblShowPg.Text = strShowPg;
         }
@@ -323,11 +317,25 @@ namespace VM
             
             for (int i = 0; i < 9; i++)
             {
-                int index = addgrpRow(grpSearch);
+               // int index = addgrpRow(grpSearch);
+                int index = grpSearch.Rows.Add();
                 grpSearch.Rows[index].Cells[4].Value = "双击投资";
             }
             grReFresh();
-            this.grpSearch.AutoGenerateColumns = false;
+            ProjectList proList = new ProjectList();
+            proList = SearchControl.projectListForAll;
+            for (int i = 0; i < 9 && i < proList.Count(); i++)
+            {
+                //Project project;
+                // ProjectList projectList=new ProjectList(); 
+                // grpSearch.Rows[i].Cells[0].Value = projectList.proArray[i + s_pgNum * c_ITEMNUM].intId;
+                grpSearch.Rows[i].Cells[0].Value = proList.getProject(i).name;
+                grpSearch.Rows[i].Cells[1].Value = proList.getProject(i).intTime;
+                grpSearch.Rows[i].Cells[2].Value = proList.getProject(i).dblMoney;
+                grpSearch.Rows[i].Cells[3].Value = proList.getProject(i).dblRate;
+                grpSearch.Rows[i].Cells[4].Value = "双击投资";
+            }
+                this.grpSearch.AutoGenerateColumns = false;
 
         }
 
@@ -367,20 +375,21 @@ namespace VM
         private void rdoSTime4_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoSTime4, txtSTimeLow, txtSTimeHigh);
-     
+            btnTimeConfirm.Enabled = true;
         }
 
         private void rdoSTime3_CheckedChanged(object sender, EventArgs e)
         {
+            btnTimeConfirm.Enabled = false;
             rdo_checkedChange(rdoSTime3, txtSTimeLow, txtSTimeHigh);
             grpSetTime(grpSTime, cdtS, txtSTimeLow, txtSTimeHigh);
-            Console.Write(cdtS.TimeDown);
             SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
             grReFresh();
         }
 
         private void rdoSTime2_CheckedChanged(object sender, EventArgs e)
         {
+            btnTimeConfirm.Enabled = false;
             rdo_checkedChange(rdoSTime2, txtSTimeLow, txtSTimeHigh);
             grpSetTime(grpSTime, cdtS, txtSTimeLow, txtSTimeHigh);
             SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
@@ -389,9 +398,9 @@ namespace VM
 
         private void rdoSTime1_CheckedChanged(object sender, EventArgs e)
         {
+            btnTimeConfirm.Enabled = false;
             rdo_checkedChange(rdoSTime1, txtSTimeLow, txtSTimeHigh );
             grpSetTime(grpSTime, cdtS, txtSTimeLow, txtSTimeHigh);
-          
             SearchControl.SelectOrOrderProjectList(cdtS.TimeDown,cdtS.TimeUp,cdtS.MoneyDown,cdtS.MoneyUp,cdtS.RateDown,cdtS.RateUp,cdtS.projectName,cdtS.IsAuction,cdtS.currentPage,cdtS.sort);
             grReFresh();
         }
@@ -399,58 +408,97 @@ namespace VM
 
         private void rdoTimeAll_CheckedChanged(object sender, EventArgs e)
         {
-            rdo_checkedChange(rdoTimeAll, txtSTimeLow, txtSTimeHigh );
+            btnTimeConfirm.Enabled = false;
+            rdo_checkedChange(rdoTimeAll, txtSTimeLow, txtSTimeHigh );            
+            grpSetTime(grpSTime, cdtS, txtSTimeLow, txtSTimeHigh);
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
+            grReFresh();
         }
         //第二组单选按钮框处理:处理起投金额
         private void rdoSMoney4_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoSMoney4, txtSMoneyLow, txtSMoneyHigh );
+            btnMoneyConfirm.Enabled = true;
         }
         private void rdoSMoney3_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoSMoney3, txtSMoneyLow, txtSMoneyHigh );
+            btnMoneyConfirm.Enabled = false;
+            grpSetMoney(grpSMoney, cdtS, txtSMoneyLow, txtSMoneyHigh);
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
+            grReFresh();
         }
 
         private void rdoSMoney2_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoSMoney2, txtSMoneyLow, txtSMoneyHigh );
+            btnMoneyConfirm.Enabled = false;
+            grpSetMoney(grpSMoney, cdtS, txtSMoneyLow, txtSMoneyHigh);
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
+            grReFresh();
         }
 
         private void rdoSMoney1_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoSMoney1, txtSMoneyLow, txtSMoneyHigh );
+            btnMoneyConfirm.Enabled = false;
+            grpSetMoney(grpSMoney, cdtS, txtSMoneyLow, txtSMoneyHigh);
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
+            grReFresh();
         }
 
 
         private void rdoMoneyAll_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoMoneyAll, txtSMoneyLow, txtSMoneyHigh );
+            btnMoneyConfirm.Enabled = false;
+            grpSetMoney(grpSMoney,cdtS,txtSMoneyLow,txtSMoneyHigh);
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
+            grReFresh();
+
         }
         //第三组单选按钮框处理:处理收益率
         private void rdoSRate4_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoSRate4, txtSRateLow, txtSRateHigh );
+            btnRateConfirm.Enabled = true;
         }
 
         private void rdoSRate3_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoSRate3, txtSRateLow, txtSRateHigh );
+            btnRateConfirm.Enabled = false;
+            grpSetRate(grpRRate,cdtS,txtSRateLow,txtSRateHigh);
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
+            grReFresh();
         }
 
         private void rdoSRate2_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoSRate2, txtSRateLow, txtSRateHigh );
+            btnRateConfirm.Enabled = false;
+            grpSetRate(grpRRate, cdtS, txtSRateLow, txtSRateHigh);
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
+            grReFresh();
         }
 
         private void rdoSRate1_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoSRate1, txtSRateLow, txtSRateHigh );
+            btnRateConfirm.Enabled = false;
+            grpSetRate(grpRRate, cdtS, txtSRateLow, txtSRateHigh);
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
+            grReFresh();
         }
 
 
         private void rdoRateAll_CheckedChanged(object sender, EventArgs e)
         {
             rdo_checkedChange(rdoRateAll, txtSRateLow, txtSRateHigh );
+            btnTimeConfirm.Enabled = false;
+            grpSetRate(grpRRate, cdtS, txtSRateLow, txtSRateHigh);
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
+            grReFresh();
         }
 
 //btnConfirm处理！！
@@ -460,16 +508,21 @@ namespace VM
           //  grpSetTime(grpSTime, cdtS, txtSTimeLow, txtSTimeHigh);
             SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
             grReFresh();
+            
         }
 
         private void btnMoneyConfirm_Click(object sender, EventArgs e)
         {
             grpSetMoney(grpSMoney,cdtS,txtSMoneyLow,txtSMoneyHigh);
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
+            grReFresh();
         }
 
         private void btnRateConfirm_Click(object sender, EventArgs e)
         {
-            grpSetRate(grpSRate,cdtS,txtSRateLow,txtSRateHigh);
+            grpSetRate(grpRRate, cdtS, txtSRateLow, txtSRateHigh);
+            SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
+            grReFresh();
         }
 
 //排序！！
@@ -590,7 +643,7 @@ namespace VM
 
         private void grpSearch_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int currentItem = s_pgNum * c_ITEMNUM + e.RowIndex;
+            int currentItem = s_pgNum * 9 + e.RowIndex;
             string link = "";
             if (!link.Equals(""))
                 System.Diagnostics.Process.Start(link);

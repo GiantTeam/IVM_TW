@@ -30,8 +30,8 @@ namespace VM
         const double c_dMAX = 999999;
         const double c_dMIN = -99999;
 
-        public Condition cdtS; 
-        public Condition cdtR; 
+        public static Condition cdtS = new Condition();
+        public static Condition cdtR = new Condition(); 
         public RadioButton rdoTem;
         public static ListSortDirection s_lsdSUpDown = ListSortDirection.Ascending;
 
@@ -265,9 +265,24 @@ namespace VM
             // c_ITEMNUM;
             //s_allPg;总页数
             //  int itemNum = s_pgNum * c_ITEMNUM;
+            //grpSearch.Rows.Clear();
+            // DataTable dt = (DataTable)grpSearch.DataSource;
+            // dt.Rows.Clear();
+            // grpSearch.DataSource = dt;
+
+            try
+            {
+                DataTable dt_xx = (DataTable)grpSearch.DataSource;
+                dt_xx.Rows.Clear();
+                grpSearch.DataSource = dt_xx;
+            }
+            catch (Exception ex)
+
+            { }
+
             ProjectList proList = new ProjectList();
             proList = SearchControl.ChildProjectList;
-            for (int i = 0; i < c_ITEMNUM && i < proList.Count() ; i++)
+            for (int i = 0; i < 8 && i < proList.Count() ; i++)
             {
                 //Project project;
                 // ProjectList projectList=new ProjectList(); 
@@ -305,8 +320,7 @@ namespace VM
         private void frmMain_Load(object sender, EventArgs e)
         {
             showPage();
-            cdtS = new Condition();
-            cdtR = new Condition();
+            
             for (int i = 0; i < 9; i++)
             {
                 int index = addgrpRow(grpSearch);
@@ -360,6 +374,7 @@ namespace VM
         {
             rdo_checkedChange(rdoSTime3, txtSTimeLow, txtSTimeHigh);
             grpSetTime(grpSTime, cdtS, txtSTimeLow, txtSTimeHigh);
+            Console.Write(cdtS.TimeDown);
             SearchControl.SelectOrOrderProjectList(cdtS.TimeDown, cdtS.TimeUp, cdtS.MoneyDown, cdtS.MoneyUp, cdtS.RateDown, cdtS.RateUp, cdtS.projectName, cdtS.IsAuction, cdtS.currentPage, cdtS.sort);
             grReFresh();
         }
@@ -841,23 +856,9 @@ namespace VM
             grpSetRate(grpRRate, cdtS, txtSRateLow, txtSRateHigh);
         }
 
+        private void grpSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        }
     }
 }

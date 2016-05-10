@@ -12,7 +12,8 @@ namespace ControlClass
     {
         public static ProjectList projectListForAll = new ProjectList();
        //总项目列表
-        public static ProjectList ChildProjectList = new ProjectList();
+        public static ProjectList ChildProjectList = Initializate.mProjectList;
+       
         //筛选出的项目的列表       
         
         //筛选和排序部分的函数统一用SelectProjectList()
@@ -22,22 +23,12 @@ namespace ControlClass
         //排序传入的参数sort，值为0代表默认排序，1代表按照价格升高排序，2代表降序，3代表期限升序排序，4代表降序排序，5代表利益率升序排序，5代表降序排序/
         public static void SelectOrOrderProjectList(string lowMonth,string HighMonth,string lowMoney,string HighMoney,string RateLow,string RateHigh,string projectName,string IsAuction,int currentPage,int sort)
         {
-            if (lowMoney == null && (HighMoney == null) && (lowMonth == null) && (HighMonth == null) && (RateLow == null) && (RateHigh == null) & (projectName == null) && (IsAuction == null) && (currentPage == 1) && (sort == 0))
-            {
                 string url = ReturnUrl(lowMonth, HighMonth, lowMoney, HighMoney, RateLow, RateHigh, projectName, IsAuction, currentPage, sort);
                 string webContent = GetWebContent.LoadDataFromWeb(url);
                 string projectStrLink = "https://list.lu.com";
-                projectListForAll = AddProjectList.addProject(ChildProjectList, webContent, projectStrLink);
-                
-            }
-            else
-            {
-
-                string url = ReturnUrl(lowMonth, HighMonth, lowMoney, HighMoney, RateLow, RateHigh, projectName, IsAuction, currentPage, sort);
-                string webContent = GetWebContent.LoadDataFromWeb(url);
-                string projectStrLink = "https://list.lu.com";
-                ChildProjectList = AddProjectList.addProject(ChildProjectList, webContent, projectStrLink);
-            }
+                if(ChildProjectList.Count() != 0)
+                ChildProjectList = AddProjectList.addProject(new ProjectList(), webContent, projectStrLink);
+            
         }
 
         public static string ReturnUrl(string lowMonth,string HighMonth,string lowMoney,string HighMoney,string RateLow,string RateHigh,string projectName,string IsAuction,int currentPage,int sort)

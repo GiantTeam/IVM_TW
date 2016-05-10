@@ -1020,6 +1020,7 @@ namespace VM
             this.grpSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grpSearch.Size = new System.Drawing.Size(864, 264);
             this.grpSearch.TabIndex = 16;
+            this.grpSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpSearch_CellContentClick);
             this.grpSearch.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grpSearch_CellMouseClick);
             this.grpSearch.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grpSearch_CellMouseDoubleClick);
             // 

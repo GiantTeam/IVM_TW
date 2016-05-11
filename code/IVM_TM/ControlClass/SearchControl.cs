@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using EntityClass;
 using ClassLibrary;
+using System.IO;
 
 namespace ControlClass
 {
     public class SearchControl
     {
-        public static ProjectList projectListForAll = new ProjectList();
+        public static ProjectList projectListForAll = Initializate.mProjectList;
        //总项目列表
         public static ProjectList ChildProjectList = new ProjectList();
        
@@ -41,6 +42,14 @@ namespace ControlClass
             if (HighMonth != null)
             {
                 HighMonth = ((int.Parse(HighMonth)) * 30).ToString();
+            }
+            if (lowMoney != null)
+            {
+                lowMoney = ((Convert.ToDouble(lowMoney)) * 10000).ToString();
+            }
+            if (HighMoney != null)
+            {
+                HighMoney = ((Convert.ToDouble(HighMoney)) * 10000).ToString();
             }
             if (RateLow != null)
             {
@@ -76,6 +85,7 @@ namespace ControlClass
                 sortString = "INVEST_RATE_DESC";
             }
             url = "https://list.lu.com/list/transfer-p2p?minMoney=" + lowMoney + "&maxMoney=" + HighMoney + "&minDays=" + lowMonth + "&maxDays=" + HighMonth + "&minRate=" + RateLow + "&maxRate=" + RateHigh + "&mode=&tradingMode=" + IsAuction + "&isCx=&currentPage=" + currentPage + "&orderCondition=" + sortString + "&isShared=&canRealized=&productCategoryEnum=";
+
             return url;
         }
    

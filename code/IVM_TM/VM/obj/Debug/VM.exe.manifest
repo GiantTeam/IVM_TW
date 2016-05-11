@@ -49,31 +49,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xhorhQbMfJ6whlRvZJI+Z81gDpGXsZznVtY8/NLAZyo=</dsig:DigestValue>
+        <dsig:DigestValue>JxSlfdnf21KuWch4qh+WnrpoypVrMi9eIAnZXqv594Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlClass.exe" size="8704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlClass.exe" size="9216">
       <assemblyIdentity name="ControlClass" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pCQ0fd16hfO5MD1G1CW2GPTC+uJQZ5yuwlhY+C9Q7TU=</dsig:DigestValue>
+        <dsig:DigestValue>iqqDEAZuK24RDM0OMXGVJSro1gFVnxNC5EGb3K4YLNk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="96784">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="98832">
       <assemblyIdentity name="VM" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NhjZ1WDXfLVkGXl3WXJzHbzENc6iNQvFq3eLU7CbTRI=</dsig:DigestValue>
+        <dsig:DigestValue>HTk8sCFm0AndJbbDkR/JvJEec2y7DNULjjJ+37g+dRM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

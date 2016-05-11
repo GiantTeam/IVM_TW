@@ -9,7 +9,8 @@ namespace ControlClass
 {
     class AddProjectList
     {
-
+        public static int currentPage = 1;
+        public static int PageCount = 1;
         public static ProjectList addProject(ProjectList mProjectList,string strWebContent,string projectStrLink)
         {
             int start = 0;
@@ -52,10 +53,17 @@ namespace ControlClass
                 start = strWebContent.IndexOf("<em class=\"num-style\">", end) + "<em class=\"num-style\">".Length;
                 end = strWebContent.IndexOf("</em>", start);
                 project.dblMoney = strWebContent.Substring(start, end - start);
-
+   
                 mProjectList.Add(project);
             }
+        /*    end = 0;
+            start = strWebContent.IndexOf("id=\"currentPage\" value=\"", end) + "id=\"currentPage\" value=\"".Length;
+            end = strWebContent.IndexOf("\"> ", start);
+            currentPage = Int32.Parse(strWebContent.Substring(start, end - start));
 
+            start = strWebContent.IndexOf("id=\"pageCount\" value=\"", end) + "id=\"pageCount\" value=\"".Length;
+            end = strWebContent.IndexOf("\"> ", start);
+            PageCount = Int32.Parse(strWebContent.Substring(start, end - start));*/
             return mProjectList;
         }
     }

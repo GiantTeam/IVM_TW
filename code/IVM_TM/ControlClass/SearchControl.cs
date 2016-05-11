@@ -13,7 +13,10 @@ namespace ControlClass
     {
         public static ProjectList projectListForAll = Initializate.mProjectList;
        //总项目列表
-        public static ProjectList ChildProjectList = new ProjectList();
+        public static ProjectList ChildProjectList = projectListForAll;
+        public static ProjectList AuctionProjectList = new ProjectList();
+        public static int curPage = 1;
+        public static int pagCount = AddProjectList.PageCount;
        
         //筛选出的项目的列表       
         
@@ -22,12 +25,24 @@ namespace ControlClass
         //参数应该是（0，6,10000,null）自己手动选的话传入参数为（第一个框的数，第二个框的参数，第三个框的数，第四个框的数为）
         //，。。。
         //排序传入的参数sort，值为0代表默认排序，1代表按照价格升高排序，2代表降序，3代表期限升序排序，4代表降序排序，5代表利益率升序排序，5代表降序排序/
-        public static void SelectOrOrderProjectList(string lowMonth,string HighMonth,string lowMoney,string HighMoney,string RateLow,string RateHigh,string projectName,string IsAuction,int currentPage,int sort)
+        public static void SelectOrOrderProjectList(string IsRush,string lowMonth,string HighMonth,string lowMoney,string HighMoney,string RateLow,string RateHigh,string projectName,string IsAuction,int currentPage,int sort)
         {
+            if (IsRush == "No")
+            {
                 string url = ReturnUrl(lowMonth, HighMonth, lowMoney, HighMoney, RateLow, RateHigh, projectName, IsAuction, currentPage, sort);
                 string webContent = GetWebContent.LoadDataFromWeb(url);
                 string projectStrLink = "https://list.lu.com";
                 ChildProjectList = AddProjectList.addProject(new ProjectList(), webContent, projectStrLink);
+                curPage = AddProjectList.currentPage;
+                pagCount = AddProjectList.PageCount;
+            }
+            else
+            {
+                string url = ReturnUrl(lowMonth, HighMonth, lowMoney, HighMoney, RateLow, RateHigh, projectName, IsAuction, currentPage, sort);
+                string webContent = GetWebContent.LoadDataFromWeb(url);
+                string projectStrLink = "https://list.lu.com";
+               AuctionProjectList = AddProjectList.addProject(new ProjectList(), webContent, projectStrLink);
+            }
             
         }
 

@@ -14,7 +14,7 @@ namespace ControlClass
     public class Initializate
     {
         
-        List<string> aLinkList = new List<string>() { "https://list.lu.com/list/transfer-p2p" };
+        List<string> aLinkList = new List<string>() { "https://list.lu.com/list/transfer-p2p?minMoney=&maxMoney=&minDays=&maxDays=&minRate=&maxRate=&mode=&tradingMode=&isCx=&currentPage=1&orderCondition=&isShared=&canRealized=&productCategoryEnum=" };
 
         public static ProjectList mProjectList = new ProjectList();//项目列表
         //从若干网页中筛选出所有项目的信息，生成总项目列表项

@@ -86,3 +86,6 @@ G:\git\IVM_TW\code\IVM_TM\VM\bin\Debug\ClassLibrary.dll
 G:\git\IVM_TW\code\IVM_TM\VM\bin\Debug\ControlClass.exe
 G:\git\IVM_TW\code\IVM_TM\VM\bin\Debug\ClassLibrary.pdb
 G:\git\IVM_TW\code\IVM_TM\VM\bin\Debug\ControlClass.pdb
+F:\git\IVM_TW\code\IVM_TM\VM\bin\Debug\VM.exe.config
+F:\git\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.exe
+F:\git\IVM_TW\code\IVM_TM\VM\obj\Debug\VM.pdb

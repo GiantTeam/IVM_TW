@@ -37,15 +37,11 @@
             this.txtC3 = new System.Windows.Forms.TextBox();
             this.txtC4 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnCReturn = new System.Windows.Forms.Button();
+            this.btnC1 = new System.Windows.Forms.Button();
+            this.btnC2 = new System.Windows.Forms.Button();
+            this.btnC3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCMoney
@@ -118,58 +114,15 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(16, 104);
+            this.pictureBox1.Location = new System.Drawing.Point(48, 96);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 168);
+            this.pictureBox1.Size = new System.Drawing.Size(800, 500);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(296, 104);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(272, 168);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(600, 104);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(272, 168);
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 280);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "收益率";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(408, 288);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "已投金额";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(704, 280);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "已获收益";
-            // 
             // btnCReturn
             // 
-            this.btnCReturn.Location = new System.Drawing.Point(696, 32);
+            this.btnCReturn.Location = new System.Drawing.Point(712, 56);
             this.btnCReturn.Name = "btnCReturn";
             this.btnCReturn.Size = new System.Drawing.Size(75, 23);
             this.btnCReturn.TabIndex = 14;
@@ -177,17 +130,45 @@
             this.btnCReturn.UseVisualStyleBackColor = true;
             this.btnCReturn.Click += new System.EventHandler(this.btnCReturn_Click);
             // 
+            // btnC1
+            // 
+            this.btnC1.Location = new System.Drawing.Point(576, 16);
+            this.btnC1.Name = "btnC1";
+            this.btnC1.Size = new System.Drawing.Size(75, 23);
+            this.btnC1.TabIndex = 15;
+            this.btnC1.Text = "收益";
+            this.btnC1.UseVisualStyleBackColor = true;
+            this.btnC1.Click += new System.EventHandler(this.btnC1_Click);
+            // 
+            // btnC2
+            // 
+            this.btnC2.Location = new System.Drawing.Point(576, 56);
+            this.btnC2.Name = "btnC2";
+            this.btnC2.Size = new System.Drawing.Size(75, 23);
+            this.btnC2.TabIndex = 16;
+            this.btnC2.Text = "投资";
+            this.btnC2.UseVisualStyleBackColor = true;
+            this.btnC2.Click += new System.EventHandler(this.btnC2_Click);
+            // 
+            // btnC3
+            // 
+            this.btnC3.Location = new System.Drawing.Point(712, 16);
+            this.btnC3.Name = "btnC3";
+            this.btnC3.Size = new System.Drawing.Size(75, 23);
+            this.btnC3.TabIndex = 17;
+            this.btnC3.Text = "收益率";
+            this.btnC3.UseVisualStyleBackColor = true;
+            this.btnC3.Click += new System.EventHandler(this.btnC3_Click);
+            // 
             // frmChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 310);
+            this.ClientSize = new System.Drawing.Size(901, 630);
+            this.Controls.Add(this.btnC3);
+            this.Controls.Add(this.btnC2);
+            this.Controls.Add(this.btnC1);
             this.Controls.Add(this.btnCReturn);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtC4);
             this.Controls.Add(this.txtC3);
@@ -200,8 +181,6 @@
             this.Name = "frmChart";
             this.Text = "图表分析";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,11 +197,9 @@
         private System.Windows.Forms.TextBox txtC3;
         private System.Windows.Forms.TextBox txtC4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCReturn;
+        private System.Windows.Forms.Button btnC1;
+        private System.Windows.Forms.Button btnC2;
+        private System.Windows.Forms.Button btnC3;
     }
 }

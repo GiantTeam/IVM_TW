@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClassLibrary.dll" size="6144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClassLibrary.dll" size="9216">
       <assemblyIdentity name="ClassLibrary" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JxSlfdnf21KuWch4qh+WnrpoypVrMi9eIAnZXqv594Q=</dsig:DigestValue>
+        <dsig:DigestValue>dOYPP+K6kZLgcSJfuGn92rvN/sqz+uEXKwe4LwaGwm0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="98832">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="97792">
       <assemblyIdentity name="VM" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HTk8sCFm0AndJbbDkR/JvJEec2y7DNULjjJ+37g+dRM=</dsig:DigestValue>
+        <dsig:DigestValue>CMT4V8SLqXMHo3+7cHa6BJdscSmnEEPGO1S1j9WDduo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

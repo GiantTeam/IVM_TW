@@ -17,7 +17,7 @@ namespace ControlClass
             Byte[] webPageData = ourSearchWeb.DownloadData(url);
             string webPageHtml = Encoding.UTF8.GetString(webPageData);
             Console.Write(webPageHtml);
-            return webPageHtml;
+            return webPageHtml;            
         }
     }
 }

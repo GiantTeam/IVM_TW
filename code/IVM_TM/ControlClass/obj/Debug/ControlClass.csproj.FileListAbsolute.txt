@@ -15,3 +15,11 @@ G:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.exe
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.exe.config
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.exe
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.exe
+F:\git\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.exe.config
+F:\git\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.exe
+F:\git\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.pdb
+F:\git\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ClassLibrary.dll
+F:\git\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ClassLibrary.pdb
+F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.csproj.ResolveComReference.cache
+F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.exe
+F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.pdb

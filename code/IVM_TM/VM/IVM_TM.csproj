@@ -92,6 +92,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatistisGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="frmChart.resx">
       <DependentUpon>frmChart.cs</DependentUpon>
     </EmbeddedResource>

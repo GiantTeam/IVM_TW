@@ -92,14 +92,7 @@ namespace VM
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.grpAnalyse = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mmuAnalyse = new System.Windows.Forms.MenuStrip();
+            this.mmuStatistic = new System.Windows.Forms.MenuStrip();
             this.mmuNew = new System.Windows.Forms.ToolStripMenuItem();
             this.mmuSave = new System.Windows.Forms.ToolStripMenuItem();
             this.mmuEmpty = new System.Windows.Forms.ToolStripMenuItem();
@@ -166,6 +159,10 @@ namespace VM
             this.rdoSortDown = new System.Windows.Forms.RadioButton();
             this.rdoSortUp = new System.Windows.Forms.RadioButton();
             this.tabSelectModule = new System.Windows.Forms.TabControl();
+            this.ColumnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).BeginInit();
             this.tapRush.SuspendLayout();
@@ -175,7 +172,7 @@ namespace VM
             this.grpRTime.SuspendLayout();
             this.tapAnalyse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpAnalyse)).BeginInit();
-            this.mmuAnalyse.SuspendLayout();
+            this.mmuStatistic.SuspendLayout();
             this.tapSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpSearch)).BeginInit();
             this.grpSRate.SuspendLayout();
@@ -682,7 +679,7 @@ namespace VM
             this.tapAnalyse.Controls.Add(this.btnDelete);
             this.tapAnalyse.Controls.Add(this.btnAdd);
             this.tapAnalyse.Controls.Add(this.grpAnalyse);
-            this.tapAnalyse.Controls.Add(this.mmuAnalyse);
+            this.tapAnalyse.Controls.Add(this.mmuStatistic);
             this.tapAnalyse.Location = new System.Drawing.Point(4, 30);
             this.tapAnalyse.Name = "tapAnalyse";
             this.tapAnalyse.Padding = new System.Windows.Forms.Padding(3);
@@ -735,13 +732,10 @@ namespace VM
             this.grpAnalyse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.grpAnalyse.ColumnHeadersHeight = 30;
             this.grpAnalyse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.dataGridViewTextBoxColumn5,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.dataGridViewTextBoxColumn6});
+            this.ColumnTime,
+            this.ColumnName,
+            this.ColumnType,
+            this.ColumnMoney});
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -772,60 +766,21 @@ namespace VM
             this.grpAnalyse.Size = new System.Drawing.Size(880, 464);
             this.grpAnalyse.TabIndex = 17;
             // 
-            // Column1
+            // mmuStatistic
             // 
-            this.Column1.HeaderText = "时间";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "类型";
-            this.Column2.Name = "Column2";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.HeaderText = "项目";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "投资";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "提现";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "项目当前余额";
-            this.Column5.Name = "Column5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.HeaderText = "盈利情况";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // mmuAnalyse
-            // 
-            this.mmuAnalyse.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.mmuAnalyse.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mmuStatistic.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.mmuStatistic.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mmuNew,
             this.mmuSave,
             this.mmuEmpty,
             this.mmuImport,
             this.mmuExport,
             this.mmuChart});
-            this.mmuAnalyse.Location = new System.Drawing.Point(3, 3);
-            this.mmuAnalyse.Name = "mmuAnalyse";
-            this.mmuAnalyse.Size = new System.Drawing.Size(890, 29);
-            this.mmuAnalyse.TabIndex = 0;
-            this.mmuAnalyse.Text = "menuStrip1";
+            this.mmuStatistic.Location = new System.Drawing.Point(3, 3);
+            this.mmuStatistic.Name = "mmuStatistic";
+            this.mmuStatistic.Size = new System.Drawing.Size(890, 29);
+            this.mmuStatistic.TabIndex = 0;
+            this.mmuStatistic.Text = "menuStrip1";
             // 
             // mmuNew
             // 
@@ -1442,7 +1397,7 @@ namespace VM
             // txtSTimeLow
             // 
             this.txtSTimeLow.Enabled = false;
-            this.txtSTimeLow.Location = new System.Drawing.Point(464, 16);
+            this.txtSTimeLow.Location = new System.Drawing.Point(464, 19);
             this.txtSTimeLow.Name = "txtSTimeLow";
             this.txtSTimeLow.Size = new System.Drawing.Size(64, 29);
             this.txtSTimeLow.TabIndex = 4;
@@ -1608,6 +1563,32 @@ namespace VM
             this.tabSelectModule.Size = new System.Drawing.Size(904, 614);
             this.tabSelectModule.TabIndex = 1;
             // 
+            // ColumnTime
+            // 
+            this.ColumnTime.FillWeight = 304.5685F;
+            this.ColumnTime.HeaderText = "时间";
+            this.ColumnTime.Name = "ColumnTime";
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnName.FillWeight = 31.81049F;
+            this.ColumnName.HeaderText = "项目";
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ColumnType
+            // 
+            this.ColumnType.FillWeight = 31.81049F;
+            this.ColumnType.HeaderText = "类型";
+            this.ColumnType.Name = "ColumnType";
+            // 
+            // ColumnMoney
+            // 
+            this.ColumnMoney.FillWeight = 31.81049F;
+            this.ColumnMoney.HeaderText = "金额";
+            this.ColumnMoney.Name = "ColumnMoney";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1616,7 +1597,7 @@ namespace VM
             this.Controls.Add(this.picLogo2);
             this.Controls.Add(this.picLogo1);
             this.Controls.Add(this.tabSelectModule);
-            this.MainMenuStrip = this.mmuAnalyse;
+            this.MainMenuStrip = this.mmuStatistic;
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Padding = new System.Windows.Forms.Padding(10);
@@ -1636,8 +1617,8 @@ namespace VM
             this.tapAnalyse.ResumeLayout(false);
             this.tapAnalyse.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpAnalyse)).EndInit();
-            this.mmuAnalyse.ResumeLayout(false);
-            this.mmuAnalyse.PerformLayout();
+            this.mmuStatistic.ResumeLayout(false);
+            this.mmuStatistic.PerformLayout();
             this.tapSearch.ResumeLayout(false);
             this.tapSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpSearch)).EndInit();
@@ -1703,14 +1684,7 @@ namespace VM
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView grpAnalyse;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.MenuStrip mmuAnalyse;
+        private System.Windows.Forms.MenuStrip mmuStatistic;
         private System.Windows.Forms.ToolStripMenuItem mmuNew;
         private System.Windows.Forms.ToolStripMenuItem mmuSave;
         private System.Windows.Forms.ToolStripMenuItem mmuEmpty;
@@ -1778,6 +1752,10 @@ namespace VM
         private System.Windows.Forms.RadioButton rdoTimeAll;
         private System.Windows.Forms.RadioButton rdoRateAll;
         private System.Windows.Forms.Button btnRConfirm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMoney;
     }
 }
 

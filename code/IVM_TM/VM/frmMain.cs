@@ -43,10 +43,10 @@ namespace VM
         }
 
         //将单选按钮组转化为对应表达式：投资期限
-        public void grpSetTime(GroupBox grp,Condition cdt,TextBox txtl,TextBox txth)
+        public void grpSetTime(GroupBox grpTime,Condition cdt,TextBox txtl,TextBox txth)
         {
             int tem;
-            tem = grpGetResult(grp);
+            tem = grpGetResult(grpTime);
             switch (tem)
             {
                 case 0:
@@ -99,29 +99,29 @@ namespace VM
         }
 
         //将单选按钮组转化为对应表达式：投资金额
-        public void grpSetMoney(GroupBox grp, Condition cdt, TextBox txtl, TextBox txth)
+        public void grpSetMoney(GroupBox grpMoney, Condition cdt, TextBox txtDown, TextBox txtUp)
         {
             int tem;
-            tem = grpGetResult(grp);
+            tem = grpGetResult(grpMoney);
             switch (tem)
             {
                 case 0:
                     {
-                        if (txtl.Text == "")
+                        if (txtDown.Text == "")
                         {
                             cdt.MoneyDown = null;
                         }
                         else
                         {
-                            cdt.MoneyDown = (txtl.Text).Trim();
+                            cdt.MoneyDown = (txtDown.Text).Trim();
                         }
-                        if (txth.Text == "")
+                        if (txtUp.Text == "")
                         {
                             cdt.MoneyUp = null;
                         }
                         else
                         {
-                            cdt.MoneyUp = (txth.Text).Trim();
+                            cdt.MoneyUp = (txtUp.Text).Trim();
                         }
                         break;
                        
@@ -156,54 +156,54 @@ namespace VM
         }
 
         //将单选按钮组转化为对应表达式：收益率
-        public void grpSetRate(GroupBox grp, Condition cdt, TextBox txtl, TextBox txth)
+        public void grpSetRate(GroupBox grpRate, Condition selectCondition, TextBox txtDown, TextBox txtUp)
         {
             int tem;
-            tem = grpGetResult(grp);
+            tem = grpGetResult(grpRate);
             switch (tem)
             {
                 case 0:
                     {
-                        if (txtl.Text == "")
+                        if (txtDown.Text == "")
                         {
-                            cdt.RateDown = null;
+                            selectCondition.RateDown = null;
                         }
                         else
                         {
-                            cdt.RateDown = (txtl.Text).Trim();
+                            selectCondition.RateDown = (txtDown.Text).Trim();
                         }
-                        if (txth.Text == "")
+                        if (txtUp.Text == "")
                         {
-                            cdt.RateUp = null;
+                            selectCondition.RateUp = null;
                         }
                         else
                         {
-                            cdt.RateUp = (txth.Text).Trim();
+                            selectCondition.RateUp = (txtUp.Text).Trim();
                         }
                         break;
                     }
                 case 1:
                     {
-                        cdt.RateDown = "10";
-                        cdt.RateUp = null;
+                        selectCondition.RateDown = "10";
+                        selectCondition.RateUp = null;
                         break;
                     }
                 case 2:
                     {
-                        cdt.RateDown = "5";
-                        cdt.RateUp = "10";
+                        selectCondition.RateDown = "5";
+                        selectCondition.RateUp = "10";
                         break;
                     }
                 case 3:
                     {
-                        cdt.RateDown = null;
-                        cdt.RateUp = "5";
+                        selectCondition.RateDown = null;
+                        selectCondition.RateUp = "5";
                         break;
                     }
                 case 4:
                     {
-                        cdt.RateDown = null;
-                        cdt.RateUp = null;
+                        selectCondition.RateDown = null;
+                        selectCondition.RateUp = null;
                         break;
                     }
                 default:
@@ -229,13 +229,13 @@ namespace VM
              return -1;
         }
 
-        public void grpSetgrp(GroupBox grp1, GroupBox grp2)
+        public void grpSetgrp(GroupBox grpSearchGUI, GroupBox grpRushGUI)
         {
             int tem;
-            tem=grpGetResult(grp1);
+            tem=grpGetResult(grpSearchGUI);
             if (-1 != tem)
             {
-                foreach (Control ct in grp2.Controls)
+                foreach (Control ct in grpRushGUI.Controls)
                 {
                     if (ct is RadioButton)
                     {
@@ -286,15 +286,7 @@ namespace VM
 
         }
 
-        //重构函数：为表格添加行
-        private int addgrpRow(DataGridView grp)
-        {
-            DataGridViewRow Row = new DataGridViewRow();
-            grp.RowHeadersWidth = 45;
-            int index = grp.Rows.Add(Row);
-            return index;
-        }
-
+        
         //显示页面数
         public void showPage()
         {
@@ -757,120 +749,6 @@ namespace VM
 
 
         //******************************************Analyse界面**********************************************
-        //页面上部，菜单栏：
-        //重构函数：选择文件夹
-        private void selectFile()
-        {
-            OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Multiselect = true;
-            fileDialog.Title = "请选择文件";
-            fileDialog.Filter = "所有文件(*.*)|*.*";
-            if (fileDialog.ShowDialog() == DialogResult.OK)
-            {
-                string file = fileDialog.FileName;
-                MessageBox.Show("已选择文件:" + file, "选择文件提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        //重构函数：选择路径
-        private void selectPath()
-        {
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            dialog.Description = "请选择文件路径";
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                string foldPath = dialog.SelectedPath;
-                MessageBox.Show("已选择文件夹:" + foldPath, "选择文件夹提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        //重构函数：清空表格内容
-        private void deleteAll()
-        {
-            int index;
-            for (index = 0; index < grpAnalyse.Rows.Count; )
-            {
-                grpAnalyse.Rows.Remove(grpAnalyse.Rows[index]);
-            }
-        }
-
-        //创建新的文件
-        private void mmuNew_Click(object sender, EventArgs e)
-        {
-            deleteAll();
-        }
-
-        //清空文件内容
-        private void mmuEmpty_Click(object sender, EventArgs e)
-        {
-            deleteAll();
-            //将结果写入文件
-        }
-
-        //保存
-        private void mmuSave_Click(object sender, EventArgs e)
-        {
-             //if(文件存在）
-            //保存文件
-            //else
-           // selectPath();
-           //保存文件
-            
-        }
-
-        //导入
-        private void mmuImport_Click(object sender, EventArgs e)
-        {
-            selectFile();
-            //读取文件并显示
-        }
-
-        //导出
-        private void mmuExport_Click(object sender, EventArgs e)
-        {
-            selectPath();
-            //转化文件格式写出
-        }
-
-        //页面中部：表格处理
-        private void mmuChart_Click(object sender, EventArgs e)
-        {
-            frmChart chart;
-            chart = new frmChart();
-            chart.Show();
-        }
-
-        //页面下部
-        //增加按钮
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            int index;
-            for (index = 0; index < grpAnalyse.Rows.Count; index++)
-            {
-                grpAnalyse.Rows[index].Selected = false;
-            }
-            index=addgrpRow(grpAnalyse);
-            grpAnalyse.Rows[index].Selected = true;
-            grpAnalyse.Rows[index].Cells[0].Value= index;
-        }
-
-        //删除按钮
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            for (int i = this.grpAnalyse.SelectedRows.Count; i > 0; i--)
-            {
-                int ID = Convert.ToInt32(grpAnalyse.SelectedRows[i - 1].Cells[0].Value);
-                grpAnalyse.Rows.RemoveAt(grpAnalyse.SelectedRows[i - 1].Index);
-                /* 使用获得的ID删除数据库的数据
-                 string SQL = "delete  from UserInfo where UserId='"+ID.ToString()+"'";
-                 int s =Convert.ToInt32(cl.Execute(SQL));  //cl是操作类的一个对像，Execute()是类中的一个方法
-                 if (s!=0)
-                 {
-                     MessageBox.Show("成功删除选中行数据！");
-                 }
-                 */
-            }
-        }
 
 
         //******************************************Rush界面**************************************

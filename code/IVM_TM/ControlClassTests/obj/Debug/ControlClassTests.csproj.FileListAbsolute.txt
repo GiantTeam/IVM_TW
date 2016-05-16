@@ -1,0 +1,11 @@
+F:\git\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\ControlClassTests.dll
+F:\git\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\ControlClassTests.pdb
+F:\git\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\ClassLibrary.dll
+F:\git\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\ControlClass.exe
+F:\git\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+F:\git\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\ClassLibrary.pdb
+F:\git\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\ControlClass.pdb
+F:\git\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+F:\git\IVM_TW\code\IVM_TM\ControlClassTests\obj\Debug\ControlClassTests.csprojResolveAssemblyReference.cache
+F:\git\IVM_TW\code\IVM_TM\ControlClassTests\obj\Debug\ControlClassTests.dll
+F:\git\IVM_TW\code\IVM_TM\ControlClassTests\obj\Debug\ControlClassTests.pdb

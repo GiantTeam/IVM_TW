@@ -15,8 +15,8 @@ namespace VM
         int[] date = new int[13] { 0, 20, 13, 30, 15, 7, 16, 27, 8, 9, 30, 21, 12 };
         int[] D = new int[13] { 0, 20, 13, 30, 15, 7, 16, 27, 8, 9, 20, 21, 12 };
         int length = 12;
-        int smonth = 7;
-        int syear = 2013;
+        int g_smonth = 7;
+        int g_syear = 2013;
         int yAdd = 10;
         public int diff(int x, int y)
         {
@@ -48,6 +48,8 @@ namespace VM
 
         public void paint(string strtitle, string strx, string stry, int[] d, int yadd)
         {
+            int syear = g_syear;
+            int smonth = g_smonth - 1;
             //画图初始化
             Bitmap bmap = new Bitmap(800, 500);
             Graphics gph = Graphics.FromImage(bmap);

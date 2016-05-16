@@ -12,27 +12,36 @@ namespace EntityClass
     public class DateRecord
     {
         
-        string strDate;
-        double dblInvest;//投资金额
-        double dblProfit;//收益
-        double dblValue;//当前价值
-        double dblRate;//收益率
-        ArrayList recordList;
-        public DateRecord (string Date,ArrayList RecordList)
-        {
-            this.strDate = Date;            
-            int DateIndex = 0;
-            Record record =(Record) RecordList[DateIndex];
-            while (!(string.Compare(record.strDate,this.strDate) >0))//将当天和那天之前的所有项目记录单独放
-            {
-                recordList.Add(record);
-                DateIndex++;
-                record = (Record)RecordList[DateIndex];
-            }
-            RecordCompareByID recordCompareByID = new RecordCompareByID();
-            recordList.Sort(recordCompareByID);//按ID排序
-
+        public DateTime dtmTime;
+        public double dblInvest =0 ;//投资金额
+        public double dblProfit = 0;//收益
+        public double dblValue = 0;//当前价值
+        public double dblRate = 0;//收益率
+        public  ArrayList recordList = new ArrayList();
+        public  DateRecord(DateTime time )
+        {           
+            this.dtmTime = time;
+            
         }
+        public void Add (Record record)
+        {
+            this.recordList.Add(record);
+        }
+        //public DateRecord (DateTime Date,ArrayList RecordList)
+        //{
+        //    this.dtmDate = Date;            
+        //    int DateIndex = 0;
+        //    Record record =(Record) RecordList[DateIndex];
+        //    while (record.dtmDate>this.dtmDate)//将当天和那天之前的所有项目记录单独放
+        //    {
+        //        recordList.Add(record);
+        //        DateIndex++;
+        //        record = (Record)RecordList[DateIndex];
+        //    }
+        //    RecordCompareByID recordCompareByID = new RecordCompareByID();
+        //    recordList.Sort(recordCompareByID);//按ID排序
+
+        //}
              
         public double Profit
         {
@@ -49,7 +58,7 @@ namespace EntityClass
                     {
                         Record temp = (Record)recordList[i];
                         //设购买金额是x元，今天离购买日期y天)，其当前的价值value = x * (1 + 0.084) * y / 365；其今天为止的收益 = value - x;
-                        double value = temp.dblMoney * (1 + 0.084) * (dateDiff(this.strDate, temp.strDate)) / 365;
+                        double value = temp.dblMoney * (1 + 0.084) * (Math.Abs((this.dtmTime-temp.dtmDate).Days))/ 365;
                         dblProfit += value - temp.dblMoney;
                         i++;
                     }
@@ -87,7 +96,9 @@ namespace EntityClass
             {
                 //今天为止的收益率=今天为止的所有项目的收益/初始现金/（当前日期-初始投资日期）*365*100%
 
-                dblRate = this.Profit / 100000 / dateDiff(((Record)recordList[0]).strDate, this.strDate)*365;
+                //dblRate = this.Profit / 100000 / dateDiff(((Record)recordList[0]).strDate, this.dtmDate)*365;
+                dblRate = this.Profit / 100000 / Math.Abs((this.dtmTime - ((Record)recordList[0]).dtmDate).Days) * 365;
+                
                 return dblRate;
             }
         }

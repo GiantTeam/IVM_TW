@@ -23,3 +23,4 @@ F:\git\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ClassLibrary.pdb
 F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.csproj.ResolveComReference.cache
 F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.exe
 F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.pdb
+F:\git\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\Aspose.Cells.dll

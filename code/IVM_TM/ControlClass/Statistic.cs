@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 using System.Xml;
 using EntityClass;
 using System.Reflection;
-using Excel= Microsoft.Office.Interop.Excel;
+//using Excel= Microsoft.Office.Interop.Excel;
 //using Excel;
+using Cells = Aspose.Cells;
 using Microsoft.Office.Interop.Excel;
 using System.Web;
 using System.Web.Security;
@@ -36,6 +37,8 @@ namespace ControlClass
 
         public ArrayList GetDateRecordList(Comparer cmpCompare)
         {
+            //打开excel选择框
+           
             //将所有的项目记录按不同的时间精度（年、月、日）进行分开整理计算，可以获取该数组
             //利用该数组画出每个时间点收益，投资，收益率，作出曲线。
             ArrayList DateRecordList = new ArrayList();
@@ -145,152 +148,105 @@ namespace ControlClass
         }
         public  ArrayList LoadDataFromExcel(string WholePath)
         {
-            ArrayList RecordList = new ArrayList();
-
+            ArrayList RecordList = new ArrayList();           
             Application app = new Application();
-            _Workbook _wbk;
+
+
+
             Workbooks wbks = app.Workbooks;
             if (!File.Exists(WholePath))
             {
-                _wbk = wbks.Add(true);
-                Sheets sh = _wbk.Sheets;
-                _Worksheet _ws = (_Worksheet)sh.get_Item(1);
-                _ws.Cells[0, 0] = "Time";
-                 _ws.Cells[0, 1] = "类型";
-                _ws.Cells[0, 2] = "金额";
-                _ws.Cells[0.3] = "项目";
-                ((Range)_ws.Rows[11, Missing.Value]).Insert(Missing.Value, XlInsertFormatOrigin.xlFormatFromLeftOrAbove);
-                _wbk.SaveAs(WholePath);
-            }
+                Cells.Workbook _wbkTemp = new Cells.Workbook();
+                //  _wbk = wbks.Add(true);
+                //Sheets sh = _wbk.Sheets;
+                Cells.Worksheet _ws = _wbkTemp.Worksheets[0];
+                //   Cells.Cells _ws = sh.Cells; 
+                //   _Worksheet _ws = (_Worksheet)sh.get_Item(1);
+                _ws.Cells[0, 0].PutValue("时间");
+                _ws.Cells[0, 1].PutValue("类型");
+                _ws.Cells[0, 2].PutValue("金额");
+                _ws.Cells[0, 3].PutValue("项目");
+                _ws.Cells[0, 4].PutValue("编号");
+                _wbkTemp.Save(WholePath);
 
-            _wbk = wbks.Add(WholePath);
-            Sheets shs = _wbk.Sheets;
-            _Worksheet _wsh = (_Worksheet)shs.get_Item(1);
-            int rowsCount = _wsh.UsedRange.Rows.Count;
-            for (int i = 1; i <= rowsCount; i++)
+            }
+            Cells.Workbook _wbk = new Cells.Workbook(WholePath);
+            Cells.Worksheet _wsh = _wbk.Worksheets[0];
+            Cells.Cells cells = _wsh.Cells;
+            int rowCount = cells.MaxRow;
+         //   int columncount = cells.MaxColumn;
+                    
+            for (int i = 1; i < rowCount; i++)
             {
                 Record record = new Record();
-                record.strType = _wsh.Cells[i - 1, 1];
-                record.dtmDate = DateTime.Parse(_wsh.Cells[i - 1, 0]);
-               
-                record.dblMoney = double.Parse(_wsh.Cells[i - 1, 2]);
-                record.strName = _wsh.Cells[i - 1, 3];
-                record.dblID = _wsh.Cells[i - 1, 4];
+                // System._ComObject 
+                record.dtmDate = DateTime.Parse(_wsh.Cells[i, 0].StringValue.Trim());                          
+                record.strType =_wsh.Cells[i, 1].StringValue;
+                record.dblMoney = Double.Parse(_wsh.Cells[i, 2].StringValue.Trim());
+                record.strName = _wsh.Cells[i, 3].StringValue.Trim(); ;
+                record.dblID = Double.Parse( _wsh.Cells[i, 4].StringValue.Trim());
+                RecordList.Add(record);
+              //  __ComObject
             }
+
+
+
+
             RecordCompareByTime cmpCompareByTime = new RecordCompareByTime();
             RecordList.Sort(cmpCompareByTime);//所有的项目记录表按时间排序
-
+         //   _wbk.Close();
             return RecordList;
         }
 
-        public void WriteDateToExcel(ArrayList RecordList, String WholePath)//保存修改
-        {
+        public void WriteDataToExcel(ArrayList RecordList, String WholePath)//保存修改
+        {                  
+            if (!File.Exists(WholePath))
+            {
+                Cells.Workbook _wbkTemp = new Cells.Workbook();          
+                Cells.Worksheet _ws = _wbkTemp.Worksheets[0];  
+                _ws.Cells[0, 0].PutValue("时间");
+                _ws.Cells[0, 1].PutValue("类型");
+                _ws.Cells[0, 2].PutValue("金额");
+                _ws.Cells[0, 3].PutValue("项目");
+                _ws.Cells[0, 4].PutValue("编号");
+                _wbkTemp.Save(WholePath);
+
+            }
             Application app = new Application();
             Workbooks wbks = app.Workbooks;
-            _Workbook _wbk = wbks.Add(WholePath);
-            Sheets shs = _wbk.Sheets;
-            _Worksheet _wsh = (_Worksheet)shs.get_Item(0);
+           // _Workbook _wbk = wbks.Add(WholePath);
+
+
+            Cells.Workbook _wbk = new Cells.Workbook(WholePath);
+            Cells.Worksheet _wsh = _wbk.Worksheets[0];
+
+            //清空原始数据
+            int rowCount = _wsh.Cells.MaxRow;
+
+
+
+            _wsh.Cells.DeleteRows(1, rowCount-1);
+          
+
+            //  Sheets shs = _wbk.Sheets;
+            //_Worksheet _wsh = (_Worksheet)shs.get_Item(1);
             int RecordNum = RecordList.Count;
-            for (int i = 0; i < RecordNum; i++)
+            for (int i = 1; i <= RecordNum; i++)
             {
-                Record record = (Record)RecordList[i];
-                _wsh.Cells[i + 1, 0] = record.dtmDate;
-                _wsh.Cells[i + 1, 1] = record.strType;
-                _wsh.Cells[i + 1, 2] = record.dblMoney;
-                _wsh.Cells[i + 1, 3] = record.strName;
-                _wsh.Cells[i + 1, 4] = record.strName;
+                Record record = (Record)RecordList[i-1];
+                _wsh.Cells[i, 0].PutValue( record.dtmDate.ToString());
+                _wsh.Cells[i, 1] .PutValue( record.strType);
+                _wsh.Cells[i, 2] .PutValue(record.dblMoney);
+                _wsh.Cells[i, 3] .PutValue( record.strName);
+                _wsh.Cells[i, 4] .PutValue( record.dblID);
             }
-
-
+            _wbk.Save(WholePath);
+            //    ((Range)_wsh.Rows[11, Missing.Value]).Insert(Missing.Value, XlInsertFormatOrigin.xlFormatFromLeftOrAbove);
+            // _wbk.Save();
+            // _wbk.Close();
         }
-
-        public void WriteAndAutoSaveXls()
-        {
-            Excel.Application excel = new Excel.Application();
-            //Range range = null;// 创建一个空的单元格对象 
-            //Worksheet sheet = null;
-            Range range = null;// 创建一个空的单元格对象 
-            Worksheet sheet = null;
-            try
-            {
-                // 注释掉的语句是:从磁盘指定位置打开一个 Excel 文件 
-                //excel.Workbooks.Open("demo.xls", Missing.Value, Missing.Value,  
-                //Missing.Value,Missing.Value, Missing.Value, Missing.Value,  
-                //Missing.Value, Missing.Value, Missing.Value, Missing.Value,  
-                //Missing.Value, Missing.Value, Missing.Value, Missing.Value); 
-                if (excel == null)
-                {
-                    //Response.Write("不能创建excle文件");
-                }
-                excel.Visible = false;// 不显示 Excel 文件,如果为 true 则显示 Excel 文件 
-                excel.Workbooks.Add(Missing.Value);// 添加工作簿 
-                                                   //使用 Missing 类的此实例来表示缺少的值，例如，当您调用具有默认参数值的方法时。 
-                sheet = (Worksheet)excel.ActiveSheet;// 获取当前工作表 
-
-
-                sheet.get_Range(sheet.Cells[29, 2], sheet.Cells[29, 2]).Orientation = Excel.XlOrientation.xlVertical;//字体竖直居中在单元格内 
-
-
-                range = sheet.get_Range("A1", Missing.Value);// 获取单个单元格 
-                range.RowHeight = 20;           // 设置行高 
-                range.ColumnWidth = 20;         // 设置列宽 
-                range.Borders.LineStyle = 1;    // 设置单元格边框 
-                range.Font.Bold = true;         // 加粗字体 
-                range.Font.Size = 20;           // 设置字体大小 
-                range.Font.ColorIndex = 5;      // 设置字体颜色 
-                range.Interior.ColorIndex = 6;  // 设置单元格背景色 
-                range.HorizontalAlignment = XlHAlign.xlHAlignCenter;// 设置单元格水平居中 
-                range.VerticalAlignment = XlVAlign.xlVAlignCenter;// 设置单元格垂直居中 
-                range.Value2 = "设置行高和列宽";// 设置单元格的值 
-
-                range = sheet.get_Range("B2", "D4");// 获取多个单元格 
-                range.Merge(Missing.Value);         // 合并单元格 
-                range.Columns.AutoFit();            // 设置列宽为自动适应 
-                range.NumberFormatLocal = "#,##0.00";// 设置单元格格式为货币格式 
-                                                     // 设置单元格左边框加粗 
-                range.Borders[XlBordersIndex.xlEdgeLeft].Weight = XlBorderWeight.xlThick;
-                // 设置单元格右边框加粗 
-                range.Borders[XlBordersIndex.xlEdgeRight].Weight = XlBorderWeight.xlThick;
-                range.Value2 = "合并单元格";
-
-                // 页面设置 
-                sheet.PageSetup.PaperSize = XlPaperSize.xlPaperA4;          // 设置页面大小为A4 
-                sheet.PageSetup.Orientation = XlPageOrientation.xlPortrait; // 设置垂直版面 
-                sheet.PageSetup.HeaderMargin = 0.0;                         // 设置页眉边距 
-                sheet.PageSetup.FooterMargin = 0.0;                         // 设置页脚边距 
-                sheet.PageSetup.LeftMargin = excel.InchesToPoints(0.354330708661417); // 设置左边距 
-                sheet.PageSetup.RightMargin = excel.InchesToPoints(0.354330708661417);// 设置右边距 
-                sheet.PageSetup.TopMargin = excel.InchesToPoints(0.393700787401575);  // 设置上边距 
-                sheet.PageSetup.BottomMargin = excel.InchesToPoints(0.393700787401575);// 设置下边距 
-                sheet.PageSetup.CenterHorizontally = true;                  // 设置水平居中 
-
-                // 打印文件 
-                sheet.PrintOut(Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
-
-                // 保存文件到程序运行目录下 
-                sheet.SaveAs("C:\\Users\\campufix\\Desktop\\hhh.xls", Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
-                excel.ActiveWorkbook.Close(false, null, null); // 关闭 Excel 文件且不保存 
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                //  Response.Write(ex.Message);
-            }
-            finally
-            {
-                excel.Quit(); // 退出 Excel 
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(range);
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(sheet);
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(excel);
-                GC.Collect();
-
-
-
-            }
-        }
-        public void DrawLineGragh()
-        {
-
-        }
+      
+    
+        
     }
 }

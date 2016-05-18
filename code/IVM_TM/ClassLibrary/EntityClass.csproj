@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Condition.cs" />
-    <Compile Include="CustomerInfo.cs" />
     <Compile Include="DateRecord.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Log.cs" />

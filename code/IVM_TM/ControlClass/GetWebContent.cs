@@ -14,7 +14,7 @@ namespace ControlClass
         {
             WebClient ourSearchWeb = new WebClient();
             ourSearchWeb.Credentials = CredentialCache.DefaultCredentials;
-            Byte[] webPageData = ourSearchWeb.DownloadData(url);
+           Byte[] webPageData = ourSearchWeb.DownloadData(url);
             string webPageHtml = Encoding.UTF8.GetString(webPageData);
             Console.Write(webPageHtml);
             return webPageHtml;            

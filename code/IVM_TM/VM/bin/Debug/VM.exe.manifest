@@ -42,6 +42,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Aspose.Cells.dll" size="6570840">
+      <assemblyIdentity name="Aspose.Cells" version="5.3.1.0" publicKeyToken="9EC0FF091D04B091" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>kWRTRSpLSORj2Wv7hcs5bFFXlMZGKS0Ud48QwMkZzvI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClassLibrary.dll" size="9728">
       <assemblyIdentity name="ClassLibrary" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -49,31 +61,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dcJ7kybF0zY2sMQadTD4A5qamYW/83Ei4lkXi2EYR6M=</dsig:DigestValue>
+        <dsig:DigestValue>jV/B23W9caT+2qYXzQ0B3k5ruknXhO3KRd3QwaDBbNc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlClass.exe" size="32256">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlClass.exe" size="28672">
       <assemblyIdentity name="ControlClass" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BGFKAqjPEgJJgTaKNnz1RM3Ha25AQ3yXTYhvGjYSs5g=</dsig:DigestValue>
+        <dsig:DigestValue>vC1GEFmECiTsY8BcuseIqJb5hgRasvUerdBhYJpypMw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="101936">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="102448">
       <assemblyIdentity name="VM" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2oxmT0mT91QHC5pE1FDTAv+wZAYwmmPI2WBSRyEwA2I=</dsig:DigestValue>
+        <dsig:DigestValue>k7EKWbDCV8OPGtHlYrDAjEUTFSQWRWEpv388z6ae42Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

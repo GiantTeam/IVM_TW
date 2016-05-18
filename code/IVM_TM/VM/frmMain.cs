@@ -39,7 +39,8 @@ namespace VM
         {
             InitializeComponent();
             new Initializate();
-
+            RecordList =sStatistic.LoadDataFromExcel(strDefaultExcelFileWholePath);
+            ShowContentOfRecordList();
         }
 
         //将单选按钮组转化为对应表达式：投资期限
@@ -711,9 +712,9 @@ namespace VM
                  MessageBox.Show(strAddInfo);
              }
             //新增一行
-            int index = addgrpRow(grpAnalyse);
+            int index = addgrpRow(grpStatisticTable);
             //赋值
-            grpAnalyse.Rows[index].Cells[0].Value = 0;
+            grpStatisticTable.Rows[index].Cells[0].Value = 0;
         }
 
         //翻页设置：上一页
@@ -913,6 +914,11 @@ namespace VM
                 //调用系统默认的浏览器 
                 System.Diagnostics.Process.Start(link);
             }
+        }
+
+        private void grpStatisticTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

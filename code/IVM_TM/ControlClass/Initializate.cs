@@ -26,7 +26,7 @@ namespace ControlClass
         }
         public Initializate()
         {
-            SetProjectList();
+            SetProjectList();          
         }
         //初始化ProjectList
         private void SetProjectList()

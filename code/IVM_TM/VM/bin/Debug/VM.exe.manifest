@@ -66,26 +66,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlClass.exe" size="28672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlClass.exe" size="14848">
       <assemblyIdentity name="ControlClass" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vC1GEFmECiTsY8BcuseIqJb5hgRasvUerdBhYJpypMw=</dsig:DigestValue>
+        <dsig:DigestValue>xjd+zuJe9qNmkrfVpj7EaohPmiMbcVuheIEH+8k4e+Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="102448">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="102400">
       <assemblyIdentity name="VM" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>k7EKWbDCV8OPGtHlYrDAjEUTFSQWRWEpv388z6ae42Y=</dsig:DigestValue>
+        <dsig:DigestValue>Z5cFV9ymO/dPiv6t3rh3XevUX+lHe079co9F98Kvd68=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -161,8 +161,8 @@ namespace VM
             this.tabSelectModule = new System.Windows.Forms.TabControl();
             this.ColumnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Other = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).BeginInit();
@@ -735,8 +735,8 @@ namespace VM
             this.grpStatisticTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnTime,
             this.ColumnType,
-            this.ColumnName,
             this.ColumnMoney,
+            this.ColumnName,
             this.Other});
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
@@ -1567,33 +1567,42 @@ namespace VM
             // 
             // ColumnTime
             // 
-            this.ColumnTime.FillWeight = 211.1675F;
+            this.ColumnTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnTime.FillWeight = 101.5228F;
             this.ColumnTime.HeaderText = "时间";
             this.ColumnTime.Name = "ColumnTime";
             this.ColumnTime.ReadOnly = true;
+            this.ColumnTime.Width = 200;
             // 
             // ColumnType
             // 
-            this.ColumnType.FillWeight = 62.94416F;
+            this.ColumnType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnType.FillWeight = 86.8386F;
             this.ColumnType.HeaderText = "类型";
             this.ColumnType.Name = "ColumnType";
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnName.FillWeight = 62.94416F;
-            this.ColumnName.HeaderText = "项目";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnType.Width = 170;
             // 
             // ColumnMoney
             // 
-            this.ColumnMoney.FillWeight = 62.94416F;
+            this.ColumnMoney.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnMoney.FillWeight = 86.8386F;
             this.ColumnMoney.HeaderText = "金额";
             this.ColumnMoney.Name = "ColumnMoney";
+            this.ColumnMoney.Width = 170;
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnName.FillWeight = 86.8386F;
+            this.ColumnName.HeaderText = "项目";
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnName.Width = 170;
             // 
             // Other
             // 
+            this.Other.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Other.FillWeight = 137.9613F;
             this.Other.HeaderText = "其他";
             this.Other.Name = "Other";
             this.Other.ReadOnly = true;
@@ -1761,11 +1770,11 @@ namespace VM
         private System.Windows.Forms.RadioButton rdoTimeAll;
         private System.Windows.Forms.RadioButton rdoRateAll;
         private System.Windows.Forms.Button btnRConfirm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Other;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnType;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMoney;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Other;
     }
 }
 

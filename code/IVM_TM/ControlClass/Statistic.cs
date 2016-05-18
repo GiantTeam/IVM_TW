@@ -176,7 +176,7 @@ namespace ControlClass
             int rowCount = cells.MaxRow;
          //   int columncount = cells.MaxColumn;
                     
-            for (int i = 1; i < rowCount; i++)
+            for (int i = 1; i <=rowCount; i++)
             {
                 Record record = new Record();
                 // System._ComObject 
@@ -231,7 +231,7 @@ namespace ControlClass
             //  Sheets shs = _wbk.Sheets;
             //_Worksheet _wsh = (_Worksheet)shs.get_Item(1);
             int RecordNum = RecordList.Count;
-            for (int i = 1; i <= RecordNum; i++)
+            for (int i = 1; i-1 < RecordNum ; i++)
             {
                 Record record = (Record)RecordList[i-1];
                 _wsh.Cells[i, 0].PutValue( record.dtmDate.ToString());

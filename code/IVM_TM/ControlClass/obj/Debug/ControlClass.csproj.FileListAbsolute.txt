@@ -24,3 +24,4 @@ F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.csproj.ResolveComR
 F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.exe
 F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.pdb
 F:\git\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\Aspose.Cells.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\Aspose.Cells.dll

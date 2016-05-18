@@ -16,7 +16,7 @@ namespace VM
         static string strDefaultExcelFileWholePath = "投资记录表.xls";
         string strExcelFileWholePath = strDefaultExcelFileWholePath;
         ArrayList RecordList = new ArrayList();
-       public  Statistic sStatistic = new Statistic();
+        public  Statistic sStatistic = new Statistic();
 
         //页面上部，菜单栏：
         //重构函数：选择文件夹
@@ -66,6 +66,7 @@ namespace VM
             ClearWholeTable();//清空表的内容
             strExcelFileWholePath = "";
             RecordList.Clear();
+            MessageBox.Show("新建成功，请点击“添加”添加数据！");
         }
 
         //清空文件内容
@@ -74,10 +75,34 @@ namespace VM
             ClearWholeTable();
             RecordList.Clear();
             //将结果写入文件
+        //    sStatistic.WriteDataToExcel(RecordList, strExcelFileWholePath);
+        }
+
+        //刷新函数
+        public void reflush()
+        {
+            RecordList.Clear();
+            for (int index = 0; index < grpStatisticTable.Rows.Count; )
+            {
+                 saveAddRecord(index);
+            }
+            saveToExcel();
+        }
+
+        //绑定刷新与保存
+        public void save()
+        {
+           // reflush();
+            saveToExcel();
         }
 
         //保存
         private void mmuSave_Click(object sender, EventArgs e)
+        {
+            save();
+        }
+
+        private void saveToExcel()
         {
             //生成RecordList中的内容      
             if (strExcelFileWholePath == "")
@@ -89,8 +114,8 @@ namespace VM
                 {
                     strExcelFileWholePath = frm.FileName;
                 }
-                sStatistic.WriteDataToExcel(RecordList, strExcelFileWholePath);
             }
+            sStatistic.WriteDataToExcel(RecordList, strExcelFileWholePath);
         }
 
         //导入
@@ -142,24 +167,41 @@ namespace VM
             index = addgrpRow(grpStatisticTable);
             grpStatisticTable.Rows[index].Selected = true;
             grpStatisticTable.Rows[index].Cells[0].Value = index;
+
+           // saveToExcel();
+        }
+
+        private void saveAddRecord(int index)
+        {
+            Record record = new Record();
+            record.dtmDate = (System.DateTime)grpStatisticTable.Rows[index].Cells[0].Value;
+            record.strType = (string)grpStatisticTable.Rows[index].Cells[1].Value;
+            record.dblMoney = (double)grpStatisticTable.Rows[index].Cells[2].Value;
+            record.strName = (string)grpStatisticTable.Rows[index].Cells[3].Value;
         }
 
         //删除按钮
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            int ID=-1;
             for (int i = this.grpStatisticTable.SelectedRows.Count; i > 0; i--)
             {
-                int ID = Convert.ToInt32(grpStatisticTable.SelectedRows[i - 1].Cells[0].Value);
+                ID = Convert.ToInt32(grpStatisticTable.SelectedRows[i - 1].Cells[4].Value);
                 grpStatisticTable.Rows.RemoveAt(grpStatisticTable.SelectedRows[i - 1].Index);
-                /* 使用获得的ID删除数据库的数据
-                 string SQL = "delete  from UserInfo where UserId='"+ID.ToString()+"'";
-                 int s =Convert.ToInt32(cl.Execute(SQL));  //cl是操作类的一个对像，Execute()是类中的一个方法
-                 if (s!=0)
-                 {
-                     MessageBox.Show("成功删除选中行数据！");
-                 }
-                 */
             }
+            MessageBox.Show("ID=" + ID);
+                int indexOfRecord = -1;
+            foreach (Record record in RecordList)
+            {
+                if(record.dblID == ID)
+                {
+                    indexOfRecord= RecordList.IndexOf(record);
+                    break;
+                }
+            }
+                RecordList.RemoveAt(indexOfRecord);
+                MessageBox.Show("delete from list!");
+                save();
         }
         //重构函数：为表格添加行
         private int addgrpRow(DataGridView grp)
@@ -169,15 +211,13 @@ namespace VM
             int index = grp.Rows.Add(Row);
             return index;
         }
+
         private void  ShowContentOfRecordList()
         {
             ClearWholeTable();
             int RecordCount = RecordList.Count;
             for (int i = 0; i < RecordCount; i++)
             {
-                //Project project;
-                // ProjectList projectList=new ProjectList(); 
-                // grpSearch.Rows[i].Cells[0].Value = projectList.proArray[i + s_pgNum * c_ITEMNUM].intId;
                 Record record = (Record)RecordList[i];
                 double TempRecordID = record.dblID;
                 bool ShuhuiOrNot = false;//默认没有赎回
@@ -190,7 +230,8 @@ namespace VM
                     }
                 }
                 // int count = grpStatisticTable.RowCount;
-                int index = grpStatisticTable.Rows.Add();
+               // int index = grpStatisticTable.Rows.Add();
+                int index = addgrpRow(grpStatisticTable);
                 grpStatisticTable.Rows[index].Cells[0].Value = record.dtmDate;
                 grpStatisticTable.Rows[index].Cells[1].Value = record.strType;
                 grpStatisticTable.Rows[index].Cells[2].Value = record.dblMoney;

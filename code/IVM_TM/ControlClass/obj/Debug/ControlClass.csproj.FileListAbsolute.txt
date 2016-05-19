@@ -25,3 +25,12 @@ F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.exe
 F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.pdb
 F:\git\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\Aspose.Cells.dll
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\Aspose.Cells.dll
+C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.exe.config
+C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.exe
+C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.pdb
+C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\Aspose.Cells.dll
+C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ClassLibrary.dll
+C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ClassLibrary.pdb
+C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.csprojResolveAssemblyReference.cache
+C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.exe
+C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.pdb

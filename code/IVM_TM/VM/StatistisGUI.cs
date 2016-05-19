@@ -13,11 +13,10 @@ namespace VM
     // StatistisGUI
     public partial class frmMain : Form
     {
-        static string strDefaultExcelFileWholePath = "投资记录表.xls";
+        public static string strDefaultExcelFileWholePath = "投资记录表.xls";
         string strExcelFileWholePath = strDefaultExcelFileWholePath;
-        ArrayList RecordList = new ArrayList();
-        public  Statistic sStatistic = new Statistic();
-
+        static public ArrayList RecordList = new ArrayList();
+        static public Statistic sStatistic = new Statistic();
         //页面上部，菜单栏：
         //重构函数：选择文件夹
         //private string selectFile()
@@ -166,7 +165,8 @@ namespace VM
             }
             index = addgrpRow(grpStatisticTable);
             grpStatisticTable.Rows[index].Selected = true;
-            grpStatisticTable.Rows[index].Cells[0].Value = index;
+            DateTime currentTime = System.DateTime.Now;
+            grpStatisticTable.Rows[index].Cells[0].Value = currentTime.ToString();
 
            // saveToExcel();
         }
@@ -183,24 +183,13 @@ namespace VM
         //删除按钮
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int ID=-1;
+            int Index=-1;
             for (int i = this.grpStatisticTable.SelectedRows.Count; i > 0; i--)
             {
-                ID = Convert.ToInt32(grpStatisticTable.SelectedRows[i - 1].Cells[4].Value);
+                Index = Convert.ToInt32(grpStatisticTable.SelectedRows[i - 1].Cells[4].Value);
                 grpStatisticTable.Rows.RemoveAt(grpStatisticTable.SelectedRows[i - 1].Index);
-            }
-            MessageBox.Show("ID=" + ID);
-                int indexOfRecord = -1;
-            foreach (Record record in RecordList)
-            {
-                if(record.dblID == ID)
-                {
-                    indexOfRecord= RecordList.IndexOf(record);
-                    break;
-                }
-            }
-                RecordList.RemoveAt(indexOfRecord);
-                MessageBox.Show("delete from list!");
+            }       
+                RecordList.RemoveAt(Index);
                 save();
         }
         //重构函数：为表格添加行

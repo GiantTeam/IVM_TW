@@ -62,6 +62,10 @@
       <Project>{68F32BC2-11C6-4FE7-96B2-85FC239043F7}</Project>
       <Name>ControlClass</Name>
     </ProjectReference>
+    <ProjectReference Include="..\VM\IVM_TM.csproj">
+      <Project>{5df52261-c299-4f87-910b-62c698a97efd}</Project>
+      <Name>IVM_TM</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

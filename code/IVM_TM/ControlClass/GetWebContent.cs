@@ -12,12 +12,12 @@ namespace ControlClass
         //获取网页内容
         public static string LoadDataFromWeb(string url)
         {
-           // WebClient ourSearchWeb = new WebClient();
-           // ourSearchWeb.Credentials = CredentialCache.DefaultCredentials;
-           //Byte[] webPageData = ourSearchWeb.DownloadData(url);
-           // string webPageHtml = Encoding.UTF8.GetString(webPageData);
-           // Console.Write(webPageHtml);
-            string webPageHtml = "";
+            //WebClient ourSearchWeb = new WebClient();
+            //ourSearchWeb.Credentials = CredentialCache.DefaultCredentials;
+            //Byte[] webPageData = ourSearchWeb.DownloadData(url);
+            //string webPageHtml = Encoding.UTF8.GetString(webPageData);
+            //Console.Write(webPageHtml);
+           string webPageHtml = "";
             return webPageHtml;            
         }
     }

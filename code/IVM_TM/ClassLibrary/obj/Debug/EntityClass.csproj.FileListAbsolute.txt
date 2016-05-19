@@ -13,3 +13,8 @@ F:\git\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\ClassLibrary.dll
 F:\git\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\ClassLibrary.pdb
 F:\git\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\ClassLibrary.dll
 F:\git\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\EntityClass.csprojResolveAssemblyReference.cache
+C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\ClassLibrary.pdb

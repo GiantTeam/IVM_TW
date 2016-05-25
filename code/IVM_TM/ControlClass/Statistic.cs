@@ -135,7 +135,7 @@ namespace ControlClass
             int rowCount = cells.MaxRow;
             //   int columncount = cells.MaxColumn;
 
-            for (int i = 1; i < rowCount; i++)
+            for (int i = 1; i <= rowCount; i++)
             {
                 Record record = new Record();
                 // System._ComObject 
@@ -184,7 +184,7 @@ namespace ControlClass
 
 
 
-            _wsh.Cells.DeleteRows(1, rowCount - 1);
+            _wsh.Cells.DeleteRows(1, rowCount );
 
 
             //  Sheets shs = _wbk.Sheets;

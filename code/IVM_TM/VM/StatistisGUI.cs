@@ -18,37 +18,7 @@ namespace VM
         static public ArrayList RecordList = new ArrayList();
         static public Statistic sStatistic = new Statistic();
         //页面上部，菜单栏：
-        //重构函数：选择文件夹
-        //private string selectFile()
-        //{
-        //    string strFileWholePath = "";
-        //    OpenFileDialog fileDialog = new OpenFileDialog();
-        //    fileDialog.Multiselect = true;
-        //    fileDialog.Title = "请选择文件";
-        //    fileDialog.Filter = "所有文件(*.*)|*.*";
-
-        //    if (fileDialog.ShowDialog() == DialogResult.OK)
-        //    {
-        //        strFileWholePath = fileDialog.FileName;
-        //        MessageBox.Show("已选择文件:" + strFileWholePath, "选择文件提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-
-        //    return strFileWholePath;
-        //}
-
-        //重构函数：选择路径
-        //private void selectPath()
-        //{
-        //    FolderBrowserDialog dialog = new FolderBrowserDialog();
-        //    dialog.Description = "请选择文件路径";
-        //    if (dialog.ShowDialog() == DialogResult.OK)
-        //    {
-        //        string foldPath = dialog.SelectedPath;
-        //        MessageBox.Show("已选择文件夹:" + foldPath, "选择文件夹提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-
-        //}
-
+      
         //重构函数：清空表格内容
         private void ClearWholeTable()
         {
@@ -74,31 +44,13 @@ namespace VM
             ClearWholeTable();
             RecordList.Clear();
             //将结果写入文件
-        //    sStatistic.WriteDataToExcel(RecordList, strExcelFileWholePath);
-        }
-
-        //刷新函数
-        public void reflush()
-        {
-            RecordList.Clear();
-            for (int index = 0; index < grpStatisticTable.Rows.Count; )
-            {
-                 saveAddRecord(index);
-            }
-            saveToExcel();
-        }
-
-        //绑定刷新与保存
-        public void save()
-        {
-           // reflush();
-            saveToExcel();
+            sStatistic.WriteDataToExcel(RecordList, strExcelFileWholePath);
         }
 
         //保存
         private void mmuSave_Click(object sender, EventArgs e)
         {
-            save();
+            saveToExcel();
         }
 
         private void saveToExcel()
@@ -128,7 +80,6 @@ namespace VM
                 RecordList = sStatistic.LoadDataFromExcel(strExcelFileWholePath);
                 //显示RecorlList的中的内容                     
                 ShowContentOfRecordList();
-              //  int count = grpStatisticTable.RowCount;
             }                               
   
         }
@@ -158,6 +109,11 @@ namespace VM
         //增加按钮
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            AddRecord();
+        }
+
+        private void AddRecord(double money=0,string name="",double id=-1,string type="投资")
+        {
             int index;
             for (index = 0; index < grpStatisticTable.Rows.Count; index++)
             {
@@ -165,33 +121,34 @@ namespace VM
             }
             index = addgrpRow(grpStatisticTable);
             grpStatisticTable.Rows[index].Selected = true;
-            DateTime currentTime = System.DateTime.Now;
-            grpStatisticTable.Rows[index].Cells[0].Value = currentTime.ToString();
-
-           // saveToExcel();
-        }
-
-        private void saveAddRecord(int index)
-        {
             Record record = new Record();
-            record.dtmDate = (System.DateTime)grpStatisticTable.Rows[index].Cells[0].Value;
-            record.strType = (string)grpStatisticTable.Rows[index].Cells[1].Value;
-            record.dblMoney = (double)grpStatisticTable.Rows[index].Cells[2].Value;
-            record.strName = (string)grpStatisticTable.Rows[index].Cells[3].Value;
+           if(id==-1)
+                id=index;
+            record.dtmDate = System.DateTime.Now;
+            record.dblID = id;
+            record.dblMoney = money;
+            record.strType = type;
+            record.strName = name;
+            RecordList.Add(record);
+            MessageBox.Show("已成功添加一条记录！");
+            ShowContentOfRecordList();
         }
 
         //删除按钮
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int Index=-1;
-            for (int i = this.grpStatisticTable.SelectedRows.Count; i > 0; i--)
+            for (int index = 0; index < grpStatisticTable.Rows.Count; index++)
             {
-                Index = Convert.ToInt32(grpStatisticTable.SelectedRows[i - 1].Cells[4].Value);
-                grpStatisticTable.Rows.RemoveAt(grpStatisticTable.SelectedRows[i - 1].Index);
-            }       
-                RecordList.RemoveAt(Index);
-                save();
+                if (grpStatisticTable.Rows[index].Selected == true)
+                {
+                    grpStatisticTable.Rows.RemoveAt(index);
+                    RecordList.RemoveAt(index);                 
+                    sStatistic.WriteDataToExcel(RecordList, strExcelFileWholePath);
+                    break;
+                }
+            }
         }
+
         //重构函数：为表格添加行
         private int addgrpRow(DataGridView grp)
         {
@@ -218,15 +175,18 @@ namespace VM
                         break;
                     }
                 }
-                // int count = grpStatisticTable.RowCount;
-               // int index = grpStatisticTable.Rows.Add();
                 int index = addgrpRow(grpStatisticTable);
                 grpStatisticTable.Rows[index].Cells[0].Value = record.dtmDate;
                 grpStatisticTable.Rows[index].Cells[1].Value = record.strType;
                 grpStatisticTable.Rows[index].Cells[2].Value = record.dblMoney;
                 grpStatisticTable.Rows[index].Cells[3].Value = record.strName;
-                grpStatisticTable.Rows[index].Cells[4].Value =( ShuhuiOrNot == false) ? "赎回" : "";
-                    // grpSearch.Rows[i].Cells[5].Value = record.dblID;             
+                grpStatisticTable.Rows[index].Cells[4].Value = record.dblID;
+                if (record.strType.Equals("赎回"))
+                {
+                    grpStatisticTable.Rows[index].Cells[5].Value = "";
+                }
+                else
+                grpStatisticTable.Rows[index].Cells[5].Value =( ShuhuiOrNot == false) ? "赎回" : "";           
             }
         }
 

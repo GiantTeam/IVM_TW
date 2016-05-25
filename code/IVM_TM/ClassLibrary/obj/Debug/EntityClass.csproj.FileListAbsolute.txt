@@ -18,3 +18,8 @@ C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\ClassLibrary
 C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\EntityClass.csprojResolveAssemblyReference.cache
 C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\ClassLibrary.dll
 C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\ClassLibrary.pdb
+E:\百度云同步盘\桌面副本\大三下课程资料\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\ClassLibrary.dll
+E:\百度云同步盘\桌面副本\大三下课程资料\IVM_TW\code\IVM_TM\ClassLibrary\bin\Debug\ClassLibrary.pdb
+E:\百度云同步盘\桌面副本\大三下课程资料\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\EntityClass.csprojResolveAssemblyReference.cache
+E:\百度云同步盘\桌面副本\大三下课程资料\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\ClassLibrary.dll
+E:\百度云同步盘\桌面副本\大三下课程资料\IVM_TW\code\IVM_TM\ClassLibrary\obj\Debug\ClassLibrary.pdb

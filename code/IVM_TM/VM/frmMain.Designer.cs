@@ -92,6 +92,12 @@ namespace VM
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.grpStatisticTable = new System.Windows.Forms.DataGridView();
+            this.ColumnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Other = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mmuStatistic = new System.Windows.Forms.MenuStrip();
             this.mmuNew = new System.Windows.Forms.ToolStripMenuItem();
             this.mmuSave = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,7 +107,6 @@ namespace VM
             this.mmuChart = new System.Windows.Forms.ToolStripMenuItem();
             this.tapSearch = new System.Windows.Forms.TabPage();
             this.lblShowPg = new System.Windows.Forms.Label();
-            this.btnToRecord = new System.Windows.Forms.Button();
             this.btnRateConfirm = new System.Windows.Forms.Button();
             this.btnTimeConfirm = new System.Windows.Forms.Button();
             this.btnPageDown = new System.Windows.Forms.Button();
@@ -159,11 +164,6 @@ namespace VM
             this.rdoSortDown = new System.Windows.Forms.RadioButton();
             this.rdoSortUp = new System.Windows.Forms.RadioButton();
             this.tabSelectModule = new System.Windows.Forms.TabControl();
-            this.ColumnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Other = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).BeginInit();
             this.tapRush.SuspendLayout();
@@ -737,6 +737,7 @@ namespace VM
             this.ColumnType,
             this.ColumnMoney,
             this.ColumnName,
+            this.Num,
             this.Other});
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
@@ -767,6 +768,63 @@ namespace VM
             this.grpStatisticTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grpStatisticTable.Size = new System.Drawing.Size(880, 464);
             this.grpStatisticTable.TabIndex = 17;
+            this.grpStatisticTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpStatisticTable_CellContentClick);
+            this.grpStatisticTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpStatisticTable_CellValueChanged);
+            // 
+            // ColumnTime
+            // 
+            this.ColumnTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnTime.FillWeight = 101.5228F;
+            this.ColumnTime.Frozen = true;
+            this.ColumnTime.HeaderText = "时间";
+            this.ColumnTime.Name = "ColumnTime";
+            this.ColumnTime.ReadOnly = true;
+            this.ColumnTime.Width = 170;
+            // 
+            // ColumnType
+            // 
+            this.ColumnType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnType.FillWeight = 86.8386F;
+            this.ColumnType.Frozen = true;
+            this.ColumnType.HeaderText = "类型";
+            this.ColumnType.Name = "ColumnType";
+            this.ColumnType.ReadOnly = true;
+            this.ColumnType.Width = 170;
+            // 
+            // ColumnMoney
+            // 
+            this.ColumnMoney.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnMoney.FillWeight = 86.8386F;
+            this.ColumnMoney.Frozen = true;
+            this.ColumnMoney.HeaderText = "金额";
+            this.ColumnMoney.Name = "ColumnMoney";
+            this.ColumnMoney.Width = 170;
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnName.FillWeight = 86.8386F;
+            this.ColumnName.Frozen = true;
+            this.ColumnName.HeaderText = "项目";
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnName.Width = 170;
+            // 
+            // Num
+            // 
+            this.Num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Num.Frozen = true;
+            this.Num.HeaderText = "编号";
+            this.Num.Name = "Num";
+            this.Num.ReadOnly = true;
+            // 
+            // Other
+            // 
+            this.Other.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Other.FillWeight = 137.9613F;
+            this.Other.HeaderText = "其他";
+            this.Other.Name = "Other";
+            this.Other.ReadOnly = true;
             // 
             // mmuStatistic
             // 
@@ -830,7 +888,6 @@ namespace VM
             // tapSearch
             // 
             this.tapSearch.Controls.Add(this.lblShowPg);
-            this.tapSearch.Controls.Add(this.btnToRecord);
             this.tapSearch.Controls.Add(this.btnRateConfirm);
             this.tapSearch.Controls.Add(this.btnTimeConfirm);
             this.tapSearch.Controls.Add(this.btnPageDown);
@@ -867,16 +924,6 @@ namespace VM
             this.lblShowPg.Size = new System.Drawing.Size(55, 21);
             this.lblShowPg.TabIndex = 28;
             this.lblShowPg.Text = "label1";
-            // 
-            // btnToRecord
-            // 
-            this.btnToRecord.Location = new System.Drawing.Point(544, 528);
-            this.btnToRecord.Name = "btnToRecord";
-            this.btnToRecord.Size = new System.Drawing.Size(96, 32);
-            this.btnToRecord.TabIndex = 27;
-            this.btnToRecord.Text = "加到记录";
-            this.btnToRecord.UseVisualStyleBackColor = true;
-            this.btnToRecord.Click += new System.EventHandler(this.btnToRecord_Click);
             // 
             // btnRateConfirm
             // 
@@ -981,7 +1028,6 @@ namespace VM
             this.grpSearch.Size = new System.Drawing.Size(864, 290);
             this.grpSearch.TabIndex = 16;
             this.grpSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpSearch_CellContentClick);
-            this.grpSearch.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grpSearch_CellMouseClick);
             this.grpSearch.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grpSearch_CellMouseDoubleClick);
             // 
             // name
@@ -1565,48 +1611,6 @@ namespace VM
             this.tabSelectModule.Size = new System.Drawing.Size(904, 614);
             this.tabSelectModule.TabIndex = 1;
             // 
-            // ColumnTime
-            // 
-            this.ColumnTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnTime.FillWeight = 101.5228F;
-            this.ColumnTime.HeaderText = "时间";
-            this.ColumnTime.Name = "ColumnTime";
-            this.ColumnTime.ReadOnly = true;
-            this.ColumnTime.Width = 200;
-            // 
-            // ColumnType
-            // 
-            this.ColumnType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnType.FillWeight = 86.8386F;
-            this.ColumnType.HeaderText = "类型";
-            this.ColumnType.Name = "ColumnType";
-            this.ColumnType.Width = 170;
-            // 
-            // ColumnMoney
-            // 
-            this.ColumnMoney.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnMoney.FillWeight = 86.8386F;
-            this.ColumnMoney.HeaderText = "金额";
-            this.ColumnMoney.Name = "ColumnMoney";
-            this.ColumnMoney.Width = 170;
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnName.FillWeight = 86.8386F;
-            this.ColumnName.HeaderText = "项目";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnName.Width = 170;
-            // 
-            // Other
-            // 
-            this.Other.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Other.FillWeight = 137.9613F;
-            this.Other.HeaderText = "其他";
-            this.Other.Name = "Other";
-            this.Other.ReadOnly = true;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1710,7 +1714,6 @@ namespace VM
         private System.Windows.Forms.ToolStripMenuItem mmuExport;
         private System.Windows.Forms.ToolStripMenuItem mmuChart;
         private System.Windows.Forms.TabPage tapSearch;
-        private System.Windows.Forms.Button btnToRecord;
         private System.Windows.Forms.Button btnRateConfirm;
         private System.Windows.Forms.Button btnTimeConfirm;
         private System.Windows.Forms.Button btnPageDown;
@@ -1774,6 +1777,7 @@ namespace VM
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnType;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMoney;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Num;
         private System.Windows.Forms.DataGridViewTextBoxColumn Other;
     }
 }

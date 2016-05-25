@@ -34,3 +34,6 @@ C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClassTests\obj\Debug\Control
 C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClassTests\obj\Debug\ControlClassTests.pdb
 C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\VM.exe
 C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\VM.pdb
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\VM.exe
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\log4net.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\VM.pdb

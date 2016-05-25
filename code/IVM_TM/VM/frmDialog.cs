@@ -14,7 +14,7 @@ namespace VM
     public partial class frmDialog : Form
     {
 
-        public String strAddInfo = null;
+        public double money;
 //***************************************************************************************
         public frmDialog()
         {
@@ -23,10 +23,17 @@ namespace VM
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            if (txtDTime.Text != "" && txtDMoney.Text != "")
+            if ( txtDMoney.Text != "")
             {
-              strAddInfo = "time=" + txtDTime.Text + "\nMoney=" + txtDMoney.Text;
-              this.Close();
+                try
+                {
+                    money = Convert.ToDouble(txtDMoney.Text);
+                    this.Close();
+                }
+                catch 
+                {
+                    MessageBox.Show("输入有误，请重新输入");
+                }
             }
            else
            {
@@ -36,13 +43,12 @@ namespace VM
 
         private void btnCannel_Click(object sender, EventArgs e)
         {
-            strAddInfo = null;
             this.Close();
         }
 
-        public String forResult()
+        public double forResult()
         {
-            return strAddInfo;
+            return money;
         }
     }
 }

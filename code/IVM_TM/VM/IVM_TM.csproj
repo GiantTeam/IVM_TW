@@ -63,6 +63,9 @@
     <Reference Include="Aspose.Cells">
       <HintPath>..\Aspose.Cells.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>G:\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel">
       <HintPath>..\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -120,6 +123,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="App.config" />
     <None Include="Properties\DataSources\frmMain.datasource" />
     <None Include="Properties\DataSources\frmMain.mData.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
@@ -135,9 +139,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="VM_TemporaryKey.pfx" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\无标题.png" />

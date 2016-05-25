@@ -20,7 +20,6 @@ F:\git\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.exe
 F:\git\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.pdb
 F:\git\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ClassLibrary.dll
 F:\git\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ClassLibrary.pdb
-F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.csproj.ResolveComReference.cache
 F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.exe
 F:\git\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.pdb
 F:\git\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\Aspose.Cells.dll
@@ -34,3 +33,12 @@ C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ClassLibrary
 C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.csprojResolveAssemblyReference.cache
 C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.exe
 C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.pdb
+E:\百度云同步盘\桌面副本\大三下课程资料\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.csprojResolveAssemblyReference.cache
+E:\百度云同步盘\桌面副本\大三下课程资料\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.exe
+E:\百度云同步盘\桌面副本\大三下课程资料\IVM_TW\code\IVM_TM\ControlClass\obj\Debug\ControlClass.pdb
+E:\百度云同步盘\桌面副本\大三下课程资料\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.exe.config
+E:\百度云同步盘\桌面副本\大三下课程资料\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.exe
+E:\百度云同步盘\桌面副本\大三下课程资料\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ControlClass.pdb
+E:\百度云同步盘\桌面副本\大三下课程资料\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\Aspose.Cells.dll
+E:\百度云同步盘\桌面副本\大三下课程资料\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ClassLibrary.dll
+E:\百度云同步盘\桌面副本\大三下课程资料\IVM_TW\code\IVM_TM\ControlClass\bin\Debug\ClassLibrary.pdb

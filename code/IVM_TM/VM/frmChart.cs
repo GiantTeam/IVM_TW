@@ -46,12 +46,6 @@ namespace VM
                return 1;
         }
         //**************************************华丽的分割线******************************************
-        //public void Form1()
-        //{
-        //    InitializeComponent();
-        //    // GetData();
-        //    paint("收益", "日期", "单位：万元", Profit, 0);
-        //}
 
         private void GetData()
         {
@@ -165,7 +159,6 @@ namespace VM
             DateRecordListByMonth = sStatistic.GetDateRecordList(strMonth, RecordList);
             DateRecordListByDay = sStatistic.GetDateRecordList(strDay, RecordList);
             Count = DateRecordListByDay.Count;
-
         }
 
         private void btnCReturn_Click(object sender, EventArgs e)

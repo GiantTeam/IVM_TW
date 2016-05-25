@@ -90,14 +90,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="102912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="103424">
       <assemblyIdentity name="VM" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WIBhW0Rk3zNi1Cl5z4mVN4qxmLljaiOsyNA5dsbRdL0=</dsig:DigestValue>
+        <dsig:DigestValue>XQjeBh8t14qtMD5zjZQK/W7s1XSDGcTWxIDOxpnQRCE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

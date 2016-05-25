@@ -279,6 +279,7 @@ namespace VM
             this.grpRush.Size = new System.Drawing.Size(864, 264);
             this.grpRush.TabIndex = 22;
             this.grpRush.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpRush_CellContentClick);
+            this.grpRush.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpRush_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -768,8 +769,7 @@ namespace VM
             this.grpStatisticTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grpStatisticTable.Size = new System.Drawing.Size(880, 464);
             this.grpStatisticTable.TabIndex = 17;
-            this.grpStatisticTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpStatisticTable_CellContentClick);
-            this.grpStatisticTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpStatisticTable_CellValueChanged);
+            this.grpStatisticTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpStatisticTable_CellContentClick);          
             // 
             // ColumnTime
             // 
@@ -1565,7 +1565,7 @@ namespace VM
             this.grpSortMode.Controls.Add(this.rdoSortDown);
             this.grpSortMode.Controls.Add(this.rdoSortUp);
             this.grpSortMode.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.grpSortMode.Location = new System.Drawing.Point(432, 192);
+            this.grpSortMode.Location = new System.Drawing.Point(432, 184);
             this.grpSortMode.Name = "grpSortMode";
             this.grpSortMode.Size = new System.Drawing.Size(144, 48);
             this.grpSortMode.TabIndex = 15;

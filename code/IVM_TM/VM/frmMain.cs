@@ -696,11 +696,13 @@ namespace VM
             try
             {
                 string buttonText = grpSearch.Rows[e.RowIndex].Cells[4].Value.ToString();
-                if (buttonText.Equals("投资"))
+                if (buttonText.Equals("投资")&&e.ColumnIndex==4)
                 {
                     frmDialog dlgHint = new frmDialog();
                     dlgHint.ShowDialog();
                     double money = dlgHint.forResult();
+                    if (money == -1)
+                        return;
                     string name = "";
                     name+=grpSearch.Rows[e.RowIndex].Cells[0].Value.ToString();
                     AddRecord(money,name);
@@ -930,12 +932,23 @@ namespace VM
 
         private void grpRush_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (SearchControl.AuctionProjectList != null)
+            
+            try
             {
-                string link = SearchControl.AuctionProjectList.getProject(e.RowIndex).strLink;
-                //调用系统默认的浏览器 
-                System.Diagnostics.Process.Start(link);
+                string buttonText = grpSearch.Rows[e.RowIndex].Cells[4].Value.ToString();
+                if (buttonText.Equals("投资") && e.ColumnIndex == 4)
+                {
+                    frmDialog dlgHint = new frmDialog();
+                    dlgHint.ShowDialog();
+                    double money = dlgHint.forResult();
+                    if (money == -1)
+                        return;
+                    string name = "";
+                    name += grpSearch.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    AddRecord(money, name);
+                }
             }
+            catch (System.NullReferenceException) { MessageBox.Show("rechoose!"); }
         }
 
         private void grpStatisticTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -943,7 +956,7 @@ namespace VM
             try
             {
                 string buttonText = grpStatisticTable.Rows[e.RowIndex].Cells[5].Value.ToString();
-                if (buttonText.Equals("赎回"))
+                if (buttonText.Equals("赎回") && e.ColumnIndex==5)
                 {
                     grpStatisticTable.Rows[e.RowIndex].Cells[5].Value = "";
                     double money =Convert.ToDouble(grpStatisticTable.Rows[e.RowIndex].Cells[2].Value);
@@ -955,14 +968,14 @@ namespace VM
             catch (System.NullReferenceException) { }
         }
 
-        private void grpStatisticTable_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void grpRush_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*Record record = (Record)RecordList[e.RowIndex];
-            record.dblMoney = Convert.ToDouble(grpStatisticTable.Rows[e.RowIndex].Cells[2].Value);
-            record.strName = grpStatisticTable.Rows[e.RowIndex].Cells[3].Value.ToString();
-            RecordList.RemoveAt(e.RowIndex);
-            RecordList.Insert(e.RowIndex, record);
-            sStatistic.WriteDataToExcel(RecordList, strExcelFileWholePath);*/
+            if (SearchControl.AuctionProjectList != null)
+            {
+                string link = SearchControl.AuctionProjectList.getProject(e.RowIndex).strLink;
+                //调用系统默认的浏览器 
+                System.Diagnostics.Process.Start(link);
+            }
         }
 
 

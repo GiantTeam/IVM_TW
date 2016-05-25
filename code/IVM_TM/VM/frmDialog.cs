@@ -43,6 +43,7 @@ namespace VM
 
         private void btnCannel_Click(object sender, EventArgs e)
         {
+            money = -1;
             this.Close();
         }
 

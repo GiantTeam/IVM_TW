@@ -50,6 +50,18 @@ namespace VM
         //保存
         private void mmuSave_Click(object sender, EventArgs e)
         {
+            Record record = new Record();
+            for (int i = 0; i < RecordList.Count; i++)
+            {
+                Record recordl = (Record)RecordList[i];
+                record.dtmDate = recordl.dtmDate;
+                record.dblID = Convert.ToDouble(grpStatisticTable.Rows[i].Cells[4].Value);
+                record.dblMoney = Convert.ToDouble(grpStatisticTable.Rows[i].Cells[2].Value);
+                record.strName = grpStatisticTable.Rows[i].Cells[3].Value.ToString();
+                record.strType = grpStatisticTable.Rows[i].Cells[1].Value.ToString();
+                RecordList.RemoveAt(i);
+                RecordList.Insert(i,record);
+            }
             saveToExcel();
         }
 

@@ -61,31 +61,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DjfJnzihj116Wz/kDSnCNm3qa7MnMv2rYAHDHPmvBo4=</dsig:DigestValue>
+        <dsig:DigestValue>+1Bj5xLQvs+TSIkp/aApAYawIvzmYML+RQFv98zEYwg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlClass.exe" size="14848">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlClass.exe" size="15872">
       <assemblyIdentity name="ControlClass" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tv3eqoB1O9PMt7uoCAuhLRisXqB6RhdYqBp/BiMHTMI=</dsig:DigestValue>
+        <dsig:DigestValue>WwpuNFIMAk8rXH4mCfln4bsDZvLkApGzeg+jQWaiuoU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="104496">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VM.exe" size="102416">
       <assemblyIdentity name="VM" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>88AvAVuC55hO1qUwSv7KJWIjiLv2LihbAiMdXNWAGjg=</dsig:DigestValue>
+        <dsig:DigestValue>K1X8tiUmlbrhQXzI7DEoqPr5DcUoX5FcC8sJqPstreM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

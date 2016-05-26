@@ -23,10 +23,10 @@ namespace VM
         private void ClearWholeTable()
         {
             int index;
-            for (index = 0; index < grpStatisticTable.Rows.Count;)
+            for (index = 0; index < grpStatisticTable.Rows.Count; )
             {
-                grpStatisticTable.Rows.RemoveAt(index);
-            }
+               grpStatisticTable.Rows.RemoveAt(index);
+            }    
         }
 
         //创建新的文件
@@ -35,50 +35,90 @@ namespace VM
             ClearWholeTable();//清空表的内容
             strExcelFileWholePath = "";
             RecordList.Clear();
-            MessageBox.Show("新建成功，请点击“添加”添加数据！");
+            AddRecord();
+            MessageBox.Show("新建成功，请完善记录！");
         }
 
         //清空文件内容
         private void mmuEmpty_Click(object sender, EventArgs e)
         {
-            ClearWholeTable();
-            RecordList.Clear();
-            //将结果写入文件
-            sStatistic.WriteDataToExcel(RecordList, strExcelFileWholePath);
+            if (MessageBox.Show("此操作将清空记录表，确定？", "确定", 
+                MessageBoxButtons.OKCancel) == DialogResult.OK)
+           {
+                  ClearWholeTable();
+                  RecordList.Clear();
+                 //将结果写入文件
+                 sStatistic.WriteDataToExcel(RecordList, strExcelFileWholePath);
+            }
+
         }
 
         //保存
         private void mmuSave_Click(object sender, EventArgs e)
         {
-            Record record = new Record();
-            for (int i = 0; i < RecordList.Count; i++)
-            {
-                Record recordl = (Record)RecordList[i];
-                record.dtmDate = recordl.dtmDate;
-                record.dblID = Convert.ToDouble(grpStatisticTable.Rows[i].Cells[4].Value);
-                record.dblMoney = Convert.ToDouble(grpStatisticTable.Rows[i].Cells[2].Value);
-                record.strName = grpStatisticTable.Rows[i].Cells[3].Value.ToString();
-                record.strType = grpStatisticTable.Rows[i].Cells[1].Value.ToString();
-                RecordList.RemoveAt(i);
-                RecordList.Insert(i,record);
-            }
-            saveToExcel();
+
+                Record record = new Record();
+                for (int i = 0; i < RecordList.Count; i++)
+                {
+                    Record recordl = (Record)RecordList[i];
+                    record.dtmDate = recordl.dtmDate;
+                    record.dblID = Convert.ToDouble(grpStatisticTable.Rows[i].Cells[4].Value);
+                    record.dblMoney = Convert.ToDouble(grpStatisticTable.Rows[i].Cells[2].Value);
+                    record.strName = grpStatisticTable.Rows[i].Cells[3].Value.ToString();
+                    record.strType = grpStatisticTable.Rows[i].Cells[1].Value.ToString();
+                    RecordList.RemoveAt(i);
+                    RecordList.Insert(i, record);
+                }
+                if (MessageBox.Show("此操作将自动同步表格部分内容，继续？", "确定",
+                   MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    for (int i = 0; i < RecordList.Count; i++)
+                    {
+                        Record recordl = (Record)RecordList[i];
+                        Record temprecord = new Record();
+                        if (recordl.strType.Equals("赎回"))
+                        {
+                            for (int j = 0; j < RecordList.Count; j++)
+                            {
+                                record = (Record)RecordList[j];
+                                if (!(record.strType.Equals("赎回")) && recordl.dblID == record.dblID)
+                                {
+                                    temprecord.dblMoney = record.dblMoney;
+                                    temprecord.strName = record.strName;
+                                    temprecord.dblID = recordl.dblID;
+                                    temprecord.dtmDate = recordl.dtmDate;
+                                    temprecord.strType = recordl.strType;
+                                    RecordList.RemoveAt(i);
+                                    RecordList.Insert(i, temprecord);
+                                }
+                            }
+                        }
+                    }
+                    ShowContentOfRecordList();
+                    saveToExcel();
+                    return;
+                }
+                ShowContentOfRecordList();
         }
 
         private void saveToExcel()
         {
-            //生成RecordList中的内容      
-            if (strExcelFileWholePath == "")
+            if (MessageBox.Show("此操作将保存改动到记录表，继续？", "确定",
+               MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                SaveFileDialog frm = new SaveFileDialog();
-                frm.Filter = "Excel文件(*.xls,xlsx)|*.xls;*.xlsx";
-                frm.FileName = "投资记录表.xlsx";
-                if (frm.ShowDialog() == DialogResult.OK)
+                //生成RecordList中的内容      
+                if (strExcelFileWholePath == "")
                 {
-                    strExcelFileWholePath = frm.FileName;
+                    SaveFileDialog frm = new SaveFileDialog();
+                    frm.Filter = "Excel文件(*.xls,xlsx)|*.xls;*.xlsx";
+                    frm.FileName = "投资记录表.xlsx";
+                    if (frm.ShowDialog() == DialogResult.OK)
+                    {
+                        strExcelFileWholePath = frm.FileName;
+                    }
                 }
+                sStatistic.WriteDataToExcel(RecordList, strExcelFileWholePath);
             }
-            sStatistic.WriteDataToExcel(RecordList, strExcelFileWholePath);
         }
 
         //导入
@@ -127,13 +167,8 @@ namespace VM
         private void AddRecord(double money=0,string name="",double id=-1,string type="投资")
         {
             int index;
-            for (index = 0; index < grpStatisticTable.Rows.Count; index++)
-            {
-                grpStatisticTable.Rows[index].Selected = false;
-            }
-            index = addgrpRow(grpStatisticTable);
-            grpStatisticTable.Rows[index].Selected = true;
             Record record = new Record();
+            index = addgrpRow(grpStatisticTable);
            if(id==-1)
                 id=index;
             record.dtmDate = System.DateTime.Now;
@@ -144,19 +179,29 @@ namespace VM
             RecordList.Add(record);
             MessageBox.Show("已成功添加一条记录！");
             ShowContentOfRecordList();
+            for (int i = 0; i < grpStatisticTable.Rows.Count; i++)
+            {
+                grpStatisticTable.Rows[i].Selected = false;
+            }
+            grpStatisticTable.Rows[index].Selected = true;  
         }
+      
 
         //删除按钮
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            for (int index = 0; index < grpStatisticTable.Rows.Count; index++)
+            if (MessageBox.Show("此操作将从记录表删除一条记录，确定？", "确定",
+                 MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                if (grpStatisticTable.Rows[index].Selected == true)
+                for (int index = 0; index < grpStatisticTable.Rows.Count; index++)
                 {
-                    grpStatisticTable.Rows.RemoveAt(index);
-                    RecordList.RemoveAt(index);                 
-                    sStatistic.WriteDataToExcel(RecordList, strExcelFileWholePath);
-                    break;
+                    if (grpStatisticTable.Rows[index].Selected == true)
+                    {
+                        grpStatisticTable.Rows.RemoveAt(index);
+                        RecordList.RemoveAt(index);
+                        sStatistic.WriteDataToExcel(RecordList, strExcelFileWholePath);
+                        break;
+                    }
                 }
             }
         }

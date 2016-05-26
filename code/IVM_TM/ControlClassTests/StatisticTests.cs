@@ -34,7 +34,7 @@ namespace ControlClass.Tests
             for (int i = 2001; i < 2004; i++)
             {
                 Record record = new Record();
-                record.strType = "购买";
+                record.strType = "投资";
                 record.strName = "车押宝" + i.ToString();
                 record.dblMoney = i;
                 record.dblID = i;
@@ -60,7 +60,7 @@ namespace ControlClass.Tests
             for (int i = 1; i < 10; i++)
             {
                 Record record = new Record();
-                record.strType = "购买";
+                record.strType = "投资";
                 record.strName = "车押宝" + (i * 20 + 2000).ToString();
                 record.dblMoney = i;
                 record.dblID = i * 10000;
@@ -85,7 +85,7 @@ namespace ControlClass.Tests
             for (int i = 2020; i < 2040; i++)
             {
                 Record record = new Record();
-                record.strType = "购买";
+                record.strType = "投资";
                 record.strName = "车押宝" + i.ToString();
                 record.dblMoney = i;
                 record.dblID = i;
@@ -112,7 +112,7 @@ namespace ControlClass.Tests
             for (int i = 1; i < 30; i++)
             {
                 Record record = new Record();
-                record.strType = "购买";
+                record.strType = "投资";
                 record.strName = "车押宝" + (i + 2000).ToString();
                 record.dblMoney = i * 10000;
                 record.dblID = i;

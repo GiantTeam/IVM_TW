@@ -27,7 +27,6 @@ namespace ControlClass
                 mark = false;
             }
            // Console.Write(webPageHtml);
-          
             return webPageHtml;            
         }
     }

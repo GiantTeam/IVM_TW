@@ -302,14 +302,10 @@ namespace VM
         //加载框架
         private void frmMain_Load(object sender, EventArgs e)
         {
-           
-            
             for (int i = 0; i < 9; i++)
-            {
-               // int index = addgrpRow(grpSearch);
+            { 
                 int index = grpSearch.Rows.Add();
                 grpRush.Rows.Add();
-                grpSearch.Rows[index].Cells[4].Value = "投资";
             }
             ProjectList proList = new ProjectList();
             proList = SearchControl.projectListForAll;
@@ -651,7 +647,7 @@ namespace VM
         //抢购按钮
         private void btnRush_Click(object sender, EventArgs e)
         {
-            int tem;
+            /*int tem;
             grpSetTime(grpSTime,cdtS,txtSTimeLow,txtSTimeHigh);
             grpSetMoney(grpSMoney, cdtS, txtSMoneyLow, txtSMoneyHigh);
             grpSetRate(grpSRate, cdtS, txtSRateLow, txtSRateHigh);
@@ -681,7 +677,7 @@ namespace VM
             {
                 txtRRateLow.Text = cdtR.RateDown.ToString();
                 txtRRateHigh.Text = cdtR.RateUp.ToString();
-            }
+            }*/
             tabSelectModule.SelectedIndex = 2;
 
         }
@@ -935,7 +931,7 @@ namespace VM
             
             try
             {
-                string buttonText = grpSearch.Rows[e.RowIndex].Cells[4].Value.ToString();
+                string buttonText = grpRush.Rows[e.RowIndex].Cells[4].Value.ToString();
                 if (buttonText.Equals("投资") && e.ColumnIndex == 4)
                 {
                     frmDialog dlgHint = new frmDialog();

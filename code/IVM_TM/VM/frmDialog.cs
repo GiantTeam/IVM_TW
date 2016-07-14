@@ -7,18 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace VM
 {
    
     public partial class frmDialog : Form
     {
 
+        List<String> tableNameList = new List<String>();
         public double money;
-//***************************************************************************************
+        string strPath = System.Environment.CurrentDirectory;
+        //***************************************************************************************
         public frmDialog()
         {
             InitializeComponent();
+
+            tableNameList.Clear();
+            DirectoryInfo dir = new DirectoryInfo(strPath);
+            foreach (FileInfo fi in dir.GetFiles("*.xls"))
+            {
+                //if (fi.FullName.EndsWith(".xls")) 
+                //{                     
+                tableNameList.Add(fi.Name);
+                //}
+            }
+
+            cbBTableNameList.Items.Clear();
+            foreach (String str in tableNameList)
+            {                
+                cbBTableNameList.Items.Add(str);
+            }
+            cbBTableNameList.SelectedIndex = 0;
+            // frmMain f =(frmMain) this.ParentForm;
+            //f.GetValue += new EventHandler(SendValue);
         }
 
         private void btnYes_Click(object sender, EventArgs e)
@@ -51,5 +72,14 @@ namespace VM
         {
             return money;
         }
+
+        
+       // private void SendValue(object sender, EventArgs e)
+       // {
+       //     tableNameList = sender as List<string>;
+       ////     strNewTableName = sender as string;
+
+       // }
     }
+
 }

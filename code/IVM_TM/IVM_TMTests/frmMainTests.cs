@@ -12,18 +12,18 @@ namespace VM.Tests
     [TestClass()]
     public class frmMainTests
     {
-        [TestMethod()]
-        public void mmuImport_ClickTest()
-        {
-            frmMain frmMainTest = new frmMain();
-            Object a = new object();
-            EventArgs b = new EventArgs();
+        //[TestMethod()]
+        //public void mmuImport_ClickTest()
+        //{
+        //    frmMain frmMainTest = new frmMain();
+        //    Object a = new object();
+        //    EventArgs b = new EventArgs();
 
-            frmMainTest.mmuImport_Click(a,b);
-            bool Actual = true;
-            bool Result = true;
-            Assert.AreEqual(Actual, Result);
+        //    frmMainTest.mmuImport_Click(a,b);
+        //    bool Actual = true;
+        //    bool Result = true;
+        //    Assert.AreEqual(Actual, Result);
 
-        }
+        //}
     }
 }

@@ -30,7 +30,6 @@ namespace VM
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,15 +40,10 @@ namespace VM
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.picLogo2 = new System.Windows.Forms.PictureBox();
-            this.picLogo1 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.tmrRushReflash = new System.Windows.Forms.Timer(this.components);
             this.tapRush = new System.Windows.Forms.TabPage();
+            this.cbBTableNameList = new System.Windows.Forms.ComboBox();
             this.grpRush = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,22 +83,10 @@ namespace VM
             this.rdoRTime2 = new System.Windows.Forms.RadioButton();
             this.rdoRTime1 = new System.Windows.Forms.RadioButton();
             this.tapAnalyse = new System.Windows.Forms.TabPage();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.grpStatisticTable = new System.Windows.Forms.DataGridView();
-            this.ColumnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Other = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mmuStatistic = new System.Windows.Forms.MenuStrip();
-            this.mmuNew = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmuSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmuEmpty = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmuImport = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmuExport = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmuChart = new System.Windows.Forms.ToolStripMenuItem();
+            this.lLTable = new System.Windows.Forms.LinkLabel();
+            this.btnOpenTable = new System.Windows.Forms.Button();
+            this.lBTableNameList = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tapSearch = new System.Windows.Forms.TabPage();
             this.lblShowPg = new System.Windows.Forms.Label();
             this.btnRateConfirm = new System.Windows.Forms.Button();
@@ -112,11 +94,6 @@ namespace VM
             this.btnPageDown = new System.Windows.Forms.Button();
             this.btnPageUp = new System.Windows.Forms.Button();
             this.grpSearch = new System.Windows.Forms.DataGridView();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.money = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inverst = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnRush = new System.Windows.Forms.Button();
             this.btnMoneyConfirm = new System.Windows.Forms.Button();
@@ -164,16 +141,22 @@ namespace VM
             this.rdoSortDown = new System.Windows.Forms.RadioButton();
             this.rdoSortUp = new System.Windows.Forms.RadioButton();
             this.tabSelectModule = new System.Windows.Forms.TabControl();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).BeginInit();
+            this.picLogo2 = new System.Windows.Forms.PictureBox();
+            this.picLogo1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.money = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inverst = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.网站 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tapRush.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpRush)).BeginInit();
             this.grpRRate.SuspendLayout();
             this.grpRMoney.SuspendLayout();
             this.grpRTime.SuspendLayout();
             this.tapAnalyse.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grpStatisticTable)).BeginInit();
-            this.mmuStatistic.SuspendLayout();
             this.tapSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpSearch)).BeginInit();
             this.grpSRate.SuspendLayout();
@@ -182,26 +165,9 @@ namespace VM
             this.grpSort.SuspendLayout();
             this.grpSortMode.SuspendLayout();
             this.tabSelectModule.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picLogo2
-            // 
-            this.picLogo2.Image = global::VM.Properties.Resources.无标题1;
-            this.picLogo2.Location = new System.Drawing.Point(160, 24);
-            this.picLogo2.Name = "picLogo2";
-            this.picLogo2.Size = new System.Drawing.Size(640, 72);
-            this.picLogo2.TabIndex = 3;
-            this.picLogo2.TabStop = false;
-            // 
-            // picLogo1
-            // 
-            this.picLogo1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picLogo1.ErrorImage")));
-            this.picLogo1.Image = global::VM.Properties.Resources.无标题;
-            this.picLogo1.Location = new System.Drawing.Point(0, 0);
-            this.picLogo1.Name = "picLogo1";
-            this.picLogo1.Size = new System.Drawing.Size(136, 120);
-            this.picLogo1.TabIndex = 2;
-            this.picLogo1.TabStop = false;
             // 
             // tmrRushReflash
             // 
@@ -210,6 +176,7 @@ namespace VM
             // 
             // tapRush
             // 
+            this.tapRush.Controls.Add(this.cbBTableNameList);
             this.tapRush.Controls.Add(this.grpRush);
             this.tapRush.Controls.Add(this.btnRConfirm);
             this.tapRush.Controls.Add(this.btnActionRush);
@@ -225,6 +192,14 @@ namespace VM
             this.tapRush.TabIndex = 2;
             this.tapRush.Text = "抢购";
             this.tapRush.UseVisualStyleBackColor = true;
+            // 
+            // cbBTableNameList
+            // 
+            this.cbBTableNameList.FormattingEnabled = true;
+            this.cbBTableNameList.Location = new System.Drawing.Point(68, 53);
+            this.cbBTableNameList.Name = "cbBTableNameList";
+            this.cbBTableNameList.Size = new System.Drawing.Size(207, 29);
+            this.cbBTableNameList.TabIndex = 23;
             // 
             // grpRush
             // 
@@ -253,7 +228,7 @@ namespace VM
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -678,10 +653,10 @@ namespace VM
             // 
             // tapAnalyse
             // 
-            this.tapAnalyse.Controls.Add(this.btnDelete);
-            this.tapAnalyse.Controls.Add(this.btnAdd);
-            this.tapAnalyse.Controls.Add(this.grpStatisticTable);
-            this.tapAnalyse.Controls.Add(this.mmuStatistic);
+            this.tapAnalyse.Controls.Add(this.lLTable);
+            this.tapAnalyse.Controls.Add(this.btnOpenTable);
+            this.tapAnalyse.Controls.Add(this.lBTableNameList);
+            this.tapAnalyse.Controls.Add(this.label2);
             this.tapAnalyse.Location = new System.Drawing.Point(4, 30);
             this.tapAnalyse.Name = "tapAnalyse";
             this.tapAnalyse.Padding = new System.Windows.Forms.Padding(3);
@@ -690,200 +665,45 @@ namespace VM
             this.tapAnalyse.Text = "统计分析";
             this.tapAnalyse.UseVisualStyleBackColor = true;
             // 
-            // btnDelete
+            // lLTable
             // 
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDelete.Location = new System.Drawing.Point(728, 512);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 32);
-            this.btnDelete.TabIndex = 19;
-            this.btnDelete.Text = "删除";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.lLTable.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lLTable.AutoSize = true;
+            this.lLTable.Location = new System.Drawing.Point(335, 339);
+            this.lLTable.Name = "lLTable";
+            this.lLTable.Size = new System.Drawing.Size(42, 21);
+            this.lLTable.TabIndex = 24;
+            this.lLTable.TabStop = true;
+            this.lLTable.Text = "新建";
+            this.lLTable.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lLTable_LinkClicked);
             // 
-            // btnAdd
+            // btnOpenTable
             // 
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnAdd.Location = new System.Drawing.Point(632, 512);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 32);
-            this.btnAdd.TabIndex = 18;
-            this.btnAdd.Text = "增加";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnOpenTable.Location = new System.Drawing.Point(480, 331);
+            this.btnOpenTable.Name = "btnOpenTable";
+            this.btnOpenTable.Size = new System.Drawing.Size(96, 36);
+            this.btnOpenTable.TabIndex = 23;
+            this.btnOpenTable.Text = "打开";
+            this.btnOpenTable.UseVisualStyleBackColor = true;
+            this.btnOpenTable.Click += new System.EventHandler(this.btnOpenTable_Click);
             // 
-            // grpStatisticTable
+            // lBTableNameList
             // 
-            this.grpStatisticTable.AllowUserToAddRows = false;
-            this.grpStatisticTable.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            this.grpStatisticTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.grpStatisticTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grpStatisticTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.grpStatisticTable.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.grpStatisticTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpStatisticTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.grpStatisticTable.ColumnHeadersHeight = 30;
-            this.grpStatisticTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnTime,
-            this.ColumnType,
-            this.ColumnMoney,
-            this.ColumnName,
-            this.Num,
-            this.Other});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grpStatisticTable.DefaultCellStyle = dataGridViewCellStyle8;
-            this.grpStatisticTable.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.grpStatisticTable.Location = new System.Drawing.Point(0, 40);
-            this.grpStatisticTable.Name = "grpStatisticTable";
-            this.grpStatisticTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpStatisticTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.grpStatisticTable.RowHeadersVisible = false;
-            this.grpStatisticTable.RowHeadersWidth = 100;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grpStatisticTable.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.grpStatisticTable.RowTemplate.Height = 23;
-            this.grpStatisticTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.grpStatisticTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grpStatisticTable.Size = new System.Drawing.Size(880, 464);
-            this.grpStatisticTable.TabIndex = 17;
-            this.grpStatisticTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpStatisticTable_CellContentClick);          
+            this.lBTableNameList.FormattingEnabled = true;
+            this.lBTableNameList.ItemHeight = 21;
+            this.lBTableNameList.Location = new System.Drawing.Point(328, 85);
+            this.lBTableNameList.Name = "lBTableNameList";
+            this.lBTableNameList.Size = new System.Drawing.Size(248, 235);
+            this.lBTableNameList.TabIndex = 21;
             // 
-            // ColumnTime
+            // label2
             // 
-            this.ColumnTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnTime.FillWeight = 101.5228F;
-            this.ColumnTime.Frozen = true;
-            this.ColumnTime.HeaderText = "时间";
-            this.ColumnTime.Name = "ColumnTime";
-            this.ColumnTime.ReadOnly = true;
-            this.ColumnTime.Width = 170;
-            // 
-            // ColumnType
-            // 
-            this.ColumnType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnType.FillWeight = 86.8386F;
-            this.ColumnType.Frozen = true;
-            this.ColumnType.HeaderText = "类型";
-            this.ColumnType.Name = "ColumnType";
-            this.ColumnType.ReadOnly = true;
-            this.ColumnType.Width = 170;
-            // 
-            // ColumnMoney
-            // 
-            this.ColumnMoney.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnMoney.FillWeight = 86.8386F;
-            this.ColumnMoney.Frozen = true;
-            this.ColumnMoney.HeaderText = "金额";
-            this.ColumnMoney.Name = "ColumnMoney";
-            this.ColumnMoney.Width = 170;
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnName.FillWeight = 86.8386F;
-            this.ColumnName.Frozen = true;
-            this.ColumnName.HeaderText = "项目";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnName.Width = 170;
-            // 
-            // Num
-            // 
-            this.Num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Num.Frozen = true;
-            this.Num.HeaderText = "编号";
-            this.Num.Name = "Num";
-            this.Num.ReadOnly = true;
-            // 
-            // Other
-            // 
-            this.Other.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Other.FillWeight = 137.9613F;
-            this.Other.HeaderText = "其他";
-            this.Other.Name = "Other";
-            this.Other.ReadOnly = true;
-            // 
-            // mmuStatistic
-            // 
-            this.mmuStatistic.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.mmuStatistic.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mmuNew,
-            this.mmuSave,
-            this.mmuEmpty,
-            this.mmuImport,
-            this.mmuExport,
-            this.mmuChart});
-            this.mmuStatistic.Location = new System.Drawing.Point(3, 3);
-            this.mmuStatistic.Name = "mmuStatistic";
-            this.mmuStatistic.Size = new System.Drawing.Size(890, 29);
-            this.mmuStatistic.TabIndex = 0;
-            this.mmuStatistic.Text = "menuStrip1";
-            // 
-            // mmuNew
-            // 
-            this.mmuNew.Name = "mmuNew";
-            this.mmuNew.Size = new System.Drawing.Size(54, 25);
-            this.mmuNew.Text = "新建";
-            this.mmuNew.Click += new System.EventHandler(this.mmuNew_Click);
-            // 
-            // mmuSave
-            // 
-            this.mmuSave.Name = "mmuSave";
-            this.mmuSave.Size = new System.Drawing.Size(54, 25);
-            this.mmuSave.Text = "保存";
-            this.mmuSave.Click += new System.EventHandler(this.mmuSave_Click);
-            // 
-            // mmuEmpty
-            // 
-            this.mmuEmpty.Name = "mmuEmpty";
-            this.mmuEmpty.Size = new System.Drawing.Size(54, 25);
-            this.mmuEmpty.Text = "清空";
-            this.mmuEmpty.Click += new System.EventHandler(this.mmuEmpty_Click);
-            // 
-            // mmuImport
-            // 
-            this.mmuImport.Name = "mmuImport";
-            this.mmuImport.Size = new System.Drawing.Size(54, 25);
-            this.mmuImport.Text = "导入";
-            this.mmuImport.Click += new System.EventHandler(this.mmuImport_Click);
-            // 
-            // mmuExport
-            // 
-            this.mmuExport.Name = "mmuExport";
-            this.mmuExport.Size = new System.Drawing.Size(54, 25);
-            this.mmuExport.Text = "导出";
-            this.mmuExport.Click += new System.EventHandler(this.mmuExport_Click);
-            // 
-            // mmuChart
-            // 
-            this.mmuChart.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mmuChart.Name = "mmuChart";
-            this.mmuChart.Size = new System.Drawing.Size(86, 25);
-            this.mmuChart.Text = "图表分析";
-            this.mmuChart.Click += new System.EventHandler(this.mmuChart_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(324, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 21);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "请选择投资表";
             // 
             // tapSearch
             // 
@@ -918,17 +738,17 @@ namespace VM
             // lblShowPg
             // 
             this.lblShowPg.AutoSize = true;
-            this.lblShowPg.Enabled = false;
-            this.lblShowPg.Location = new System.Drawing.Point(11, 534);
+            this.lblShowPg.Location = new System.Drawing.Point(27, 528);
             this.lblShowPg.Name = "lblShowPg";
             this.lblShowPg.Size = new System.Drawing.Size(55, 21);
-            this.lblShowPg.TabIndex = 28;
-            this.lblShowPg.Text = "label1";
+            this.lblShowPg.TabIndex = 27;
+            this.lblShowPg.Text = "label4";
+            this.lblShowPg.Click += new System.EventHandler(this.lblShowPg_Click);
             // 
             // btnRateConfirm
             // 
             this.btnRateConfirm.Enabled = false;
-            this.btnRateConfirm.Location = new System.Drawing.Point(808, 144);
+            this.btnRateConfirm.Location = new System.Drawing.Point(808, 142);
             this.btnRateConfirm.Name = "btnRateConfirm";
             this.btnRateConfirm.Size = new System.Drawing.Size(75, 32);
             this.btnRateConfirm.TabIndex = 26;
@@ -975,20 +795,20 @@ namespace VM
             this.grpSearch.AllowUserToDeleteRows = false;
             this.grpSearch.AllowUserToResizeColumns = false;
             this.grpSearch.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            this.grpSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            this.grpSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.grpSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grpSearch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grpSearch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grpSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.grpSearch.ColumnHeadersHeight = 30;
             this.grpSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.grpSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -996,32 +816,33 @@ namespace VM
             this.time,
             this.money,
             this.rate,
-            this.inverst});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grpSearch.DefaultCellStyle = dataGridViewCellStyle13;
+            this.inverst,
+            this.网站});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grpSearch.DefaultCellStyle = dataGridViewCellStyle8;
             this.grpSearch.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.grpSearch.Location = new System.Drawing.Point(8, 232);
             this.grpSearch.Name = "grpSearch";
             this.grpSearch.ReadOnly = true;
             this.grpSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.grpSearch.RowHeadersVisible = false;
             this.grpSearch.RowHeadersWidth = 100;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grpSearch.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grpSearch.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.grpSearch.RowTemplate.Height = 23;
             this.grpSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.grpSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1029,48 +850,6 @@ namespace VM
             this.grpSearch.TabIndex = 16;
             this.grpSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpSearch_CellContentClick);
             this.grpSearch.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grpSearch_CellMouseDoubleClick);
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "项目";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // time
-            // 
-            this.time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.time.DataPropertyName = "time";
-            this.time.HeaderText = "投资期限";
-            this.time.Name = "time";
-            this.time.ReadOnly = true;
-            this.time.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // money
-            // 
-            this.money.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.money.DataPropertyName = "money";
-            this.money.HeaderText = "起投金额";
-            this.money.Name = "money";
-            this.money.ReadOnly = true;
-            this.money.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // rate
-            // 
-            this.rate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.rate.DataPropertyName = "rate";
-            this.rate.HeaderText = "收益率";
-            this.rate.Name = "rate";
-            this.rate.ReadOnly = true;
-            this.rate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // inverst
-            // 
-            this.inverst.HeaderText = "投资";
-            this.inverst.Name = "inverst";
-            this.inverst.ReadOnly = true;
             // 
             // txtSearch
             // 
@@ -1605,28 +1384,123 @@ namespace VM
             this.tabSelectModule.Controls.Add(this.tapAnalyse);
             this.tabSelectModule.Controls.Add(this.tapRush);
             this.tabSelectModule.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabSelectModule.Location = new System.Drawing.Point(0, 120);
+            this.tabSelectModule.Location = new System.Drawing.Point(0, 121);
             this.tabSelectModule.Name = "tabSelectModule";
             this.tabSelectModule.SelectedIndex = 0;
             this.tabSelectModule.Size = new System.Drawing.Size(904, 614);
             this.tabSelectModule.TabIndex = 1;
             // 
+            // picLogo2
+            // 
+            this.picLogo2.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo2.Image = global::VM.Properties.Resources.透明色口号图片;
+            this.picLogo2.Location = new System.Drawing.Point(160, 25);
+            this.picLogo2.Name = "picLogo2";
+            this.picLogo2.Size = new System.Drawing.Size(640, 72);
+            this.picLogo2.TabIndex = 3;
+            this.picLogo2.TabStop = false;
+            // 
+            // picLogo1
+            // 
+            this.picLogo1.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picLogo1.ErrorImage")));
+            this.picLogo1.Image = global::VM.Properties.Resources.touming1;
+            this.picLogo1.Location = new System.Drawing.Point(0, 0);
+            this.picLogo1.Name = "picLogo1";
+            this.picLogo1.Size = new System.Drawing.Size(136, 120);
+            this.picLogo1.TabIndex = 2;
+            this.picLogo1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(674, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 19);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "欢迎您，亲爱的";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("宋体", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(819, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 19);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "用户";
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "项目";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // time
+            // 
+            this.time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.time.DataPropertyName = "time";
+            this.time.HeaderText = "投资期限";
+            this.time.Name = "time";
+            this.time.ReadOnly = true;
+            this.time.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // money
+            // 
+            this.money.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.money.DataPropertyName = "money";
+            this.money.HeaderText = "起投金额";
+            this.money.Name = "money";
+            this.money.ReadOnly = true;
+            this.money.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // rate
+            // 
+            this.rate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.rate.DataPropertyName = "rate";
+            this.rate.HeaderText = "收益率";
+            this.rate.Name = "rate";
+            this.rate.ReadOnly = true;
+            this.rate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // inverst
+            // 
+            this.inverst.HeaderText = "投资";
+            this.inverst.Name = "inverst";
+            this.inverst.ReadOnly = true;
+            // 
+            // 网站
+            // 
+            this.网站.HeaderText = "网站";
+            this.网站.Name = "网站";
+            this.网站.ReadOnly = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::VM.Properties.Resources.花纹;
             this.ClientSize = new System.Drawing.Size(895, 707);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.picLogo2);
             this.Controls.Add(this.picLogo1);
             this.Controls.Add(this.tabSelectModule);
-            this.MainMenuStrip = this.mmuStatistic;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.ShowIcon = false;
+            this.TransparencyKey = System.Drawing.SystemColors.ActiveBorder;
             this.Load += new System.EventHandler(this.frmMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).EndInit();
             this.tapRush.ResumeLayout(false);
             this.tapRush.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpRush)).EndInit();
@@ -1638,9 +1512,6 @@ namespace VM
             this.grpRTime.PerformLayout();
             this.tapAnalyse.ResumeLayout(false);
             this.tapAnalyse.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grpStatisticTable)).EndInit();
-            this.mmuStatistic.ResumeLayout(false);
-            this.mmuStatistic.PerformLayout();
             this.tapSearch.ResumeLayout(false);
             this.tapSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpSearch)).EndInit();
@@ -1655,7 +1526,10 @@ namespace VM
             this.grpSortMode.ResumeLayout(false);
             this.grpSortMode.PerformLayout();
             this.tabSelectModule.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1703,27 +1577,12 @@ namespace VM
         private System.Windows.Forms.RadioButton rdoRTime2;
         private System.Windows.Forms.RadioButton rdoRTime1;
         private System.Windows.Forms.TabPage tapAnalyse;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DataGridView grpStatisticTable;
-        private System.Windows.Forms.MenuStrip mmuStatistic;
-        private System.Windows.Forms.ToolStripMenuItem mmuNew;
-        private System.Windows.Forms.ToolStripMenuItem mmuSave;
-        private System.Windows.Forms.ToolStripMenuItem mmuEmpty;
-        private System.Windows.Forms.ToolStripMenuItem mmuImport;
-        private System.Windows.Forms.ToolStripMenuItem mmuExport;
-        private System.Windows.Forms.ToolStripMenuItem mmuChart;
         private System.Windows.Forms.TabPage tapSearch;
         private System.Windows.Forms.Button btnRateConfirm;
         private System.Windows.Forms.Button btnTimeConfirm;
         private System.Windows.Forms.Button btnPageDown;
         private System.Windows.Forms.Button btnPageUp;
         private System.Windows.Forms.DataGridView grpSearch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn money;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rate;
-        private System.Windows.Forms.DataGridViewButtonColumn inverst;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnRush;
         private System.Windows.Forms.Button btnMoneyConfirm;
@@ -1768,17 +1627,24 @@ namespace VM
         private System.Windows.Forms.RadioButton rdoSortDown;
         private System.Windows.Forms.RadioButton rdoSortUp;
         private System.Windows.Forms.TabControl tabSelectModule;
-        public System.Windows.Forms.Label lblShowPg;
         private System.Windows.Forms.RadioButton rdoMoneyAll;
         private System.Windows.Forms.RadioButton rdoTimeAll;
         private System.Windows.Forms.RadioButton rdoRateAll;
         private System.Windows.Forms.Button btnRConfirm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMoney;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Num;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Other;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox lBTableNameList;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel lLTable;
+        private System.Windows.Forms.Button btnOpenTable;
+        private System.Windows.Forms.Label lblShowPg;
+        private System.Windows.Forms.ComboBox cbBTableNameList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 网站;
+        private System.Windows.Forms.DataGridViewButtonColumn inverst;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn money;
+        private System.Windows.Forms.DataGridViewTextBoxColumn time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
     }
 }
 

@@ -28,32 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCMoney = new System.Windows.Forms.Label();
             this.lblCInterst = new System.Windows.Forms.Label();
             this.lblCMoney2 = new System.Windows.Forms.Label();
             this.txtRe = new System.Windows.Forms.TextBox();
-            this.txtWholeInvest = new System.Windows.Forms.TextBox();
             this.txtC3 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCReturn = new System.Windows.Forms.Button();
             this.btnC1 = new System.Windows.Forms.Button();
             this.btnC2 = new System.Windows.Forms.Button();
             this.btnC3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblCMoney = new System.Windows.Forms.Label();
+            this.txtWholeInvest = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblCMoney
-            // 
-            this.lblCMoney.AutoSize = true;
-            this.lblCMoney.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblCMoney.Location = new System.Drawing.Point(29, 20);
-            this.lblCMoney.Name = "lblCMoney";
-            this.lblCMoney.Size = new System.Drawing.Size(110, 16);
-            this.lblCMoney.TabIndex = 0;
-            this.lblCMoney.Text = "投资总金额：";
             // 
             // lblCInterst
             // 
@@ -84,15 +74,6 @@
             this.txtRe.Size = new System.Drawing.Size(132, 26);
             this.txtRe.TabIndex = 4;
             // 
-            // txtWholeInvest
-            // 
-            this.txtWholeInvest.Enabled = false;
-            this.txtWholeInvest.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtWholeInvest.Location = new System.Drawing.Point(130, 14);
-            this.txtWholeInvest.Name = "txtWholeInvest";
-            this.txtWholeInvest.Size = new System.Drawing.Size(132, 26);
-            this.txtWholeInvest.TabIndex = 5;
-            // 
             // txtC3
             // 
             this.txtC3.Enabled = false;
@@ -101,14 +82,6 @@
             this.txtC3.Name = "txtC3";
             this.txtC3.Size = new System.Drawing.Size(132, 26);
             this.txtC3.TabIndex = 6;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 96);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(997, 500);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // btnCReturn
             // 
@@ -150,16 +123,6 @@
             this.btnC3.UseVisualStyleBackColor = true;
             this.btnC3.Click += new System.EventHandler(this.btnC3_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(268, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 16);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "元";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -179,6 +142,43 @@
             this.label3.Size = new System.Drawing.Size(17, 16);
             this.label3.TabIndex = 20;
             this.label3.Text = "%";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(12, 96);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(997, 500);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblCMoney
+            // 
+            this.lblCMoney.AutoSize = true;
+            this.lblCMoney.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblCMoney.Location = new System.Drawing.Point(29, 20);
+            this.lblCMoney.Name = "lblCMoney";
+            this.lblCMoney.Size = new System.Drawing.Size(110, 16);
+            this.lblCMoney.TabIndex = 0;
+            this.lblCMoney.Text = "投资总金额：";
+            // 
+            // txtWholeInvest
+            // 
+            this.txtWholeInvest.Enabled = false;
+            this.txtWholeInvest.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtWholeInvest.Location = new System.Drawing.Point(130, 14);
+            this.txtWholeInvest.Name = "txtWholeInvest";
+            this.txtWholeInvest.Size = new System.Drawing.Size(132, 26);
+            this.txtWholeInvest.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(268, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 16);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "元";
             // 
             // frmChart
             // 
@@ -209,20 +209,19 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblCMoney;
         private System.Windows.Forms.Label lblCInterst;
         private System.Windows.Forms.Label lblCMoney2;
         private System.Windows.Forms.TextBox txtRe;
-        private System.Windows.Forms.TextBox txtWholeInvest;
         private System.Windows.Forms.TextBox txtC3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCReturn;
         private System.Windows.Forms.Button btnC1;
         private System.Windows.Forms.Button btnC2;
         private System.Windows.Forms.Button btnC3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtWholeInvest;
+        private System.Windows.Forms.Label lblCMoney;
     }
 }

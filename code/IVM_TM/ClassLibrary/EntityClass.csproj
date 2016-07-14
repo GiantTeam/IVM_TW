@@ -45,7 +45,6 @@
     <Compile Include="Condition.cs" />
     <Compile Include="DateRecord.cs" />
     <Compile Include="Project.cs" />
-    <Compile Include="Log.cs" />
     <Compile Include="ProjectList.cs" />
     <Compile Include="ProjectRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

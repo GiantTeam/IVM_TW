@@ -37,3 +37,16 @@ C:\Users\campufix\Desktop\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\VM.pdb
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\VM.exe
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\log4net.dll
 C:\Users\Administrator\Desktop\老陈\IVM_TW\code\IVM_TM\ControlClassTests\bin\Debug\VM.pdb
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ControlClassTests\bin\Debug\ControlClassTests.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ControlClassTests\bin\Debug\ControlClassTests.pdb
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ControlClassTests\bin\Debug\ClassLibrary.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ControlClassTests\bin\Debug\ControlClass.exe
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ControlClassTests\bin\Debug\VM.exe
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ControlClassTests\bin\Debug\Aspose.Cells.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ControlClassTests\bin\Debug\log4net.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ControlClassTests\bin\Debug\ClassLibrary.pdb
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ControlClassTests\bin\Debug\ControlClass.pdb
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ControlClassTests\bin\Debug\VM.pdb
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ControlClassTests\obj\Debug\ControlClassTests.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ControlClassTests\obj\Debug\ControlClassTests.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ControlClassTests\obj\Debug\ControlClassTests.pdb

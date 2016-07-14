@@ -14,3 +14,10 @@ F:\git\IVM_TW\code\IVM_TM\ClassLibraryTests\bin\Debug\zh-Hans\Microsoft.VisualSt
 F:\git\IVM_TW\code\IVM_TM\ClassLibraryTests\obj\Debug\EntityClassTest.csprojResolveAssemblyReference.cache
 F:\git\IVM_TW\code\IVM_TM\ClassLibraryTests\obj\Debug\ClassLibraryTests.dll
 F:\git\IVM_TW\code\IVM_TM\ClassLibraryTests\obj\Debug\ClassLibraryTests.pdb
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ClassLibraryTests\bin\Debug\ClassLibraryTests.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ClassLibraryTests\bin\Debug\ClassLibraryTests.pdb
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ClassLibraryTests\bin\Debug\ClassLibrary.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ClassLibraryTests\bin\Debug\ClassLibrary.pdb
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ClassLibraryTests\obj\Debug\EntityClassTest.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ClassLibraryTests\obj\Debug\ClassLibraryTests.dll
+C:\Users\Administrator\Desktop\老陈\IVM_TM\ClassLibraryTests\obj\Debug\ClassLibraryTests.pdb

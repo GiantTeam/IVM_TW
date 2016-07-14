@@ -33,13 +33,15 @@
             this.btnYes = new System.Windows.Forms.Button();
             this.btnCannel = new System.Windows.Forms.Button();
             this.txtDMoney = new System.Windows.Forms.TextBox();
+            this.cbBTableNameList = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblDMoney
             // 
             this.lblDMoney.AutoSize = true;
             this.lblDMoney.Enabled = false;
-            this.lblDMoney.Location = new System.Drawing.Point(8, 48);
+            this.lblDMoney.Location = new System.Drawing.Point(8, 85);
             this.lblDMoney.Name = "lblDMoney";
             this.lblDMoney.Size = new System.Drawing.Size(97, 12);
             this.lblDMoney.TabIndex = 1;
@@ -57,7 +59,7 @@
             // 
             // btnYes
             // 
-            this.btnYes.Location = new System.Drawing.Point(24, 88);
+            this.btnYes.Location = new System.Drawing.Point(24, 125);
             this.btnYes.Name = "btnYes";
             this.btnYes.Size = new System.Drawing.Size(75, 23);
             this.btnYes.TabIndex = 3;
@@ -68,7 +70,7 @@
             // btnCannel
             // 
             this.btnCannel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCannel.Location = new System.Drawing.Point(136, 88);
+            this.btnCannel.Location = new System.Drawing.Point(136, 125);
             this.btnCannel.Name = "btnCannel";
             this.btnCannel.Size = new System.Drawing.Size(75, 23);
             this.btnCannel.TabIndex = 4;
@@ -78,17 +80,37 @@
             // 
             // txtDMoney
             // 
-            this.txtDMoney.Location = new System.Drawing.Point(112, 40);
+            this.txtDMoney.Location = new System.Drawing.Point(112, 77);
             this.txtDMoney.Name = "txtDMoney";
             this.txtDMoney.Size = new System.Drawing.Size(120, 21);
             this.txtDMoney.TabIndex = 6;
+            // 
+            // cbBTableNameList
+            // 
+            this.cbBTableNameList.FormattingEnabled = true;
+            this.cbBTableNameList.Location = new System.Drawing.Point(91, 38);
+            this.cbBTableNameList.Name = "cbBTableNameList";
+            this.cbBTableNameList.Size = new System.Drawing.Size(154, 20);
+            this.cbBTableNameList.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Enabled = false;
+            this.label1.Location = new System.Drawing.Point(22, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 12);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "投资表";
             // 
             // frmDialog
             // 
             this.AcceptButton = this.btnYes;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(242, 127);
+            this.ClientSize = new System.Drawing.Size(257, 197);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbBTableNameList);
             this.Controls.Add(this.txtDMoney);
             this.Controls.Add(this.btnCannel);
             this.Controls.Add(this.btnYes);
@@ -112,5 +134,7 @@
         private System.Windows.Forms.Button btnYes;
         private System.Windows.Forms.Button btnCannel;
         private System.Windows.Forms.TextBox txtDMoney;
+        private System.Windows.Forms.ComboBox cbBTableNameList;
+        private System.Windows.Forms.Label label1;
     }
 }

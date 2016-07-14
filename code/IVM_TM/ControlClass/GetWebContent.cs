@@ -23,10 +23,12 @@ namespace ControlClass
                 mark = true;
             } catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 MessageBox.Show("网络异常");
                 mark = false;
             }
            // Console.Write(webPageHtml);
+          
             return webPageHtml;            
         }
     }
